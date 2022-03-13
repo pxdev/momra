@@ -242,3 +242,33 @@ input + .btn {
 
 
 }
+
+
+.toggle-switch {
+  height: 45px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid $border-color;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s all ease-in-out;
+    height: 45px;
+    color: $primary;
+    padding: 0 15px;
+    &.active {
+      background: $primary;
+      color: #fff;
+    }
+  }
+
+
+
+
+}
+

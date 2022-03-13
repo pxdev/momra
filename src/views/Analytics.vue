@@ -39,8 +39,7 @@
                           transform="translate(-4.204 -5.422)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
                           stroke-width="1.5"/>
                     <path id="Path_216" data-name="Path 216" d="M14.643,28H0" transform="translate(0 -10.619)"
-                          fill="none"
-                          stroke="#68bfca" stroke-miterlimit="10" stroke-width="1.5"/>
+                          fill="none" stroke="#68bfca" stroke-miterlimit="10" stroke-width="1.5"/>
                     <path id="Path_217" data-name="Path 217"
                           d="M2.075,20.265A7.642,7.642,0,0,1,4.114,20c2.311,0,4.184.936,4.184,2.092v3.486"
                           transform="translate(-0.628 -8.186)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
@@ -128,10 +127,16 @@
         <!-- / quick-stats -->
         <div class="state-widgets cols-2 d-flex align-items-stretch">
           <div class="card mg-b-15 shadow rounded pd-25">
-            <div class="widget-heading mg-b-15">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 d-flex align-items-center">متوسط حجم الأسرة <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
               <p class="op-8 tx-12">التغير السنوي في أداء المدن حسب المؤشر</p>
+            </div>
+              <div class="toggle-switch">
+                <a href="#" @click.prevent="activeToggle=1" :class="{'active' : activeToggle==1}">المناطق</a>
+                <a href="#" @click.prevent="activeToggle=2" :class="{'active' : activeToggle==2}" >مدن</a>
+              </div>
             </div>
           </div>
           <div class="card mg-b-15 shadow rounded pd-25">
@@ -178,7 +183,7 @@
           </div>
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading">
-              <h4 class="mg-b-5 d-flex align-items-center">مقارنة مع الفهرس الدولي <i
+              <h4 class="mg-b-5 d-flex align-items-center">المؤشر على مستوى المناطق  <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
               <p class="op-8 tx-12">يُعرف أيضًا أحيانًا بالنص الوهمي المستخدم في تصميمات الويب</p>
             </div>
@@ -194,21 +199,21 @@
               <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
             </div>
-
+           <bar-chart></bar-chart>
           </div>
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
             </div>
-
+            <bar-chart></bar-chart>
           </div>
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
             </div>
-
+            <bar-chart></bar-chart>
           </div>
 
         </div>
@@ -224,11 +229,17 @@
 
 import PageHeader from "../components/PageHeader";
 import SideNavigation from "../components/SideNavigation";
+import BarChart from "@/components/Charts/BarChart";
 
 export default {
-  components: {SideNavigation, PageHeader},
+  components: {BarChart, SideNavigation, PageHeader},
   data() {
-    return {}
+    return {
+      activeToggle:1
+    }
+  },
+  mounted() {
+
   }
 
 
