@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home'
 import Analytics from '../views/Analytics'
+import Explore from '../views/Explore'
 
 
 Vue.use(VueRouter)
@@ -12,6 +13,11 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/explore',
+        name: 'Explore',
+        component: Explore
     },
     {
         path: '/analytics',

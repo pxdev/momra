@@ -1,53 +1,56 @@
-.pre-header {
-  background: $primary;
-
-
-
-  .toll-free {
-    color: #fff;
-    .phone-number {
-      direction: ltr;
-    }
-    i{
-      position: relative;
-      font-size: 18px;
-      width: 20px;
-      &:before {
-        transform: rotateY(180deg);
-        position: absolute;
-        top: -12px;
-
-      }
-    }
-  }
-
-  .social {
-    a{
-     font-size: 18px;
-      color: #fff;
-      padding: 0 2px;
-      opacity: 0.6;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-
-}
 
 header {
   box-shadow: 0 0 10px rgba(0, 0, 0, .02);
   background: $light-bg;
   border-bottom: 1px solid $border-color;
+  z-index: 20;
 
   &.fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 20;
   }
+
+  .pre-header {
+    background: $primary;
+
+
+
+    .toll-free {
+      color: #fff;
+      .phone-number {
+        direction: ltr;
+      }
+      i{
+        position: relative;
+        font-size: 18px;
+        width: 20px;
+        &:before {
+          transform: rotateY(180deg);
+          position: absolute;
+          top: -12px;
+
+        }
+      }
+    }
+
+    .social {
+      a{
+        font-size: 18px;
+        color: #fff;
+        padding: 0 2px;
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
 
   .dropdown-btn {
     color: $secondary;
@@ -60,9 +63,7 @@ header {
       border-bottom: 1px solid $border-color;
       margin-bottom: 20px;
       display: block;
-
     }
-
 
     h5 {
       font-size: 16px;

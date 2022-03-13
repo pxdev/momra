@@ -1,0 +1,45 @@
+.explore-page {
+
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  h1 {
+    color: #fff;
+  }
+
+  &:after {
+    @extend %vertical-gradient;
+    width: 100%;
+    content: "";
+    right: 0;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .explore-data {
+    padding: 0 160px;
+  }
+
+
+  .data-icons {
+
+    .data-icon-box {
+      padding: 20px 0;
+
+      min-width: 33.33%;
+
+      @include for-size('small-devices') {
+        width: 50%;
+      }
+
+    }
+
+  }
+
+
+}

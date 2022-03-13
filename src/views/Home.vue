@@ -1,43 +1,108 @@
 <template>
-  <section>
-
+  <section class="landing-page">
     <page-header></page-header>
+    <main class="bg-primary">
 
-    <main class="landing-page">
       <video-bg :sources="['Summer_Flower_4K_Living_Background.mp4']">
-
         <div class="landing-heading">
           <div class="container"><h1 class="tx-34">المرصد الحضري الوطني</h1></div>
         </div>
         <!-- / landing-heading -->
 
+        <div class="container landing-data d-flex align-items-center justify-content-between">
+          <div class="data-icons d-flex flex-wrap pd-y-30">
+            <div v-for="n in 6" :key="n" class="data-icon-box d-flex align-items-start">
+              <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
+              <div class="pd-x-15">
+                <p class="tx-16">إجمالي عدد الأسر</p>
+                <p class="tx-32 tx-bold">3,681,927</p>
+              </div>
+            </div>
+          </div>
+          <div class="ksa-map">
+            <img src="map.svg" alt="">
+          </div>
+
+        </div>
+        <!-- / landing-data -->
 
         <div class="landing-navigation ">
           <div class="container">
             <VueSlickCarousel class="slick-carousel landing-slick" v-bind="Settings">
             <div v-for="(n, index) in 10" :key="index + '_group'" class="pd-x-10">
                 <a href="#" class="home-nav-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="55" height="47.999" viewBox="0 0 55 47.999">
-                    <g id="global_business_home" transform="translate(0 -4.009)">
-                      <path id="Path_321" data-name="Path 321" d="M28.186,5.094c.5-.044,1-.073,1.51-.085" transform="translate(-2.341)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <path id="Path_322" data-name="Path 322" d="M24.23,5.731q.719-.178,1.454-.312" transform="translate(-2.001 -0.036)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <path id="Path_323" data-name="Path 323" d="M20.327,7.021q.618-.264,1.254-.493" transform="translate(-1.665 -0.135)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <path id="Path_324" data-name="Path 324" d="M12.312,38.259l-3.264,4.9a.912.912,0,0,1-1.479.053l-6.378-8.2a.911.911,0,0,1,.72-1.47l3.408,0a22.43,22.43,0,0,1-.674-5.47A22.7,22.7,0,0,1,16.34,8.3" transform="translate(0 -0.292)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <path id="Path_325" data-name="Path 325" d="M31.682,54.9c-.488.044-.982.072-1.479.085" transform="translate(-2.515 -3.973)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <path id="Path_326" data-name="Path 326" d="M35.619,54.242q-.689.171-1.393.3" transform="translate(-2.862 -3.914)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <path id="Path_327" data-name="Path 327" d="M39.673,52.878q-.631.273-1.282.511" transform="translate(-3.221 -3.793)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <path id="Path_328" data-name="Path 328" d="M46.226,18.3l3.264-4.9a.912.912,0,0,1,1.479-.053l6.379,8.2a.911.911,0,0,1-.721,1.469H53.282a22.341,22.341,0,0,1,.611,5.467A22.682,22.682,0,0,1,42.542,48.067" transform="translate(-3.537 -0.249)" fill="none" stroke="#60cb5f" stroke-miterlimit="10" stroke-width="2"/>
-                      <g id="Group_2577" data-name="Group 2577">
-                        <path id="Path_312" data-name="Path 312" d="M10,30H46.6" transform="translate(-0.8 -1.991)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_313" data-name="Path 313" d="M29.987,10a23.242,23.242,0,0,1,0,36.906" transform="translate(-2.483 -0.444)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_314" data-name="Path 314" d="M30,11V46.995" transform="translate(-2.5 -0.532)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_315" data-name="Path 315" d="M15.551,43.4C17.9,40.8,22.907,39,28.7,39s10.817,1.808,13.164,4.414" transform="translate(-1.216 -2.674)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_316" data-name="Path 316" d="M21.067,37.166a23.461,23.461,0,0,0,8.139,11.693" transform="translate(-1.72 -2.397)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_317" data-name="Path 317" d="M20.206,33.181q.1.745.242,1.474" transform="translate(-1.656 -2.235)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_318" data-name="Path 318" d="M29.111,10A23.085,23.085,0,0,0,20,28.223" transform="translate(-1.627 -0.444)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_319" data-name="Path 319" d="M28.3,46.906A18.454,18.454,0,1,0,10,28.453,18.377,18.377,0,0,0,28.3,46.906Z" transform="translate(-0.8 -0.444)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path_320" data-name="Path 320" d="M15.545,16.177C17.892,18.783,22.9,20.57,28.7,20.57s10.811-1.8,13.158-4.406" transform="translate(-1.215 -0.878)" fill="none" stroke="#ebc35b" stroke-miterlimit="10" stroke-width="2"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="42.022" height="38.989" viewBox="0 0 42.022 38.989">
+                    <g id="Conference" transform="translate(0 0.75)">
+                      <g id="Group_2564" data-name="Group 2564" transform="translate(0 0)">
+                        <path id="Path_210" data-name="Path 210"
+                              d="M4.092,15.184A2.092,2.092,0,1,0,2,13.092,2.092,2.092,0,0,0,4.092,15.184Z"
+                              transform="translate(-0.605 -5.422)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_211" data-name="Path 211"
+                              d="M10.092,7.184A2.092,2.092,0,1,0,8,5.092,2.092,2.092,0,0,0,10.092,7.184Z"
+                              transform="translate(-2.422 -3)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_212" data-name="Path 212"
+                              d="M22.092,7.184A2.092,2.092,0,1,0,20,5.092,2.092,2.092,0,0,0,22.092,7.184Z"
+                              transform="translate(-6.005 -3)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_213" data-name="Path 213"
+                              d="M36.092,7.184A2.092,2.092,0,1,0,34,5.092,2.092,2.092,0,0,0,36.092,7.184Z"
+                              transform="translate(-10.209 -3)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_214" data-name="Path 214"
+                              d="M48.092,7.184A2.092,2.092,0,1,0,46,5.092,2.092,2.092,0,0,0,48.092,7.184Z"
+                              transform="translate(-13.792 -3)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_215" data-name="Path 215"
+                              d="M16.092,15.184A2.092,2.092,0,1,0,14,13.092,2.092,2.092,0,0,0,16.092,15.184Z"
+                              transform="translate(-4.204 -5.422)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_216" data-name="Path 216" d="M14.643,28H0" transform="translate(0 -10.619)"
+                              fill="none" stroke="#68bfca" stroke-miterlimit="10" stroke-width="1.5"/>
+                        <path id="Path_217" data-name="Path 217"
+                              d="M2.075,20.265A7.642,7.642,0,0,1,4.114,20c2.311,0,4.184.936,4.184,2.092v3.486"
+                              transform="translate(-0.628 -8.186)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_218" data-name="Path 218"
+                              d="M17.223,20.265A7.642,7.642,0,0,0,15.184,20C12.873,20,11,20.936,11,22.092"
+                              transform="translate(-3.301 -8.183)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_219" data-name="Path 219"
+                              d="M43.092,15.184A2.092,2.092,0,1,0,41,13.092,2.092,2.092,0,0,0,43.092,15.184Z"
+                              transform="translate(-12.311 -5.422)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_220" data-name="Path 220"
+                              d="M55.092,15.184A2.092,2.092,0,1,0,53,13.092,2.092,2.092,0,0,0,55.092,15.184Z"
+                              transform="translate(-15.911 -5.422)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_221" data-name="Path 221" d="M53.643,28H39" transform="translate(-11.673 -10.619)"
+                              fill="none" stroke="#68bfca" stroke-miterlimit="10" stroke-width="1.5"/>
+                        <path id="Path_222" data-name="Path 222"
+                              d="M41.075,20.265A7.642,7.642,0,0,1,43.115,20c2.311,0,4.184.936,4.184,2.092v3.486"
+                              transform="translate(-12.327 -8.186)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_223" data-name="Path 223"
+                              d="M56.223,20.265A7.642,7.642,0,0,0,54.184,20C51.873,20,50,20.936,50,22.092"
+                              transform="translate(-15.003 -8.183)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_224" data-name="Path 224"
+                              d="M23.113,12.023c.2-.015.409-.023.618-.023,2.311,0,4.184.936,4.184,2.092"
+                              transform="translate(-6.939 -5.744)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <path id="Path_225" data-name="Path 225"
+                              d="M34.8,12.023c-.2-.015-.409-.023-.618-.023C31.873,12,30,12.936,30,14.092"
+                              transform="translate(-9.007 -5.744)" fill="none" stroke="#68bfca" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
                       </g>
+                      <path id="Path_226" data-name="Path 226"
+                            d="M28.184,27.762c2.311,0,4.184-2.185,4.184-4.881S30.494,18,28.184,18,24,20.185,24,22.881,25.873,27.762,28.184,27.762Z"
+                            transform="translate(-7.199 -7.582)" fill="none" stroke="#60cb5f" stroke-miterlimit="10"
+                            stroke-width="1.5"/>
+                      <path id="Path_229" data-name="Path 229"
+                            d="M27.4,51.037V40.264l5.721,1.629a2.113,2.113,0,0,0,1.741-.27l4.2-2.789a2.095,2.095,0,0,0-2.327-3.484L33.341,37.6l-5.849-1.664a6.345,6.345,0,0,0-1.731-.241H19.235a6.34,6.34,0,0,0-1.73.241L11.656,37.6,8.264,35.35a2.095,2.095,0,1,0-2.327,3.484l4.2,2.789a2.113,2.113,0,0,0,1.741.27L17.6,40.264V51.037"
+                            transform="translate(-1.514 -12.798)" fill="none" stroke="#60cb5f" stroke-miterlimit="10"
+                            stroke-width="1.5"/>
                     </g>
                   </svg>
                   <span>البنية التحتية</span>
@@ -57,6 +122,9 @@
 
 
       </video-bg>
+
+
+
     </main>
 
   </section>
@@ -85,7 +153,7 @@ export default {
           {
             "breakpoint": 1024,
             "settings": {
-              "slidesToShow": 4,
+              "slidesToShow": 3,
             }
           },
 

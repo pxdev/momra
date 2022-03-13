@@ -27,6 +27,8 @@ body {
 
 .pages-content {
   flex-grow: 1;
+  position: relative;
+  z-index: 5;
   @include rtl(padding-left, 25px, 0);
   @include rtl(padding-right, 0, 25px);
 }
