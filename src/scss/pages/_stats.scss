@@ -1,0 +1,68 @@
+.number-stats {
+  min-width: calc(50% - 35px);
+
+  .stats-box:nth-child(2) {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+  }
+}
+
+.indicator-info {
+  min-width: calc(50% - 35px);
+}
+
+.quick-stats {
+  .divider {
+    @include for-size('small-devices') {
+      display: none;
+    }
+  }
+}
+
+.state-widgets {
+  &.cols-2 {
+    .card {
+      min-width: calc(50% - 7.5px);
+      &:nth-child(1) {
+        @include rtl(margin-left, 0, 15px);
+        @include rtl(margin-right, 15px, 0);
+
+        @include for-size('small-devices') {
+          @include rtl(margin-left, 0, 0);
+          @include rtl(margin-right, 0, 0);
+          width: 100%;
+        }
+
+      }
+      @include for-size('small-devices') {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &.cols-3 {
+    .card {
+      min-width: calc(33.3% - 10px);
+      &:nth-child(2) {
+        margin-left: 15px;
+        margin-right: 15px;
+
+        @include for-size('small-devices') {
+          @include rtl(margin-left, 0, 0);
+          @include rtl(margin-right, 0, 0);
+          width: 100%;
+        }
+
+      }
+      @include for-size('small-devices') {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  @include for-size('small-devices') {
+    flex-wrap: wrap;
+  }
+
+
+}

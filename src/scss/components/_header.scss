@@ -1,0 +1,256 @@
+.pre-header {
+  background: $primary;
+
+
+
+  .toll-free {
+    color: #fff;
+    .phone-number {
+      direction: ltr;
+    }
+    i{
+      position: relative;
+      font-size: 18px;
+      width: 20px;
+      &:before {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: -12px;
+
+      }
+    }
+  }
+
+  .social {
+    a{
+     font-size: 18px;
+      color: #fff;
+      padding: 0 2px;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+header {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .02);
+  background: $light-bg;
+  border-bottom: 1px solid $border-color;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .dropdown-btn {
+    color: $secondary;
+  }
+
+  .nav-heading {
+    display: none;
+    @include for-size('small-devices') {
+      padding: 22px 15px;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 20px;
+      display: block;
+
+    }
+
+
+    h5 {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    a {
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+
+  }
+
+  nav {
+
+    @include for-size('small-devices') {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: $light-bg;
+      width: 300px;
+      z-index: 110;
+      overflow-y: scroll;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .05);
+    }
+
+    ul {
+      @extend %flex-area;
+      flex-wrap: wrap;
+
+      li {
+        display: flex;
+
+        @include for-size('small-devices') {
+          width: 100%;
+        }
+
+        a {
+          font-size: 16px;
+          display: block;
+          padding: 5px 0;
+          margin: 0 15px;
+           position: relative;
+          color: $primary;
+
+          &:after {
+            height: 5px;
+            background: $secondary;
+            width: 0;
+            content: "";
+            display: block;
+            transition: all .6s cubic-bezier(.165, .84, .44, 1) .0s;
+            position: absolute;
+            bottom: -7px;
+          }
+
+
+          &.router-link-active {
+            &:after {
+              width: 100%;
+            }
+
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+
+        }
+
+        &.active {
+          .dropdown-btn {
+            font-weight: 600;
+            opacity: 1;
+          }
+          .link-hover {
+            font-weight: 600;
+            opacity: 1;
+
+          }
+        }
+
+      }
+
+      .dropdown {
+        margin: 0 15px;
+        width: 100%;
+
+        @include for-size('small-devices') {
+          .dropdown-menu {
+            position: static;
+            box-shadow: none;
+            border: none;
+            margin: 0 !important;
+            width: auto !important;
+            max-width: none !important;
+            animation: none;
+          }
+
+        }
+
+
+        a {
+          margin: 0;
+        }
+
+        &.shown {
+          .dropdown-btn {
+            font-weight: 600;
+            opacity: 1;
+
+          }
+        }
+      }
+
+      @include for-size('small-devices') {
+        .dropdown {
+          display: block !important;
+          margin: 0 15px !important;
+        }
+      }
+
+
+    }
+
+
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary;
+    opacity: 0.8;
+    z-index: 100;
+  }
+
+  .link-hover {
+    &:after {
+      display: none;
+    }
+  }
+
+  .mobile-nav {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    display: none;
+
+    @include for-size('small-devices') {
+      display: block !important;
+    }
+
+
+    a {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      .mobile-nav-line {
+        height: 2px;
+        display: block;
+        background: $primary;
+
+        &:nth-child(1) {
+        }
+
+        &:nth-child(2) {
+          margin: 5px 0;
+        }
+
+        &:nth-child(3) {
+        }
+
+      }
+    }
+
+
+  }
+
+}
+
+
+

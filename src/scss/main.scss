@@ -1,0 +1,24 @@
+// main configuration
+@import "config/variables";
+
+// utilities
+@import "utilities/utilites" ;
+
+// theme
+@import "themes/theme" ;
+
+// fonts
+@import "fonts/thesansarab/stylesheet.css" ;
+
+// general components
+@import "components/components" ;
+
+// components
+@import "components/header";
+
+// pages
+@import "pages/stats";
+@import "pages/landing";
+
+
+

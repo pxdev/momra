@@ -1,0 +1,29 @@
+
+.data-title {
+  position: relative;
+
+  &:hover {
+    &:after {
+      position: absolute;
+      content: attr(data-title);
+      padding: 0.4rem;
+      left: auto;
+      bottom: 100%;
+      color: #fff;
+      display: block;
+      background: rgba(34, 46, 58, .8);
+      white-space: nowrap;
+      font-size: 12px;
+      box-shadow: 0 2px 35px rgba(0, 0, 0, .1);
+      border-radius: 4px;
+      animation-name: fadeOut;
+      animation-fill-mode: both;
+      animation-duration: 0.4s;
+      animation-delay: 0.6s;
+      z-index: 100;
+
+    }
+
+  }
+}
+

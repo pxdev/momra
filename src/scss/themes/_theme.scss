@@ -1,0 +1,37 @@
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-size-adjust: 100%;
+  font-weight: 400;
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  font-size: $font-size-base;
+  background: $body-bg;
+  color: $font-color-base;
+  overflow-x: hidden;
+  font-family: $font-family-base;
+  padding-top: 136px;
+}
+
+.pages-heading {
+  @include for-size('small-devices') {
+    flex-wrap: wrap;
+  }
+}
+
+.pages-content {
+  flex-grow: 1;
+  @include rtl(padding-left, 25px, 0);
+  @include rtl(padding-right, 0, 25px);
+}
+
+
+
+
+
