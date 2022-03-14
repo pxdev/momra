@@ -36,15 +36,3 @@ $num: 0;
     $num: $num + 5;
 }
 
-.page-margin {
-    padding-left: $page-margin;
-    padding-right: $page-margin;
-
-
-    @include for-size('small-devices'){
-        padding-left: $page-margin-sm;
-        padding-right: $page-margin-sm;
-    }
-
-
-}

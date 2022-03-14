@@ -12,11 +12,9 @@
         <div class="pages-heading mg-b-20 d-flex align-items-center justify-content-between">
           <div class="heading-start d-flex align-items-center">
             <div class="pd-5 heading-icon">
-
               <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
                 <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
               </svg>
-
              </div>
             <div class="pd-x-15">
               <h1 class="mg-b-10 d-flex align-items-center">متوسط حجم الأسرة <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h1>

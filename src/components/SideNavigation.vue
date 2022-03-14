@@ -6,63 +6,23 @@
 
       <div class="quick-search mg-y-20">
         <i class="ri-search-line search-ico"></i>
-        <treeselect placeholder="بحث عن المؤشرات" v-model="value" :options="options"/>
+        <treeselect placeholder="بحث عن المؤشرات" v-model="value" :options="sectors"/>
       </div>
       <ul>
-        <li>
-          <a href="#" class="side-nav-link">
+        <li :class="{'active' : sector.isOpened==true }"  v-for="(sector, index) in sectors" :key="index + '_sector'">
+          <a href="#" class="side-nav-link" @click.prevent="toggleNav(sector)" >
             <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-              <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
+              <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
             </svg>
-            <span class="pd-x-20">السكان والخصائص السكانية</span></a>
-        </li>
-        <li>
-          <a href="#" class="side-nav-link">
-            <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-              <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
-            </svg>
-            <span class="pd-x-20">إدارة الكوارث</span></a>
-        </li>
-        <li>
-          <a href="#" class="side-nav-link">
-            <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-              <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
-            </svg>
-            <span class="pd-x-20">السكان والخصائص السكانية</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="side-nav-link">
-            <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-              <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
-            </svg>
-            <span class="pd-x-20">السكان والخصائص السكانية</span></a>
-        </li>
-        <li class="active">
-          <a href="#" class="side-nav-link">
-            <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-              <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
-            </svg>
+            <span class="pd-x-20">{{ sector.label }}</span></a>
 
-            <span class="pd-x-20">السكان والخصائص السكانية</span></a>
-          <ul>
-            <li><a href="#">إجمالي عدد الأسر</a></li>
-            <li class="active"><a href="#">متوسط حجم الأسرة</a></li>
-            <li><a href="#">متوسط دخل الأسرة</a></li>
-            <li><a href="#">معدل بطالة الشباب</a></li>
-            <li><a href="#">متوسط العمر المتوقع عند الولادة</a></li>
-            <li><a href="#">نصيب الفرد من الناتج المحلي</a></li>
+          <ul v-if="sector.children.length && sector.isOpened == true  " >
+            <li :class="{'active' : indicator.isActive==true }" v-for="(indicator, index) in sector.children"
+                :key="index + '_indicator'">
+              <a href="#">{{ indicator.label }}</a>
+            </li>
           </ul>
         </li>
-        <li>
-          <a href="#" class="side-nav-link">
-            <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-              <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
-            </svg>
-
-            <span class="pd-x-20">السكان والخصائص السكانية</span></a>
-        </li>
-
       </ul>
 
     </nav>
@@ -79,26 +39,101 @@ export default {
   components: {Treeselect},
   data() {
     return {
-      // define the default value
+
       value: null,
-      // define options
-      options: [{
-        id: 'a',
-        label: 'a',
-        children: [{
-          id: 'aa',
-          label: 'aa',
-        }, {
-          id: 'ab',
-          label: 'ab',
-        }],
-      }, {
-        id: 'b',
-        label: 'b',
-      }, {
-        id: 'c',
-        label: 'c',
-      }],
+
+      sectors: [
+        {
+          id: 'السكان والخصائص السكانية',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: ' السكان والخصائص السكانية ',
+          children: [
+            {
+              id: ' عدد الأسر',
+              label: '  عدد الأسر ',
+              isActive: true,
+            },
+            {
+              id: 'المعدل السنوي  الأسر الجديدة',
+              label: ' المعدل السنوي  الأسر الجديدة ',
+              isActive: false,
+            }
+          ],
+        },
+        {
+          id: ' المياه والبيئة',
+          iconId: "conference-ico",
+          isActive: true,
+          isOpened: true,
+          label: 'المياه والبيئة',
+          children: [
+            {
+              id: ' تركيز ثاني أكسيد الكبريت ',
+              label: '  تركيز ثاني أكسيد الكبريت  ',
+              isActive: true,
+            },
+            {
+              id: ' عدد محطات الرصد والمراقبة ',
+              label: '  عدد محطات الرصد والمراقبة  ',
+              isActive: false,
+            },
+            {
+              id: ' نسبة زمن الاستجابة  دقائق فأقل ',
+              label: '  نسبة زمن الاستجابة  دقائق فأقل  ',
+              isActive: false,
+            },
+
+            {
+              id: '  زمن الاستجابة  دقائق فأقل ',
+              label: '   زمن الاستجابة  دقائق فأقل  ',
+              isActive: false,
+            },
+          ],
+        },
+        {
+          id: ' إدارة الكوارث ',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: '  إدارة الكوارث  ',
+          children: [
+            {
+              id: ' نسبة زمن الاستجابة للحوادث خلال سبع دقائق فأقل ',
+              label: '  نسبة زمن الاستجابة للحوادث خلال سبع دقائق فأقل  ',
+              isActive: false,
+            },
+            {
+              id: 'المعدل السنوي الأسر الجديدة',
+              label: ' المعدل السنوي الأسر الجديدة ',
+              isActive: false,
+            }
+          ],
+        },
+        {
+          id: ' الايواء والمساكن ',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: '  الايواء والمساكن  ',
+          children: []
+        },
+        {
+          id: 'البنية التحتية',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'البنية التحتية',
+          children: []
+        },
+      ],
+    }
+  }
+  ,
+  methods:{
+    toggleNav(sector){
+      sector.isOpened = ! sector.isOpened
     }
   }
 }
