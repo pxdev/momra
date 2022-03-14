@@ -1,7 +1,7 @@
 .explore-page {
 
   position: relative;
-  color: #fff;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,6 +23,7 @@
 
   .explore-data {
     padding: 0 160px;
+    color: #fff;
 
     @include for-size('small-devices') {
       padding: 0 ;
