@@ -51,10 +51,12 @@ header {
 
   }
 
-
+.user-profile {
   .dropdown-btn {
     color: $secondary;
   }
+
+}
 
   .nav-heading {
     display: none;
@@ -104,7 +106,12 @@ header {
           width: 100%;
         }
 
-        a {
+        .dropdown-btn {
+          font-size: 16px;
+          color: $primary;
+        }
+
+        a.parent-link {
           font-size: 16px;
           display: block;
           padding: 5px 0;
@@ -177,8 +184,6 @@ header {
 
         &.shown {
           .dropdown-btn {
-            font-weight: 600;
-            opacity: 1;
 
           }
         }

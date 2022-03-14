@@ -148,15 +148,14 @@
     }
 
     &:hover {
+      --blue-color: rgba(255,255,255,0.6);
+      --green-color: #FFF;
+
+
       span {
         color: #fff;
       }
 
-      svg {
-        path {
-          stroke: #fff;
-        }
-      }
 
       &:after {
         transform: scaleY(1.2);

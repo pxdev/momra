@@ -23,6 +23,10 @@
       }
 
       &.active {
+
+        --blue-color: #9AC4C3;
+        --green-color: #FFF;
+
         a.side-nav-link {
           background: $primary;
           color: #fff;
@@ -59,6 +63,7 @@
           }
 
           &.active {
+
             a {
               opacity: 1;
               font-weight: 700;

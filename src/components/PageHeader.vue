@@ -31,13 +31,20 @@
 
           <ul>
             <li>
-              <router-link to="/" href="#">الرئيسية</router-link>
+              <router-link class="parent-link" to="/" href="#">الرئيسية</router-link>
             </li>
-            <li><a href="#">عن المرصد</a></li>
-            <li><a href="#">أعمالنا الحضرية</a></li>
-            <li><a href="#">المنصة التحليلية </a></li>
-            <li><a href="#">أخبار الرصد الحضري </a></li>
-            <li><a href="#">تواصل معنا </a></li>
+            <li>
+              <drop-down class="parent-link" title="عن المرصد" width="200" toggle-arrow="true">
+                <a href="#" class="menu-item">الأهداف </a>
+                <a href="#" class="menu-item">الرؤية</a>
+                <a href="#" class="menu-item">الرسالة</a>
+                <a href="#" class="menu-item">الائحة التنظيمية</a>
+              </drop-down>
+            </li>
+            <li><a class="parent-link" href="#">أعمالنا الحضرية</a></li>
+            <li><a class="parent-link" href="#">المنصة التحليلية </a></li>
+            <li><a class="parent-link" href="#">أخبار الرصد الحضري </a></li>
+            <li><a class="parent-link" href="#">تواصل معنا </a></li>
           </ul>
         </nav>
         <div v-if="loggedIn" class="divider bd-l mg-x-10"></div>

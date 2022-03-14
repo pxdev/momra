@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #68BFCA;
+  --green-color: #60CB5F;
+}
 
 html {
   line-height: 1.5;
@@ -17,9 +21,18 @@ body {
   overflow-x: hidden;
   font-family: $font-family-base;
   padding-top: 136px;
+
+
+
 }
 
 .pages-heading {
+  @include for-size('small-devices') {
+    flex-wrap: wrap;
+  }
+}
+
+.pages {
   @include for-size('small-devices') {
     flex-wrap: wrap;
   }
@@ -32,8 +45,6 @@ body {
   @include rtl(padding-left, 25px, 0);
   @include rtl(padding-right, 0, 25px);
 }
-
-
 
 
 

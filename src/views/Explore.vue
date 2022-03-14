@@ -27,7 +27,7 @@
               </div>
             </div>
           </div>
-          <a href="#" class="btn btn-secondary lg pd-x-30">تفاصيل</a>
+          <router-link to="/analytics" href="#" class="btn btn-secondary lg pd-x-30">تفاصيل</router-link>
         </div>
 
       </div>
@@ -38,7 +38,7 @@
 
 <script>
 
-import PageHeader from "../components/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import SideNavigation from "@/components/SideNavigation";
 
 export default {

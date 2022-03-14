@@ -23,6 +23,12 @@
 
   .explore-data {
     padding: 0 160px;
+
+    @include for-size('small-devices') {
+      padding: 0 ;
+    }
+
+
   }
 
 
@@ -35,6 +41,10 @@
 
       @include for-size('small-devices') {
         width: 50%;
+      }
+
+      @include for-size('phone-only') {
+        width: 100%;
       }
 
     }

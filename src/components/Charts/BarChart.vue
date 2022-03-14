@@ -1,99 +1,90 @@
 <template>
-  <div class="charts bar-chart" ref="chartdiv"></div>
+  <div>
+    <div :id="chartId" class="charts"></div>
+  </div>
 </template>
 
 <script>
-import * as am5 from '@amcharts/amcharts5';
-import * as am5xy from '@amcharts/amcharts5/xy';
+/* Imports */
+import * as am4core from "@amcharts/amcharts4/core";
+import * as am4charts from "@amcharts/amcharts4/charts";
+import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+
+am4core.options.commercialLicense = true;
 
 export default {
   name: "BarChart",
+
+  props:['chartId'],
+
   mounted() {
-    let root = am5.Root.new(this.$refs.chartdiv);
 
 
-    let chart = root.container.children.push(
-        am5xy.XYChart.new(root, {
-          panY: false,
-          layout: root.verticalLayout
-        })
-    );
+// Themes begin
+    am4core.useTheme(am4themes_animated);
+// Themes end
 
-    // Define data
-    let data = [{
-      category: "2015",
-      value1: 10,
-      value2: 58
-    },
-      {
-        category: "2017",
-        value1: 12,
-        value2: 180
-      }, {
-        category: "2019",
-        value1: 85,
-        value2: 120
-      }
+// Create chart instance
+    var chart = am4core.create(this.chartId, am4charts.XYChart);
+
+// Add data
+    chart.data = [{
+      "year": "2015",
+      "count": 5
+    }, {
+      "year": "2016",
+      "count": 10
+    }, {
+      "year": "2017",
+      "count": 20
+    }, {
+      "year": "2018",
+      "count": 30
+    }, {
+      "year": "2019",
+      "count": 4
+    }, {
+      "year": "2020",
+      "count": 5
+    }];
+
+
+// Modify chart's colors
+    chart.colors.list = [
+      am4core.color("#046F6C"),
     ];
 
-    // Create Y-axis
-    let yAxis = chart.yAxes.push(
-        am5xy.ValueAxis.new(root, {
-          renderer: am5xy.AxisRendererY.new(root, {})
-        })
-    );
+ // Create axes
+    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "year";
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.minGridDistance = 30;
 
-    // Create X-Axis
-    let xAxis = chart.xAxes.push(
-        am5xy.CategoryAxis.new(root, {
-          renderer: am5xy.AxisRendererX.new(root, {}),
-          categoryField: "category"
-        })
-    );
-    xAxis.data.setAll(data);
+    categoryAxis.renderer.cellStartLocation = 0.2;
+    categoryAxis.renderer.cellEndLocation = 0.6;
 
-    // Create series
-    let series1 = chart.series.push(
-        am5xy.ColumnSeries.new(root, {
-          name: "Series",
-          xAxis: xAxis,
-          yAxis: yAxis,
-          valueYField: "value1",
-          categoryXField: "category"
-        })
-    );
-    series1.data.setAll(data);
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    console.log(valueAxis)
 
-    let series2 = chart.series.push(
-        am5xy.ColumnSeries.new(root, {
-          name: "Series",
-          xAxis: xAxis,
-          yAxis: yAxis,
-          valueYField: "value2",
-          categoryXField: "category"
-        })
-    );
-    series2.data.setAll(data);
+// Create series
+    var series = chart.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = "count";
+    series.dataFields.categoryX = "year";
+    series.name = "Visits";
+    series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
+    series.columns.template.fillOpacity = 1;
+    series.columns.template.column.cornerRadiusTopRight = 4;
+    series.columns.template.column.cornerRadiusTopLeft = 4;
 
+    var columnTemplate = series.columns.template;
+    columnTemplate.strokeWidth = 0;
+    columnTemplate.strokeOpacity = 0;
 
-    // Add cursor
-    chart.set("cursor", am5xy.XYCursor.new(root, {}));
-
-    this.root = root;
-  },
-
-  beforeDestroy() {
-    if (this.root) {
-      this.root.dispose();
-    }
   }
 
 }
 </script>
 
 <style scoped>
-.bar-chart {
-  width: 100%;
-  height: 300px;
-}
+
 </style>

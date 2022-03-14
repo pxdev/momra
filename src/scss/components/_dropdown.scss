@@ -87,13 +87,13 @@
     a.menu-item {
       display: block;
       padding: 10px 15px;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid lighten($border-color, 5);
       transition: 0.4s all ease-in-out;
       font-size: 14px;
-      font-weight: 400;
+      color: $primary;
 
       &:hover {
-        background: #FAFAFA;
+        background: $gray;
       }
 
       &:last-child {
@@ -120,9 +120,9 @@
 
 .toggle-arrow {
   transition: 0.4s all ease-out;
-  width: 14px;
-  height: 14px;
-
+  width: 15px;
+  height: 15px;
+  fill: $primary
 }
 
 .shown {
