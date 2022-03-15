@@ -40,87 +40,183 @@ export default {
       value: null,
       sectors: [
         {
-          id: 'السكان والخصائص السكانية',
+          id: '01',
           iconId: "conference-ico",
           isActive: false,
           isOpened: false,
           label: ' السكان والخصائص السكانية ',
           children: [
             {
-              id: ' عدد الأسر',
+              id: ' 01-01',
               label: '  عدد الأسر ',
               isActive: true,
             },
             {
-              id: 'المعدل السنوي  الأسر الجديدة',
+              id: '01-02',
               label: ' المعدل السنوي  الأسر الجديدة ',
               isActive: false,
             }
           ],
         },
         {
-          id: ' المياه والبيئة',
+          id: ' 02',
           iconId: "conference-ico",
           isActive: true,
           isOpened: true,
           label: 'المياه والبيئة',
           children: [
             {
-              id: ' تركيز ثاني أكسيد الكبريت ',
+              id: ' 02-01 ',
               label: '  تركيز ثاني أكسيد الكبريت  ',
               isActive: true,
             },
             {
-              id: ' عدد محطات الرصد والمراقبة ',
+              id: ' 02-02 ',
               label: '  عدد محطات الرصد والمراقبة  ',
               isActive: false,
             },
             {
-              id: ' نسبة زمن الاستجابة  دقائق فأقل ',
+              id: ' 02-03 ',
               label: '  نسبة زمن الاستجابة  دقائق فأقل  ',
               isActive: false,
             },
 
             {
-              id: '  زمن الاستجابة  دقائق فأقل ',
+              id: '  02-04 ',
               label: '   زمن الاستجابة  دقائق فأقل  ',
               isActive: false,
             },
           ],
         },
         {
-          id: ' إدارة الكوارث ',
+          id: ' 03 ',
           iconId: "conference-ico",
           isActive: false,
           isOpened: false,
           label: '  إدارة الكوارث  ',
           children: [
             {
-              id: ' نسبة زمن الاستجابة للحوادث خلال سبع دقائق فأقل ',
+              id: ' 03-01 ',
               label: '  نسبة زمن الاستجابة للحوادث خلال سبع دقائق فأقل  ',
               isActive: false,
             },
             {
-              id: 'المعدل السنوي الأسر الجديدة',
+              id: '03-02',
               label: ' المعدل السنوي الأسر الجديدة ',
               isActive: false,
             }
           ],
         },
         {
-          id: ' الايواء والمساكن ',
+          id: ' 04',
           iconId: "conference-ico",
           isActive: false,
           isOpened: false,
-          label: '  الايواء والمساكن  ',
+          label: '  الشؤون الإسلامية والحج والعمرة ',
           children: []
         },
         {
-          id: 'البنية التحتية',
+          id: '05',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'الأمن والسلامة',
+          children: []
+        },
+        {
+          id: '06',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'الايواء والمساكن',
+          children: []
+        },
+        {
+          id: '07',
           iconId: "conference-ico",
           isActive: false,
           isOpened: false,
           label: 'البنية التحتية',
+          children: []
+        },
+        {
+          id: '08',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'الطاقة',
+          children: []
+        },
+        {
+          id: '09',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'الحوكمة والتشريعات',
+          children: []
+        },
+        {
+          id: '10',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'الثقافة والإعلام',
+          children: []
+        },
+        {
+          id: '11',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'الصحة',
+          children: []
+        },
+        {
+          id: '12',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'النمو الاقتصادي',
+          children: []
+        },
+        {
+          id: '13',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'التعليم',
+          children: []
+        },
+        {
+          id: '14',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'العمل والحماية الاجتماعية',
+          children: []
+        },
+        {
+          id: '15',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'النسيج العمراني',
+          children: []
+        },
+        {
+          id: '16',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'تمويل البلديات',
+          children: []
+        },
+        {
+          id: '17',
+          iconId: "conference-ico",
+          isActive: false,
+          isOpened: false,
+          label: 'السياحة والترفيه والرياضة',
           children: []
         },
       ],

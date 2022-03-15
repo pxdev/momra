@@ -31,20 +31,28 @@
 
           <ul>
             <li>
-              <router-link class="parent-link" to="/" href="#">الرئيسية</router-link>
+              <router-link class="parent-link" to="/">الرئيسية</router-link>
             </li>
             <li>
-              <drop-down class="parent-link" title="عن المرصد" width="200" toggle-arrow="true">
-                <a href="#" class="menu-item">الأهداف </a>
-                <a href="#" class="menu-item">الرؤية</a>
-                <a href="#" class="menu-item">الرسالة</a>
-                <a href="#" class="menu-item">الائحة التنظيمية</a>
+              <a class="parent-link" href="#">عن المرصد</a>
+            </li>
+            <li>
+              <drop-down class="parent-link" title="اعمالنا الحضرية" width="250" toggle-arrow="true">
+                <a href="#" class="menu-item">الأدلة الاسترشادية للمراصد المحلية </a>
+                <a href="#" class="menu-item">التجارب الدولية والمحلية</a>
+                <a href="#" class="menu-item">الاستطلاعات الحضرية</a>
               </drop-down>
             </li>
-            <li><a class="parent-link" href="#">أعمالنا الحضرية</a></li>
-            <li><a class="parent-link" href="#">المنصة التحليلية </a></li>
-            <li><a class="parent-link" href="#">أخبار الرصد الحضري </a></li>
-            <li><a class="parent-link" href="#">تواصل معنا </a></li>
+            <li>
+              <drop-down class="parent-link" title="المؤشرات الحضرية" width="200" toggle-arrow="true">
+                <a href="#" class="menu-item">أداء القطاعات الحضرية </a>
+                <a href="#" class="menu-item">أداء المناطق</a>
+                <a href="#" class="menu-item">الخارطة التفاعلية</a>
+                <a href="#" class="menu-item">حاسبة أهمية البيانات</a>
+              </drop-down>
+            </li>
+            <li><a class="parent-link" href="#">دراسات حضرية </a></li>
+            <li><a class="parent-link" href="#">الأخبار الحضرية </a></li>
           </ul>
         </nav>
         <div v-if="loggedIn" class="divider bd-l mg-x-10"></div>
@@ -54,10 +62,10 @@
             <avatar class="rounded-circle" size="35" src="https://i.pravatar.cc/150?u=a042581f4e29026704d"></avatar>
             <drop-down class="user-profile mg-x-10 tx-secondary" title="عبد الله" width="200" toggle-arrow="true">
               <a href="#" class="menu-item">الملف الشخصى</a>
-              <a href="#" class="menu-item"  @click.prevent="loggedIn=false">تسجيل الخروج</a>
+              <a href="#" class="menu-item" @click.prevent="loggedIn=false">تسجيل الخروج</a>
             </drop-down>
           </div>
-          <a v-else href="#" class="btn  btn-secondary" @click.prevent="loggedIn=true" >تسجيل الدخول</a>
+          <a v-else href="#" class="btn  btn-secondary" @click.prevent="loggedIn=true">تسجيل الدخول</a>
 
 
           <div class="mobile-nav">

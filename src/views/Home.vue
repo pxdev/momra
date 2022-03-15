@@ -3,7 +3,7 @@
     <page-header></page-header>
     <main class="bg-primary">
 
-      <video-bg :sources="['Summer_Flower_4K_Living_Background.mp4']">
+      <video-bg :sources="['intro.mp4']">
         <div class="landing-heading">
           <div class="container"><h1 class="tx-34">المرصد الحضري الوطني</h1></div>
         </div>
@@ -49,10 +49,7 @@
         </div>
         <!-- / landing-navigation -->
 
-
       </video-bg>
-
-
 
     </main>
 

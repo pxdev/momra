@@ -32,10 +32,9 @@ export default {
   },
   methods: {
 
-    toggleDropdown(e) {
+    toggleDropdown() {
       this.state = !this.state
-      console.log(e)
-    },
+     },
     close(e) {
       if (!this.$el.contains(e.target)) {
         this.state = false

@@ -31,6 +31,8 @@ export default {
 
     // Create map instance
     var chart = am4core.create(this.chartId, am4maps.MapChart);
+    chart.chartContainer.wheelable = false;
+    chart.seriesContainer.draggable = false;
 
 // Set map definition
     chart.geodata = am4geodata_region_saudiArabia_onLow;
@@ -126,7 +128,7 @@ export default {
 
 // Configure series tooltip
     var polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "{title}: {value}";
+    polygonTemplate.tooltipText = " منطقة {title}";
     polygonTemplate.nonScalingStroke = true;
     polygonTemplate.strokeWidth = 0.5;
     polygonTemplate.fill = am4core.color("#74B266");

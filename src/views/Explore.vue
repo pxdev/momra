@@ -8,12 +8,16 @@
         <div class="explore-data">
         <div class="explore-heading pd-y-60">
 
+          <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
+            <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
+          </svg>
+
+
           <div class="explore-nav d-flex">
             <a href="#"><i class="ri-arrow-right-line tx-warning tx-34"></i></a>
             <a href="#"><i class="ri-arrow-left-line tx-warning tx-34"></i></a>
           </div>
-
-          <h1 class="tx-42">الإيواء والمساكن</h1>
+          <h1 class="tx-42">السكان والخصائص السكانية</h1>
           <p class="op-6">إنه نص وهمي لتصميم الويب</p>
         </div>
 

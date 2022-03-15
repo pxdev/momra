@@ -39,11 +39,11 @@
   }
 
   .vue-slider-mark-label {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     color: $primary;
-    margin-top: -40px !important;
-    padding: 0 10px;
+    margin-top: -38px !important;
+    padding: 0 0;
     cursor: pointer;
 
     @include for-size('phone-only') {

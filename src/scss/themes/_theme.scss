@@ -9,6 +9,7 @@ html {
   font-size-adjust: 100%;
   font-weight: 400;
   direction: rtl;
+  height: 100%;
 }
 
 body {
@@ -21,7 +22,18 @@ body {
   overflow-x: hidden;
   font-family: $font-family-base;
   padding-top: 136px;
+}
 
+main {
+  min-height: 100vh;
+}
+
+#app{
+  height: 100%;
+}
+
+.router-content {
+  height: 100%;
 }
 
 .pages-heading {

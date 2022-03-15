@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div @click.prevent="exploreRegion">
     <div :id="chartId" class="charts"></div>
-
   </div>
 </template>
 
@@ -25,7 +24,8 @@ export default {
 
     // Create map instance
     var chart = am4core.create(this.chartId, am4maps.MapChart);
-
+    chart.chartContainer.wheelable = false;
+    chart.seriesContainer.draggable = false;
 // Set map definition
     chart.geodata = am4geodata_region_saudiArabia_onLow;
 
@@ -43,6 +43,11 @@ export default {
 
 // Make map load polygon data (state shapes and names) from GeoJSON
     polygonSeries.useGeodata = true;
+
+
+    polygonSeries.events.on("hit", function() {
+
+    })
 
     // Set heatmap values for each state
     polygonSeries.data = [
@@ -115,10 +120,9 @@ export default {
     ];
 
 
-
 // Configure series tooltip
     var polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "{title}";
+    polygonTemplate.tooltipText = " منطقة {title}";
     polygonTemplate.nonScalingStroke = true;
     polygonTemplate.strokeWidth = 1;
     polygonTemplate.stroke = am4core.color("#fff")
@@ -133,7 +137,12 @@ export default {
     hs.properties.fill = am4core.color("#0C5955");
     hs.properties.fillOpacity = 1;
 
-}
+},
+  methods:{
+    exploreRegion(){
+      this.$router.push("/explore");
+    }
+  },
 }
 </script>
 

@@ -1,10 +1,28 @@
 .explore-page {
-
   position: relative;
-
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: $primary;
+
+  .explore-heading {
+    position: relative;
+    --blue-color: #9AC4C3;
+    --green-color: #FFF;
+
+    .svg-ico {
+      height: 200px;
+      width: 200px;
+      opacity: 0.2;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(50%);
+      z-index: -1;
+    }
+
+  }
 
   h1 {
     color: #fff;
@@ -22,7 +40,7 @@
   }
 
   .explore-data {
-    padding: 0 160px;
+    padding: 50px 160px;
     color: #fff;
 
     @include for-size('small-devices') {
