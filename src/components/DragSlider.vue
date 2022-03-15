@@ -1,7 +1,9 @@
 <template>
-<div>
-  <vue-slider class="indicator-slider" v-model="value" :data="data" :marks="true" :tooltip="'none'">
-
+<div class="d-flex align-items-center">
+   <vue-slider class="indicator-slider flex-fill mg-x-50" v-model="value"  :interval="1" :data="data" :marks="true" :tooltip="'none'">
+     <template v-slot:dot>
+      <span class="custom-dot"></span>
+    </template>
   </vue-slider>
 </div>
 </template>
@@ -9,7 +11,6 @@
 <script>
 
 import VueSlider from 'vue-slider-component'
-import 'vue-slider-component/theme/default.css'
 
 export default {
   name: "DragSlider",
@@ -18,8 +19,8 @@ export default {
   },
   data(){
     return{
-      value:[10, 20],
-      data: ['2021', '2020', '2019', '2018', '2017', '..2010']
+      value:[1, 20],
+      data: ['2021', '2020', '2019', '2018', '2017', '2010']
     }
   }
 }
