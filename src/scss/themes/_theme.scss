@@ -22,8 +22,6 @@ body {
   font-family: $font-family-base;
   padding-top: 136px;
 
-
-
 }
 
 .pages-heading {
@@ -44,6 +42,12 @@ body {
   z-index: 5;
   @include rtl(padding-left, 25px, 0);
   @include rtl(padding-right, 0, 25px);
+
+  @include for-size('small-devices') {
+    @include rtl(padding-left, 0, 0);
+    @include rtl(padding-right, 0, 0);
+  }
+
 }
 
 

@@ -56,7 +56,7 @@
         <!-- / quick-stats -->
         <div class="state-widgets cols-2 d-flex align-items-stretch">
           <div class="card mg-b-15 shadow rounded pd-25">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between flex-wrap align-items-center">
               <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 d-flex align-items-center">متوسط حجم الأسرة <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
@@ -97,7 +97,7 @@
               والأشخاص المتضررين مباشرة بسبب الكوارث لكل 100,000 نسمة:A2 عدد الوفيات بسبب الكوارث:A3 عدد المفقودين بسبب
               الكوارث:B1 عدد الأشخاص المتأثرين بشكل مباشر بسبب الكوارث</p>
 
-            <div class="bg-gray shadow bd rounded mg-t-15 pd-15 d-flex align-items-center justify-content-between">
+            <div class="bg-gray calc-legend shadow bd rounded mg-t-15 pd-15 d-flex align-items-center justify-content-between">
               <div class="meta-data pd-x-20 flex-fill">
                 <p class="tx-12">وحدة القياس</p>
                 <p class="tx-20 tx-bold tx-primary">عدد</p>
