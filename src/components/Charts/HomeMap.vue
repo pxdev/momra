@@ -10,7 +10,7 @@
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 //import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
-import am4geodata_usaLow from "@amcharts/amcharts4-geodata/usaLow";
+import am4geodata_region_saudiArabia_onLow from "@amcharts/amcharts4-geodata/saudiArabiaLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 am4core.options.commercialLicense = true;
@@ -27,10 +27,10 @@ export default {
     var chart = am4core.create(this.chartId, am4maps.MapChart);
 
 // Set map definition
-    chart.geodata = am4geodata_usaLow;
+    chart.geodata = am4geodata_region_saudiArabia_onLow;
 
 // Set projection
-    chart.projection = new am4maps.projections.AlbersUsa();
+    chart.projection = new am4maps.projections.Miller();
 
 // Create map polygon series
     var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -44,214 +44,81 @@ export default {
 // Make map load polygon data (state shapes and names) from GeoJSON
     polygonSeries.useGeodata = true;
 
-// Set heatmap values for each state
+    // Set heatmap values for each state
     polygonSeries.data = [
       {
-        id: "US-AL",
-        value: 4447100
+        id: "SA-01",
+        value: 4447100,
+        title: "الرياض"
       },
       {
-        id: "US-AK",
-        value: 626932
+        id: "SA-02",
+        value: 626932,
+        title: "مكة المكرمة"
       },
       {
-        id: "US-AZ",
-        value: 5130632
+        id: "SA-03",
+        value: 5130632,
+        title: "المدينة المنورة"
       },
       {
-        id: "US-AR",
-        value: 2673400
+        id: "SA-04",
+        value: 2673400,
+        title: "الشرقية"
       },
       {
-        id: "US-CA",
-        value: 33871648
+        id: "SA-05",
+        value: 5130632,
+        title: "القصيم"
       },
       {
-        id: "US-CO",
-        value: 4301261
+        id: "SA-06",
+        value: 4301261,
+        title: "حائل"
       },
       {
-        id: "US-CT",
-        value: 3405565
+        id: "SA-07",
+        value: 3405565,
+        title: "تبوك"
       },
       {
-        id: "US-DE",
-        value: 783600
+        id: "SA-08",
+        value: 783600,
+        title: "الحدود الشمالية"
       },
       {
-        id: "US-FL",
-        value: 15982378
+        id: "SA-09",
+        value: 15982378,
+        title: "جازان"
       },
       {
-        id: "US-GA",
-        value: 8186453
+        id: "SA-10",
+        value: 8186453,
+        title: "نجران"
       },
       {
-        id: "US-HI",
-        value: 1211537
+        id: "SA-11",
+        value: 1211537,
+        title: "الباحة"
       },
       {
-        id: "US-ID",
-        value: 1293953
+        id: "SA-12",
+        value: 1293953,
+        title: "الجوف"
       },
+
       {
-        id: "US-IL",
-        value: 12419293
-      },
-      {
-        id: "US-IN",
-        value: 6080485
-      },
-      {
-        id: "US-IA",
-        value: 2926324
-      },
-      {
-        id: "US-KS",
-        value: 2688418
-      },
-      {
-        id: "US-KY",
-        value: 4041769
-      },
-      {
-        id: "US-LA",
-        value: 4468976
-      },
-      {
-        id: "US-ME",
-        value: 1274923
-      },
-      {
-        id: "US-MD",
-        value: 5296486
-      },
-      {
-        id: "US-MA",
-        value: 6349097
-      },
-      {
-        id: "US-MI",
-        value: 9938444
-      },
-      {
-        id: "US-MN",
-        value: 4919479
-      },
-      {
-        id: "US-MS",
-        value: 2844658
-      },
-      {
-        id: "US-MO",
-        value: 5595211
-      },
-      {
-        id: "US-MT",
-        value: 902195
-      },
-      {
-        id: "US-NE",
-        value: 1711263
-      },
-      {
-        id: "US-NV",
-        value: 1998257
-      },
-      {
-        id: "US-NH",
-        value: 1235786
-      },
-      {
-        id: "US-NJ",
-        value: 8414350
-      },
-      {
-        id: "US-NM",
-        value: 1819046
-      },
-      {
-        id: "US-NY",
-        value: 18976457
-      },
-      {
-        id: "US-NC",
-        value: 8049313
-      },
-      {
-        id: "US-ND",
-        value: 642200
-      },
-      {
-        id: "US-OH",
-        value: 11353140
-      },
-      {
-        id: "US-OK",
-        value: 3450654
-      },
-      {
-        id: "US-OR",
-        value: 3421399
-      },
-      {
-        id: "US-PA",
-        value: 12281054
-      },
-      {
-        id: "US-RI",
-        value: 1048319
-      },
-      {
-        id: "US-SC",
-        value: 4012012
-      },
-      {
-        id: "US-SD",
-        value: 754844
-      },
-      {
-        id: "US-TN",
-        value: 5689283
-      },
-      {
-        id: "US-TX",
-        value: 20851820
-      },
-      {
-        id: "US-UT",
-        value: 2233169
-      },
-      {
-        id: "US-VT",
-        value: 608827
-      },
-      {
-        id: "US-VA",
-        value: 7078515
-      },
-      {
-        id: "US-WA",
-        value: 5894121
-      },
-      {
-        id: "US-WV",
-        value: 1808344
-      },
-      {
-        id: "US-WI",
-        value: 5363675
-      },
-      {
-        id: "US-WY",
-        value: 493782
+        id: "SA-14",
+        value: 6080485,
+        title: "عسير"
       }
     ];
 
 
+
 // Configure series tooltip
     var polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "{name}: {value}";
+    polygonTemplate.tooltipText = "{title}";
     polygonTemplate.nonScalingStroke = true;
     polygonTemplate.strokeWidth = 1;
     polygonTemplate.stroke = am4core.color("#fff")
