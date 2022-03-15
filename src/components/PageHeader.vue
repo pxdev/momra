@@ -26,7 +26,7 @@
 
           <div class="d-flex justify-content-between nav-heading" v-if="isMobile">
             <h5>القائمة الرئيسية</h5>
-            <a href="#" @click.prevent="toggleMobileNav"><i class="abjd-close"></i></a>
+            <a href="#" @click.prevent="toggleMobileNav"><i class="ri-close-line tx-22"></i></a>
           </div>
 
           <ul>
