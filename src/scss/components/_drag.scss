@@ -1,5 +1,5 @@
 .indicator-slider {
-  height: 45px !important;
+  height: 46px !important;
   border-radius: 6px !important;
 
 
@@ -18,6 +18,8 @@
   /* process style */
   .vue-slider-process {
     background-color: #68BFCA;
+    height: 46px !important;
+    top: 0!important;
   }
 
   /* mark style */
@@ -59,12 +61,12 @@
   }
 
   .vue-slider-dot {
-    height: 45px !important;
-    width: 45px !important;
+    height: 46px !important;
+    width: 46px !important;
     cursor: pointer;
     border-radius: 10px 0 0 10px;
     background-color: #68BFCA;
-    transform: translate(-45px, -50%) !important;
+    transform: translate(-46px, -50%) !important;
 
     .custom-dot {
       position: absolute;

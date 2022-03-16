@@ -5,13 +5,24 @@
   z-index: 5;
   margin-bottom: 30px;
 
+  .scroll-area {
+    position: relative;
+    height: 840px;
+    direction: ltr;
+    .scroll-content{
+
+      @include rtl(direction, rtl, ltr);
+      @include rtl(direction, ltr, rtl);
+
+    }
+  }
+
   @include for-size('small-devices') {
     width: 100%;
-   }
+  }
 
   .side-nav {
     word-break: break-word;
-    padding: 25px;
 
     li {
       a.side-nav-link {

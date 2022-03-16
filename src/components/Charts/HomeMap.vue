@@ -1,5 +1,5 @@
 <template>
-  <div @click.prevent="exploreRegion">
+  <div>
     <div :id="chartId" class="charts"></div>
   </div>
 </template>
@@ -17,7 +17,7 @@ am4core.options.commercialLicense = true;
 export default {
   name: "HomeMap",
 
-  props:['chartId'],
+  props: ['chartId'],
 
   mounted() {
     am4core.useTheme(am4themes_animated);
@@ -39,14 +39,14 @@ export default {
     polygonSeries.heatRules.push({
       property: "fill",
       target: polygonSeries.mapPolygons.template,
-     });
+    });
 
 // Make map load polygon data (state shapes and names) from GeoJSON
     polygonSeries.useGeodata = true;
 
 
-    polygonSeries.events.on("hit", function() {
-
+    polygonSeries.events.on("hit", () => {
+      this.exploreRegion()
     })
 
     // Set heatmap values for each state
@@ -137,9 +137,9 @@ export default {
     hs.properties.fill = am4core.color("#0C5955");
     hs.properties.fillOpacity = 1;
 
-},
-  methods:{
-    exploreRegion(){
+  },
+  methods: {
+    exploreRegion() {
       this.$router.push("/explore");
     }
   },

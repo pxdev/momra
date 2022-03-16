@@ -5,7 +5,7 @@
 
     <main class="container pages pd-y-30 d-flex">
 
-      <side-navigation></side-navigation>
+      <side-navigation @updateActive="setActiveSector" :active-sector-index="activeSectorIndex"></side-navigation>
 
       <div class="pages-content">
 
@@ -13,11 +13,16 @@
           <div class="heading-start d-flex align-items-center">
             <div class="pd-5 heading-icon">
               <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-                <use class="svg-ico-use" xlink:href="icons/icon.symbol.svg#conference-ico"></use>
+                <use class="svg-ico-use"
+                     :xlink:href="`icons/icon.symbol.svg#${sectors[activeSectorIndex].iconId}`"></use>
               </svg>
-             </div>
+
+            </div>
             <div class="pd-x-15">
-              <h1 class="mg-b-10 d-flex align-items-center">متوسط حجم الأسرة <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h1>
+              <h1 class="mg-b-10 d-flex align-items-center">{{ sectors[activeSectorIndex].label }}
+                <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
+                   data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
+              </h1>
               <p class="op-8">كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>
             </div>
           </div>
@@ -49,7 +54,10 @@
           </div>
           <div class="divider flex-grow-0 bd-l bd-2 mg-x-30"></div>
           <div class="indicator-info">
-            <h4 class="mg-b-10 d-flex align-items-center">بيانات المؤشر <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
+            <h4 class="mg-b-10 d-flex align-items-center">بيانات المؤشر
+              <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
+                 data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
+            </h4>
             <drag-slider></drag-slider>
           </div>
         </div>
@@ -58,13 +66,15 @@
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="d-flex justify-content-between flex-wrap align-items-center">
               <div class="widget-heading mg-b-15">
-              <h4 class="mg-b-5 d-flex align-items-center">متوسط حجم الأسرة <i
-                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
-              <p class="op-8 tx-12">التغير السنوي في أداء المدن حسب المؤشر</p>
-            </div>
+                <h4 class="mg-b-5 d-flex align-items-center">متوسط حجم الأسرة<i
+                    class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
+                    data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
+                </h4>
+                <p class="op-8 tx-12">التغير السنوي في أداء المدن حسب المؤشر</p>
+              </div>
               <div class="toggle-switch">
                 <a href="#" @click.prevent="activeToggle=1" :class="{'active' : activeToggle==1}">المناطق</a>
-                <a href="#" @click.prevent="activeToggle=2" :class="{'active' : activeToggle==2}" >مدن</a>
+                <a href="#" @click.prevent="activeToggle=2" :class="{'active' : activeToggle==2}">مدن</a>
               </div>
             </div>
 
@@ -74,7 +84,9 @@
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 d-flex align-items-center">مقارنة مع الفهرس الدولي <i
-                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
+                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
+                  data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
+              </h4>
               <p class="op-8 tx-12">يُعرف أيضًا أحيانًا بالنص الوهمي المستخدم في تصميمات الويب</p>
             </div>
 
@@ -86,7 +98,9 @@
           <div class="card d-flex flex-column justify-content-between mg-b-15 shadow rounded pd-25">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 d-flex align-items-center">منهجية الحساب <i
-                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
+                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
+                  data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
+              </h4>
               <p class="op-8 tx-12">المعلومات تعرض حسب توفر البيانات</p>
             </div>
 
@@ -97,7 +111,8 @@
               والأشخاص المتضررين مباشرة بسبب الكوارث لكل 100,000 نسمة:A2 عدد الوفيات بسبب الكوارث:A3 عدد المفقودين بسبب
               الكوارث:B1 عدد الأشخاص المتأثرين بشكل مباشر بسبب الكوارث</p>
 
-            <div class="bg-gray calc-legend shadow bd rounded mg-t-15 pd-15 d-flex align-items-center justify-content-between">
+            <div
+                class="bg-gray calc-legend shadow bd rounded mg-t-15 pd-15 d-flex align-items-center justify-content-between">
               <div class="meta-data pd-x-20 flex-fill">
                 <p class="tx-12">وحدة القياس</p>
                 <p class="tx-20 tx-bold tx-primary">عدد</p>
@@ -115,8 +130,10 @@
           </div>
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading">
-              <h4 class="mg-b-5 d-flex align-items-center">المؤشر على مستوى المناطق  <i
-                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
+              <h4 class="mg-b-5 d-flex align-items-center">المؤشر على مستوى المناطق <i
+                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
+                  data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
+              </h4>
               <p class="op-8 tx-12">يُعرف أيضًا أحيانًا بالنص الوهمي المستخدم في تصميمات الويب</p>
             </div>
 
@@ -128,29 +145,25 @@
         <div class="state-widgets cols-3 d-flex align-items-stretch">
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading mg-b-15">
-              <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة <i
-                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
+              <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة<i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i></h4>
             </div>
             <bar-chart class="related-indicator" chart-id="chart01"></bar-chart>
           </div>
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading mg-b-15">
-              <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة <i
-                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
+              <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة<i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i></h4>
             </div>
             <bar-chart class="related-indicator" chart-id="chart02"></bar-chart>
           </div>
           <div class="card mg-b-15 shadow rounded pd-25">
             <div class="widget-heading mg-b-15">
-              <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة <i
-                  class="ri-question-line tx-18 tx-default tx-normal mg-x-5 op-6"></i></h4>
+              <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة<i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i></h4>
             </div>
             <bar-chart class="related-indicator" chart-id="chart03"></bar-chart>
           </div>
 
         </div>
       </div>
-
 
 
     </main>
@@ -166,18 +179,24 @@ import PageHeader from "@/components/PageHeader";
 import SideNavigation from "@/components/SideNavigation";
 import DragSlider from "@/components/DragSlider";
 import BarChart from "@/components/Charts/BarChart";
-import MapChart from "../components/Charts/MapChart";
-import XyChart from "../components/Charts/XyChart";
+import MapChart from "@/components/Charts/MapChart";
+import XyChart from "@/components/Charts/XyChart";
+import sectors from "@/json/sectors.json";
 
 export default {
   components: {XyChart, MapChart, BarChart, DragSlider, SideNavigation, PageHeader},
   data() {
     return {
-      activeToggle:1
+      activeToggle: 1,
+      activeSectorIndex: 1,
+      sectors: sectors,
+
     }
   },
-  mounted() {
-
+  methods: {
+    setActiveSector(index) {
+      this.activeSectorIndex = index
+    }
   }
 
 

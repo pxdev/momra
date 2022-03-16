@@ -2,13 +2,11 @@
   <section class="landing-page">
     <page-header></page-header>
     <main class="bg-primary">
-
       <video-bg :sources="['intro.mp4']">
         <div class="landing-heading">
           <div class="container"><h1 class="tx-34">المرصد الحضري الوطني</h1></div>
         </div>
         <!-- / landing-heading -->
-
         <div class="container landing-data d-flex align-items-center justify-content-between">
           <div class="data-icons d-flex flex-wrap pd-y-30">
             <div v-for="n in 6" :key="n" class="data-icon-box d-flex align-items-start">
@@ -25,18 +23,17 @@
 
         </div>
         <!-- / landing-data -->
-
         <div class="landing-navigation ">
           <div class="container">
             <VueSlickCarousel class="slick-carousel landing-slick" v-bind="Settings">
             <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
-                <router-link to="/explore" class="home-nav-item">
+                <a href="#" @click.prevent="toggleNav(index)" class="home-nav-item">
                   <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
                     <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                   </svg>
                   <span>{{ sector.label }}</span>
                   <span class="explore-btn tx-12 d-flex align-items-center"><i class="ri-arrow-left-line"></i><span class="pd-x-5">استكشف</span></span>
-                </router-link>
+                </a>
             </div>
             <template #prevArrow>
               <div class="ri-arrow-left-line"></div>
@@ -48,11 +45,8 @@
           </div>
         </div>
         <!-- / landing-navigation -->
-
       </video-bg>
-
     </main>
-
   </section>
 </template>
 
@@ -98,6 +92,12 @@ export default {
 
 
       }
+    }
+  },
+  methods:{
+    toggleNav(index){
+      this.$emit('updateActive', index);
+      this.$router.push("/explore");
     }
   }
 

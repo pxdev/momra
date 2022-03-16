@@ -167,6 +167,9 @@ h1, h2, h3, h4, h5, h6 {
   color: $yellow;
 }
 
+.hint {
+  color: darken($gray, 20);
+}
 
 @mixin make-opacity($num) {
   .tx-#{$num} {

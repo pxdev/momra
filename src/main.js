@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
 
+
 import './scss/main.scss'
 import 'remixicon/fonts/remixicon.css'
-
 
 
 Vue.config.productionTip = false

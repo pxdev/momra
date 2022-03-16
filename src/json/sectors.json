@@ -1,7 +1,7 @@
 [
   {
     "id": "01",
-    "iconId": "conference-ico",
+    "iconId": "population_and_demographics",
     "isActive": false,
     "isOpened": false,
     "label": " السكان والخصائص السكانية ",
@@ -20,7 +20,7 @@
   },
   {
     "id": " 02",
-    "iconId": "conference-ico",
+    "iconId": "water_and_the_environment",
     "isActive": true,
     "isOpened": true,
     "label": "المياه والبيئة",
@@ -49,7 +49,7 @@
   },
   {
     "id": " 03 ",
-    "iconId": "conference-ico",
+    "iconId": "crisis_management",
     "isActive": false,
     "isOpened": false,
     "label": "  إدارة الكوارث  ",
@@ -68,7 +68,7 @@
   },
   {
     "id": " 04",
-    "iconId": "conference-ico",
+    "iconId": "islamic_affairs_jajj_and_umrah",
     "isActive": false,
     "isOpened": false,
     "label": "  الشؤون الإسلامية والحج والعمرة ",
@@ -76,7 +76,7 @@
   },
   {
     "id": "05",
-    "iconId": "conference-ico",
+    "iconId": "safety_and_security",
     "isActive": false,
     "isOpened": false,
     "label": "الأمن والسلامة",
@@ -84,7 +84,7 @@
   },
   {
     "id": "06",
-    "iconId": "conference-ico",
+    "iconId": "accommodation_and_housing",
     "isActive": false,
     "isOpened": false,
     "label": "الايواء والمساكن",
@@ -92,7 +92,7 @@
   },
   {
     "id": "07",
-    "iconId": "conference-ico",
+    "iconId": "infrastructure",
     "isActive": false,
     "isOpened": false,
     "label": "البنية التحتية",
@@ -100,7 +100,7 @@
   },
   {
     "id": "08",
-    "iconId": "conference-ico",
+    "iconId": "energy",
     "isActive": false,
     "isOpened": false,
     "label": "الطاقة",
@@ -108,7 +108,7 @@
   },
   {
     "id": "09",
-    "iconId": "conference-ico",
+    "iconId": "governance_and_legislation",
     "isActive": false,
     "isOpened": false,
     "label": "الحوكمة والتشريعات",
@@ -116,7 +116,7 @@
   },
   {
     "id": "10",
-    "iconId": "conference-ico",
+    "iconId": "media_and_culture",
     "isActive": false,
     "isOpened": false,
     "label": "الثقافة والإعلام",
@@ -124,7 +124,7 @@
   },
   {
     "id": "11",
-    "iconId": "conference-ico",
+    "iconId": "health",
     "isActive": false,
     "isOpened": false,
     "label": "الصحة",
@@ -132,7 +132,7 @@
   },
   {
     "id": "12",
-    "iconId": "conference-ico",
+    "iconId": "economic_growth",
     "isActive": false,
     "isOpened": false,
     "label": "النمو الاقتصادي",
@@ -140,7 +140,7 @@
   },
   {
     "id": "13",
-    "iconId": "conference-ico",
+    "iconId": "education",
     "isActive": false,
     "isOpened": false,
     "label": "التعليم",
@@ -148,7 +148,7 @@
   },
   {
     "id": "14",
-    "iconId": "conference-ico",
+    "iconId": "labor_and_social_security",
     "isActive": false,
     "isOpened": false,
     "label": "العمل والحماية الاجتماعية",
@@ -156,7 +156,7 @@
   },
   {
     "id": "15",
-    "iconId": "conference-ico",
+    "iconId": "urban_fabric",
     "isActive": false,
     "isOpened": false,
     "label": "النسيج العمراني",
@@ -164,7 +164,7 @@
   },
   {
     "id": "16",
-    "iconId": "conference-ico",
+    "iconId": "municipal_funding",
     "isActive": false,
     "isOpened": false,
     "label": "تمويل البلديات",
@@ -172,7 +172,7 @@
   },
   {
     "id": "17",
-    "iconId": "conference-ico",
+    "iconId": "tourism_leisure_and_sports",
     "isActive": false,
     "isOpened": false,
     "label": "السياحة والترفيه والرياضة",
