@@ -1,8 +1,8 @@
 <template>
-  <aside class="side-bar">
+  <aside class="side-bar ">
 
-    <nav class="side-nav card shadow rounded">
-      <div class="pd-25">
+    <nav class="side-nav card shadow rounded pd-y-15">
+      <div class="pd-25 mg-b-20">
         <div class="quick-search ">
           <i class="ri-search-line search-ico"></i>
           <treeselect placeholder="بحث عن المؤشرات" v-model="value" :options="sectors"/>
