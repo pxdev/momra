@@ -7,9 +7,10 @@
     width: 100%;
     content: "";
     right: 0;
+    left: 0;
     height: 100%;
     top: 0;
-    position: absolute;
+    position: fixed;
     z-index: 1;
   }
 
@@ -17,6 +18,7 @@
     position: relative;
     z-index: 10;
     color: #fff;
+    padding-bottom: 90px;
 
     @include for-size('small-devices') {
       flex-wrap: wrap;
@@ -91,12 +93,22 @@
   }
 }
 
-.landing-navigation {
+.home-video{
   position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+}
+
+.landing-navigation {
+  //position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 15;
+  height: 180px;
 
   @include for-size('small-devices') {
     position: static;
@@ -159,7 +171,7 @@
 
 
       &:after {
-        transform: scaleY(1.2);
+        transform: scaleY(1.15);
         opacity: 1;
       }
 

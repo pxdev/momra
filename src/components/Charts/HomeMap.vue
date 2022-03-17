@@ -134,8 +134,8 @@ export default {
 
 // Create hover state and set alternative fill color
     var hs = polygonTemplate.states.create("hover");
-    hs.properties.fill = am4core.color("#0C5955");
-    hs.properties.fillOpacity = 1;
+    hs.properties.fill = am4core.color("#046F6C");
+    hs.properties.fillOpacity = 0.6;
 
   },
   methods: {

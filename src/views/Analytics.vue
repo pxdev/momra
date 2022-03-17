@@ -12,9 +12,9 @@
         <div class="pages-heading mg-b-20 d-flex align-items-center justify-content-between">
           <div class="heading-start d-flex align-items-center">
             <div class="pd-5 heading-icon">
-              <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-                <use class="svg-ico-use"
-                     :xlink:href="`icons/icon.symbol.svg#${sectors[activeSectorIndex].iconId}`"></use>
+
+               <svg class="svg-ico" :width="sectors[activeSectorIndex].iconWidth" :height="sectors[activeSectorIndex].iconHeight" >
+                 <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sectors[activeSectorIndex].iconId}`"></use>
               </svg>
 
             </div>

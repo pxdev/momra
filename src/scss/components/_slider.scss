@@ -81,12 +81,13 @@
     flex-shrink: 0;
      height: 100%;
     top: 0;
-    width: 120px;
+    width: 90px;
     z-index: 10;
     color: $secondary;
     cursor: pointer;
     font-size: 30px;
     padding: 20px;
+    transform: translateY(-10px);
 
     &.slick-disabled {
       cursor: auto;

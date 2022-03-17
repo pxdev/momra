@@ -2,20 +2,57 @@
   <section class="landing-page">
     <page-header></page-header>
     <main class="bg-primary">
-      <video-bg :sources="['intro.mp4']">
+      <video-bg class="home-video" :sources="['intro.mp4']"> </video-bg>
         <div class="landing-heading">
           <div class="container"><h1 class="tx-34">المرصد الحضري الوطني</h1></div>
         </div>
         <!-- / landing-heading -->
         <div class="container landing-data d-flex align-items-center justify-content-between">
           <div class="data-icons d-flex flex-wrap pd-y-30">
-            <div v-for="n in 6" :key="n" class="data-icon-box d-flex align-items-start">
+            <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
               <div class="pd-x-15">
                 <p class="tx-16">إجمالي عدد الأسر</p>
                 <p class="tx-32 tx-bold">3,681,927</p>
               </div>
             </div>
+            <div class="data-icon-box d-flex align-items-start">
+              <img class="mg-t-5" src="data-icons/briefcase.svg" alt="">
+              <div class="pd-x-15">
+                <p class="tx-16">معدل بطالة الشباب</p>
+                <p class="tx-32 tx-bold">0.23</p>
+              </div>
+            </div>
+            <div class="data-icon-box d-flex align-items-start">
+              <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
+              <div class="pd-x-15">
+                <p class="tx-16">إجمالي عدد الأسر</p>
+                <p class="tx-32 tx-bold">3,681,927</p>
+              </div>
+            </div>
+            <div class="data-icon-box d-flex align-items-start">
+              <img class="mg-t-5" src="data-icons/chart.svg" alt="">
+              <div class="pd-x-15">
+                <p class="tx-16">متوسط حجم الأسرة</p>
+                <p class="tx-32 tx-bold">3,681,927</p>
+              </div>
+            </div>
+            <div class="data-icon-box d-flex align-items-start">
+              <img class="mg-t-5" src="data-icons/chart.svg" alt="">
+              <div class="pd-x-15">
+                <p class="tx-16">متوسط حجم الأسرة</p>
+                <p class="tx-32 tx-bold">3,681,927</p>
+              </div>
+            </div>
+            <div class="data-icon-box d-flex align-items-start">
+              <img class="mg-t-5" src="data-icons/chart.svg" alt="">
+              <div class="pd-x-15">
+                <p class="tx-16">متوسط حجم الأسرة</p>
+                <p class="tx-32 tx-bold">3,681,927</p>
+              </div>
+            </div>
+
+
           </div>
           <div class="ksa-map">
             <home-map chart-id="homeMap"></home-map>
@@ -28,8 +65,8 @@
             <VueSlickCarousel class="slick-carousel landing-slick" v-bind="Settings">
             <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
                 <a href="#" @click.prevent="toggleNav(index)" class="home-nav-item">
-                  <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
-                    <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
+                  <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight" >
+                  <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                   </svg>
                   <span>{{ sector.label }}</span>
                   <span class="explore-btn tx-12 d-flex align-items-center"><i class="ri-arrow-left-line"></i><span class="pd-x-5">استكشف</span></span>
@@ -45,7 +82,6 @@
           </div>
         </div>
         <!-- / landing-navigation -->
-      </video-bg>
     </main>
   </section>
 </template>

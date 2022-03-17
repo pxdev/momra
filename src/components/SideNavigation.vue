@@ -14,7 +14,7 @@
             <li :class="{'active' : ActiveSectorIndex == index }" v-for="(sector, index) in sectors"
                 :key="index + '_sector'">
               <a href="#" class="side-nav-link" @click.prevent="toggleNav(index)">
-                <svg class="svg-ico" width="42.053" height="39.501" viewBox="0 0 42.022 38.989">
+                <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight" >
                   <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                 </svg>
                 <span class="pd-x-20">{{ sector.label }}</span></a>

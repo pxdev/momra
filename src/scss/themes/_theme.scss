@@ -10,6 +10,7 @@ html {
   font-weight: 400;
   direction: rtl;
   height: 100%;
+  background: $primary;
 }
 
 body {
@@ -22,10 +23,6 @@ body {
   overflow-x: hidden;
   font-family: $font-family-base;
   padding-top: 136px;
-}
-
-main {
-  min-height: 100vh;
 }
 
 #app{
