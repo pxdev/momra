@@ -5,7 +5,6 @@
       <video-bg class="home-video" :sources="['intro.mp4']"> </video-bg>
         <div class="landing-heading">
           <div class="container">
-            {{counter}}
             <h1 class="tx-34">المرصد الحضري الوطني</h1></div>
         </div>
         <!-- / landing-heading -->
