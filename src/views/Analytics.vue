@@ -5,7 +5,7 @@
 
     <main class="container pages pd-y-30 d-flex">
 
-      <side-navigation @updateActive="setActiveSector" :active-sector-index="activeSectorIndex"></side-navigation>
+      <side-navigation></side-navigation>
 
       <div class="pages-content">
 
@@ -13,13 +13,13 @@
           <div class="heading-start d-flex align-items-center">
             <div class="pd-5 heading-icon">
 
-               <svg class="svg-ico" :width="sectors[activeSectorIndex].iconWidth" :height="sectors[activeSectorIndex].iconHeight" >
-                 <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sectors[activeSectorIndex].iconId}`"></use>
+               <svg class="svg-ico" :width="sectors[counter].iconWidth" :height="sectors[counter].iconHeight" >
+                 <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sectors[counter].iconId}`"></use>
               </svg>
 
             </div>
             <div class="pd-x-15">
-              <h1 class="mg-b-10 d-flex align-items-center">{{ sectors[activeSectorIndex].label }}
+              <h1 class="mg-b-10 d-flex align-items-center">{{ sectors[counter].label }}
                 <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
                    data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
               </h1>
@@ -188,16 +188,17 @@ export default {
   data() {
     return {
       activeToggle: 1,
-      activeSectorIndex: 1,
       sectors: sectors,
 
     }
   },
-  methods: {
-    setActiveSector(index) {
-      this.activeSectorIndex = index
+
+  computed:{
+    counter(){
+      return this.$store.state.counter;
     }
-  }
+  },
+
 
 
 }
