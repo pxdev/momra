@@ -2,6 +2,47 @@
   position: relative;
   height: 100%;
 
+
+  .side-bar {
+    position: fixed;
+    top: 160px;
+    right: auto;
+    bottom: 0;
+    z-index: 10;
+
+    @include for-size('small-height') {
+      top: 140px;
+    }
+
+
+    .side-nav {
+      height: 100%;
+    }
+
+    .scroll-area {
+      height: 100px;
+      min-height: calc(100% - 120px);
+    }
+  }
+
+
+  .moving-arrow {
+
+    &.next {
+      animation: arrowMovingRight 5s infinite ease-in-out;
+
+    }
+
+    &.prev {
+      animation: arrowMovingLeft 5s infinite ease-in-out;
+    }
+
+    &:hover {
+      animation: normal;
+    }
+
+  }
+
   .sector-bg {
     position: fixed;
     left: 0;
@@ -17,16 +58,19 @@
 
   .explore-heading {
     position: relative;
+
+    margin: 50px 0;
+
     --blue-color: #9AC4C3;
     --green-color: #FFF;
 
     .svg-ico {
-       opacity: 0.35;
+      opacity: 0.25;
       position: absolute;
       right: 0;
       top: 0;
-       z-index: -1;
-      transform: scale(4) translateX(20%) translateY(50%);
+      z-index: -1;
+      transform: scale(3) translateX(20%) translateY(20%);
     }
 
   }
@@ -47,11 +91,11 @@
   }
 
   .explore-data {
-    padding: 50px 160px;
+    padding: 20px 470px 0 120px;
     color: #fff;
 
     @include for-size('small-devices') {
-      padding: 0 ;
+      padding: 0;
     }
 
 

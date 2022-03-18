@@ -1,23 +1,24 @@
 <template>
   <section class="explore-page">
     <page-header></page-header>
-    <main class="container pages pd-y-30 d-flex">
+    <main class="container pages pd-y-30 d-flex ">
 
       <section class="sector-bg" style="background-image: url(https://placeimg.com/1000/920/tech)"></section>
 
-      <side-navigation  @updateActive="setActiveSector" :active-sector-index="activeSectorIndex" ></side-navigation>
+      <side-navigation></side-navigation>
       <div class="pages-content">
         <div class="explore-data">
-          <div class="explore-heading pd-y-60">
-            <svg class="svg-ico" :width="sectors[activeSectorIndex].iconWidth" :height="sectors[activeSectorIndex].iconHeight">
+
+          <div class="explore-heading">
+            <svg class="svg-ico" :width="sectors[counter].iconWidth" :height="sectors[counter].iconHeight">
               <use class="svg-ico-use"
-                   :xlink:href="`icons/icon.symbol.svg#${sectors[activeSectorIndex].iconId}`"></use>
+                   :xlink:href="`icons/icon.symbol.svg#${sectors[counter].iconId}`"></use>
             </svg>
             <div class="explore-nav d-flex">
-               <a href="#" title="التالى"  @click.prevent="NextActiveSector"><i class="ri-arrow-right-line tx-warning tx-42"></i></a>
-              <a href="#" title="السابق"  @click.prevent="PrevActiveSector"><i class="ri-arrow-left-line tx-warning tx-42"></i></a>
+               <a href="#" class="moving-arrow next" @click.prevent="increase" title="التالى"><i class="ri-arrow-right-line tx-warning tx-42"></i></a>
+              <a href="#" class="moving-arrow prev" @click.prevent="decrease" title="السابق"><i class="ri-arrow-left-line tx-warning tx-42"></i></a>
             </div>
-            <h1 class="tx-42">{{ sectors[activeSectorIndex].label }}</h1>
+            <h1 class="tx-42">{{ sectors[counter].label }}</h1>
             <p class="op-6">إنه نص وهمي لتصميم الويب</p>
           </div>
           <div class="data-icons d-flex flex-wrap pd-y-10">
@@ -105,28 +106,36 @@ export default {
     return {
       activeSectorIndex: 0,
       sectors: sectors,
+
     }
   },
 
   methods: {
-    setActiveSector(index){
-        this.activeSectorIndex = index
+
+
+    increase (){
+
+      if (this.$store.state.counter< this.sectors.length - 1){
+        this.$store.state.counter ++;
+      }else
+        return false
+
     },
+    decrease (){
+      if (this.$store.state.counter >  0){
+        this.$store.state.counter --;
+      }else
+        return false
 
-    NextActiveSector(){
-      if (this.activeSectorIndex < sectors.length-1){
-        this.activeSectorIndex ++
-      }
-     },
+    }
 
-    PrevActiveSector(){
-      if (this.activeSectorIndex > 0){
-        this.activeSectorIndex --
-      }
-      return false
-     }
+  },
 
-  }
+  computed:{
+    counter(){
+      return this.$store.state.counter;
+    }
+  },
 
 
 }

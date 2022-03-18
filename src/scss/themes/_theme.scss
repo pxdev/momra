@@ -23,9 +23,13 @@ body {
   overflow-x: hidden;
   font-family: $font-family-base;
   padding-top: 136px;
+  @include for-size('small-height') {
+    padding-top: 116px;
+
+  }
 }
 
-#app{
+#app {
   height: 100%;
 }
 
@@ -60,4 +64,46 @@ body {
 }
 
 
+.data-icons {
 
+  @include for-size('small-height') {
+    padding-top: 15px;
+  }
+
+  .data-icon-box {
+    padding: 20px 0;
+
+    @include for-size('small-height') {
+      padding: 10px 0;
+    }
+
+    p:nth-child(1) {
+      font-size: 130%;
+      @include for-size('small-height') {
+        font-size: 110%;
+      }
+
+    }
+
+    p:nth-child(2) {
+      font-size: 250%;
+      @include for-size('small-height') {
+        font-size: 200%;
+      }
+
+    }
+
+    img {
+      max-width: 40px;
+      @include for-size('small-height') {
+        max-width: 30px;
+      }
+    }
+
+    @include for-size('small-devices') {
+      width: 100%;
+    }
+
+  }
+
+}

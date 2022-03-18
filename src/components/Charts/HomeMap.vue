@@ -140,9 +140,16 @@ export default {
   },
   methods: {
     exploreRegion() {
+      this.$store.state.counter = 0;
       this.$router.push("/explore");
     }
   },
+  computed:{
+    counter(){
+      return this.$store.state.counter;
+    }
+  },
+
 }
 </script>
 

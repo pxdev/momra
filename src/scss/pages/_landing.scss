@@ -1,6 +1,9 @@
 .landing-page {
-
   position: relative;
+
+  @include for-size('small-height') {
+    font-size: 80%;
+   }
 
   &:after {
     @extend %vertical-gradient;
@@ -18,7 +21,14 @@
     position: relative;
     z-index: 10;
     color: #fff;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    align-items: center;
+
+    @include for-size('small-height') {
+      align-items: start;
+
+    }
 
     @include for-size('small-devices') {
       flex-wrap: wrap;
@@ -26,14 +36,16 @@
 
     .data-icons {
       min-width: 50%;
+      padding-top: 30px;
+      padding-right: 20px;
+      padding-left: 20px;
+      @include for-size('small-height') {
+        padding-top: 15px;
+      }
 
       .data-icon-box {
-        padding: 20px 0;
-        min-width: 50%;
-
-        @include for-size('small-devices') {
-          width: 100%;
-        }
+        flex: 1 0 50%;
+        max-width: 50%;
 
       }
 
@@ -41,6 +53,16 @@
 
     .ksa-map {
       min-width: 50%;
+
+
+      #homeMap{
+
+        @include for-size('small-height') {
+          max-height: 300px;
+          transform: translateY(-45px);
+        }
+
+      }
 
 
       @include for-size('small-devices') {
@@ -63,13 +85,22 @@
 
 .landing-heading {
   background: rgba(255, 255, 255, 0.08);
-  position: relative;
+  position: absolute;
   z-index: 10;
+  left: 0;
+  right: 0;
 
   h1 {
-    line-height: 34px;
+    line-height: normal;
     padding: 20px 0;
     color: $light-bg;
+    font-size: 240%;
+    @include for-size('small-height') {
+      padding: 10px 0;
+
+      font-size: 160%;
+    }
+
   }
 }
 
@@ -103,7 +134,7 @@
 }
 
 .landing-navigation {
-  //position: fixed;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;

@@ -1,5 +1,5 @@
 <template>
-<div class="d-flex align-items-center">
+<div class="d-flex indicator-container align-items-center">
    <vue-slider class="indicator-slider flex-fill mg-x-50" v-model="value"  :interval="1" :data="data" :marks="true" :tooltip="'none'">
      <template v-slot:dot>
       <span class="custom-dot"></span>

@@ -91,21 +91,43 @@
 
     &.slick-disabled {
       cursor: auto;
+      filter: grayscale(1);
+      animation: normal;
       opacity: 0.2;
+      &:before {
+        animation: normal;
+      }
     }
 
-    &:hover {
-      opacity: 0.9;
-    }
+
 
   }
 
   .slick-prev {
     left: 0;
+
+    &:before {
+      animation: arrowMovingLeft 5s infinite ease-in-out;
+    }
+
+    &:hover {
+      animation: normal;
+    }
+
+
   }
 
   .slick-next {
     right: 0;
+
+    &:before {
+      animation: arrowMovingRight 5s infinite ease-in-out;
+    }
+
+    &:hover {
+      animation: normal;
+    }
+
   }
 
 

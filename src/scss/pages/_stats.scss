@@ -1,16 +1,29 @@
 .number-stats {
-  min-width: calc(50% - 35px);
+  flex: 1 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+
 
   .stats-box {
     @include for-size('phone-only') {
       flex-grow: 1;
       width: 100%;
     }
+
+    h2 {
+      font-size: 200%;
+    }
+
+
+
   }
 
   .stats-box:nth-child(2) {
     border-left: 1px solid $border-color;
     border-right: 1px solid $border-color;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right:15px ;
+    margin-left:15px ;
     @include for-size('phone-only') {
       border: 0;
     }
@@ -30,7 +43,8 @@
 }
 
 .indicator-info {
-  min-width: calc(50% - 35px);
+  flex: 1 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
 
   @include for-size('small-devices') {
     flex-grow: 1;
@@ -40,6 +54,9 @@
 }
 
 .quick-stats {
+  .divider {
+    margin: 0 15px;
+  }
   .divider {
     @include for-size('small-devices') {
       display: none;

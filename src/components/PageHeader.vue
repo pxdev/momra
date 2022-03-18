@@ -19,7 +19,7 @@
     </div>
     <!-- pre-header -->
 
-    <div class="container pd-y-20 d-flex justify-content-between align-items-center">
+    <div class="container page-header  d-flex justify-content-between align-items-center">
       <router-link to="/" class="logo"><img src="/logo.svg" alt=""></router-link>
       <div class="d-flex left-heading">
         <nav v-show="mobileNav">
@@ -110,7 +110,7 @@ export default {
 
     handleResize() {
       this.windowWidth = window.innerWidth;
-      if (this.windowWidth < 1024) {
+      if (this.windowWidth < 1023) {
         this.mobileNav = false;
         this.isMobile = true;
 

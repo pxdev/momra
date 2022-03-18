@@ -4,51 +4,53 @@
     <main class="bg-primary">
       <video-bg class="home-video" :sources="['intro.mp4']"> </video-bg>
         <div class="landing-heading">
-          <div class="container"><h1 class="tx-34">المرصد الحضري الوطني</h1></div>
+          <div class="container">
+            {{counter}}
+            <h1 class="tx-34">المرصد الحضري الوطني</h1></div>
         </div>
         <!-- / landing-heading -->
-        <div class="container landing-data d-flex align-items-center justify-content-between">
-          <div class="data-icons d-flex flex-wrap pd-y-30">
+        <div class="container landing-data d-flex justify-content-between">
+          <div class="data-icons d-flex flex-wrap">
             <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
               <div class="pd-x-15">
-                <p class="tx-16">إجمالي عدد الأسر</p>
-                <p class="tx-32 tx-bold">3,681,927</p>
+                <p>إجمالي عدد الأسر</p>
+                <p class="tx-bold">3,681,927</p>
               </div>
             </div>
             <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/briefcase.svg" alt="">
               <div class="pd-x-15">
-                <p class="tx-16">معدل بطالة الشباب</p>
-                <p class="tx-32 tx-bold">0.23</p>
+                <p>معدل بطالة الشباب</p>
+                <p class="tx-bold">0.23</p>
               </div>
             </div>
             <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
               <div class="pd-x-15">
-                <p class="tx-16">إجمالي عدد الأسر</p>
-                <p class="tx-32 tx-bold">3,681,927</p>
+                <p>إجمالي عدد الأسر</p>
+                <p class="tx-bold">3,681,927</p>
               </div>
             </div>
             <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/chart.svg" alt="">
               <div class="pd-x-15">
-                <p class="tx-16">متوسط حجم الأسرة</p>
-                <p class="tx-32 tx-bold">3,681,927</p>
+                <p>متوسط حجم الأسرة</p>
+                <p class="tx-bold">3,681,927</p>
               </div>
             </div>
             <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/chart.svg" alt="">
               <div class="pd-x-15">
-                <p class="tx-16">متوسط حجم الأسرة</p>
-                <p class="tx-32 tx-bold">3,681,927</p>
+                <p>متوسط حجم الأسرة</p>
+                <p class="tx-bold">3,681,927</p>
               </div>
             </div>
             <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/chart.svg" alt="">
               <div class="pd-x-15">
-                <p class="tx-16">متوسط حجم الأسرة</p>
-                <p class="tx-32 tx-bold">3,681,927</p>
+                <p>متوسط حجم الأسرة</p>
+                <p class="tx-bold">3,681,927</p>
               </div>
             </div>
 
@@ -64,7 +66,7 @@
           <div class="container">
             <VueSlickCarousel class="slick-carousel landing-slick" v-bind="Settings">
             <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
-                <a href="#" @click.prevent="toggleNav(index)" class="home-nav-item">
+                <a href="#" @click.prevent="setActiveSector(index)" class="home-nav-item">
                   <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight" >
                   <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                   </svg>
@@ -112,7 +114,7 @@ export default {
 
         "responsive": [
           {
-            "breakpoint": 1024,
+            "breakpoint": 1023,
             "settings": {
               "slidesToShow": 3,
             }
@@ -130,12 +132,20 @@ export default {
       }
     }
   },
-  methods:{
-    toggleNav(index){
-      this.$emit('updateActive', index);
+  methods: {
+
+    setActiveSector(index){
+      this.$store.state.counter = index;
       this.$router.push("/explore");
+    },
+
+  },
+
+  computed:{
+    counter(){
+      return this.$store.state.counter;
     }
-  }
+  },
 
 
 }

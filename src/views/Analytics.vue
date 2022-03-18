@@ -32,27 +32,27 @@
           </div>
         </div>
         <!-- / page heading -->
-        <div class="quick-stats mg-b-15 card shadow rounded flex-wrap d-flex pd-y-20 pd-x-15">
+        <div class="quick-stats mg-b-15 card shadow rounded justify-content-between flex-wrap d-flex pd-20">
           <div class="number-stats pd-y-15  d-flex align-items-center">
-            <div class="stats-box pd-x-20 flex-fill">
-              <h2 class="tx-30 mg-b-10">5.68</h2>
+            <div class="stats-box flex-fill">
+              <h2 class="mg-b-10">5.68</h2>
               <p class="tx-12"><span>الفترة الحالية</span><span class="pd-x-5">-</span><span
                   class="tx-primary tx-number">2020</span></p>
             </div>
-            <div class="stats-box pd-x-20 flex-fill">
-              <h2 class="tx-30 mg-b-10">5.68</h2>
+            <div class="stats-box flex-fill">
+              <h2 class="mg-b-10">5.68</h2>
               <p class="tx-12"><span>الفترة السابقة</span><span class="pd-x-5">-</span><span
                   class="tx-primary tx-number">2020</span></p>
             </div>
-            <div class="stats-box pd-x-20 flex-fill">
-              <h2 class="tx-30 mg-b-10 d-flex align-items-center">5.68 <span
+            <div class="stats-box flex-fill">
+              <h2 class="mg-b-10 d-flex align-items-center">5.68 <span
                   class="change-rate tx-number pd-x-10 tx-16 tx-secondary"><i
                   class="ri-arrow-right-up-line "></i>+1%</span></h2>
               <p class="tx-12"><span>مقارنة</span><span class="pd-x-5">-</span><span class="tx-primary tx-number">2019 & 2020</span>
               </p>
             </div>
           </div>
-          <div class="divider flex-grow-0 bd-l bd-2 mg-x-30"></div>
+          <div class="divider flex-grow-0 bd-l bd-2"></div>
           <div class="indicator-info">
             <h4 class="mg-b-10 d-flex align-items-center">بيانات المؤشر
               <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
