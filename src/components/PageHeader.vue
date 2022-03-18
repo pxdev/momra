@@ -34,7 +34,11 @@
               <router-link class="parent-link" to="/">الرئيسية</router-link>
             </li>
             <li>
-              <a class="parent-link" href="#">عن المرصد</a>
+              <drop-down class="parent-link" title="عن المرصد" width="200" toggle-arrow="true">
+                <a href="#" class="menu-item">نبذة عن المرصد </a>
+                <a href="#" class="menu-item">الرؤية والرسالة </a>
+                <a href="#" class="menu-item">اللائحة التنظيمية</a>
+              </drop-down>
             </li>
             <li>
               <drop-down class="parent-link" title="اعمالنا الحضرية" width="250" toggle-arrow="true">

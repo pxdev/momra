@@ -3,27 +3,7 @@
   height: 100%;
 
 
-  .side-bar {
-    position: fixed;
-    top: 160px;
-    right: auto;
-    bottom: 0;
-    z-index: 10;
 
-    @include for-size('small-height') {
-      top: 140px;
-    }
-
-
-    .side-nav {
-      height: 100%;
-    }
-
-    .scroll-area {
-      height: 100px;
-      min-height: calc(100% - 120px);
-    }
-  }
 
 
   .moving-arrow {
@@ -91,7 +71,7 @@
   }
 
   .explore-data {
-    padding: 20px 470px 0 120px;
+    padding: 20px 100px 0 120px;
     color: #fff;
 
     @include for-size('small-devices') {

@@ -21,6 +21,7 @@ body {
   background: $body-bg;
   color: $font-color-base;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   font-family: $font-family-base;
   padding-top: 136px;
   @include for-size('small-height') {
@@ -106,4 +107,30 @@ body {
 
   }
 
+}
+
+.side-bar {
+  &.fixed-sidebar {
+    position: fixed;
+    top: 160px;
+    right: auto;
+    bottom: 0;
+    z-index: 10;
+    @include for-size('small-height') {
+      top: 140px;
+    }
+    .side-nav {
+      height: 100%;
+    }
+    .scroll-area {
+      height: 100px;
+      min-height: calc(100% - 120px);
+    }
+
+  }
+
+}
+
+.pages-data {
+  padding-right: 360px;
 }

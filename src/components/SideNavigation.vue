@@ -1,5 +1,5 @@
 <template>
-  <aside class="side-bar ">
+  <aside class="side-bar fixed-sidebar ">
 
     <nav class="side-nav card shadow rounded pd-y-15">
       <div class="pd-25 mg-b-20">
@@ -11,14 +11,14 @@
       <VuePerfectScrollbar class="scroll-area">
         <div class="scroll-content pd-x-25">
           <ul>
-            <li :class="{'active' : counter == index }" v-for="(sector, index) in sectors"
+            <li :class="{'active' : sectorCounter == index || defaultSectorCounter == index }" v-for="(sector, index) in sectors"
                 :key="index + '_sector'">
               <a href="#" class="side-nav-link" @click.prevent="setActiveSector(index)">
-                <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight" >
+                <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight">
                   <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                 </svg>
                 <span class="pd-x-20">{{ sector.label }}</span></a>
-              <ul v-if="sector.children.length && counter == index  ">
+              <ul v-if="sector.children.length && sectorCounter == index || defaultSectorCounter == index  ">
                 <li :class="{'active' : indicator.isActive==true }" v-for="(indicator, index) in sector.children"
                     :key="index + '_indicator'">
                   <a href="#">{{ indicator.label }}</a>
@@ -54,15 +54,25 @@ export default {
   ,
   methods: {
 
-    setActiveSector(index){
-      this.$store.state.counter = index
+    // setActiveIndictor(indicatorIndex) {
+    //   this.$store.state.sectorCounter = index
+    // },
+
+
+    setActiveSector(index) {
+      this.$store.state.sectorCounter = index
+      this.$store.state.defaultSectorCounter = index
     },
 
   },
 
-  computed:{
-    counter(){
-      return this.$store.state.counter;
+  computed: {
+    defaultSectorCounter(){
+      return this.$store.state.defaultSectorCounter;
+    },
+
+    sectorCounter() {
+      return this.$store.state.sectorCounter;
     }
   },
 

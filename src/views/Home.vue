@@ -99,18 +99,15 @@ export default {
   components: {HomeMap, PageHeader, VideoBg, VueSlickCarousel},
   data() {
     return {
-
       sectors: sectors,
-
       Settings: {
         "dots": false,
-        "infinite": true,
+        "infinite": false,
         "speed": 700,
         "slidesToShow": 7,
-        "slidesToScroll": 5,
-        "touchThreshold": 5,
+        "slidesToScroll": 1,
+        "touchThreshold": 1,
         "adaptiveHeight": false,
-        "variableWidth": true,
 
 
         "responsive": [
@@ -136,15 +133,17 @@ export default {
   methods: {
 
     setActiveSector(index){
-      this.$store.state.counter = index;
+      this.$store.state.sectorCounter = index;
+      this.$store.state.defaultSectorCounter = index;
+      this.$store.state.activeRegion = null;
       this.$router.push("/explore");
     },
 
   },
 
   computed:{
-    counter(){
-      return this.$store.state.counter;
+    sectorCounter(){
+      return this.$store.state.sectorCounter;
     }
   },
 

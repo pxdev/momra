@@ -141,6 +141,16 @@
   z-index: 15;
   height: 180px;
 
+  &:after {
+    height: 120px;
+    background: $primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+  }
+
   @include for-size('small-devices') {
     position: static;
   }
@@ -151,11 +161,10 @@
     justify-content: center;
     position: relative;
     display: flex;
-    padding: 20px 30px;
+    padding: 20px 10px;
     text-align: center;
     flex-direction: column;
     margin: 25px 0;
-    white-space: nowrap;
 
     span {
       position: relative;

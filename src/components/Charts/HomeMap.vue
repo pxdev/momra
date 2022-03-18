@@ -1,7 +1,7 @@
 <template>
   <div>
     <div :id="chartId" class="charts"></div>
-  </div>
+   </div>
 </template>
 
 <script>
@@ -45,9 +45,6 @@ export default {
     polygonSeries.useGeodata = true;
 
 
-    polygonSeries.events.on("hit", () => {
-      this.exploreRegion()
-    })
 
     // Set heatmap values for each state
     polygonSeries.data = [
@@ -120,6 +117,9 @@ export default {
     ];
 
 
+
+
+
 // Configure series tooltip
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = " منطقة {title}";
@@ -137,16 +137,30 @@ export default {
     hs.properties.fill = am4core.color("#046F6C");
     hs.properties.fillOpacity = 0.6;
 
+// Create Click state
+
+    polygonTemplate.events.on("hit", (ev) => {
+      var data = ev.target.dataItem.dataContext;
+      console.log(data)
+      this.exploreRegion(data.title)
+    });
+
+
+
   },
   methods: {
-    exploreRegion() {
-      this.$store.state.counter = 0;
+    exploreRegion(region) {
+      this.$store.state.activeRegion = region;
+      this.$store.state.sectorCounter = null;
       this.$router.push("/explore");
     }
   },
   computed:{
-    counter(){
-      return this.$store.state.counter;
+    sectorCounter(){
+      return this.$store.state.sectorCounter;
+    },
+    activeRegion(){
+      return this.$store.state.activeRegion;
     }
   },
 

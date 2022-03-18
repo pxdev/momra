@@ -8,20 +8,22 @@
       <side-navigation></side-navigation>
 
       <div class="pages-content">
+        <div class="pages-data">
 
         <div class="pages-heading mg-b-20 d-flex align-items-center justify-content-between">
           <div class="heading-start d-flex align-items-center">
             <div class="pd-5 heading-icon">
-
-               <svg class="svg-ico" :width="sectors[counter].iconWidth" :height="sectors[counter].iconHeight" >
-                 <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sectors[counter].iconId}`"></use>
+               <svg class="svg-ico"
+                    :width="sectors[defaultSectorCounter].iconWidth"
+                    :height="sectors[sectorCounter].iconHeight" >
+                 <use class="svg-ico-use"
+                      :xlink:href="`icons/icon.symbol.svg#${ sectors[sectorCounter].iconId }`"></use>
               </svg>
-
             </div>
             <div class="pd-x-15">
-              <h1 class="mg-b-10 d-flex align-items-center">{{ sectors[counter].label }}
-                <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
-                   data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
+              <h1 class="mg-b-10 d-flex align-items-center">
+                <span>{{sectors[sectorCounter].label || sectors[defaultSectorCounter].label }}</span>
+                <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
               </h1>
               <p class="op-8">كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>
             </div>
@@ -163,6 +165,7 @@
           </div>
 
         </div>
+        </div>
       </div>
 
 
@@ -193,9 +196,20 @@ export default {
     }
   },
 
+  methods:{
+
+
+  },
+
   computed:{
-    counter(){
-      return this.$store.state.counter;
+    defaultSectorCounter(){
+      return this.$store.state.defaultSectorCounter;
+    },
+    sectorCounter(){
+      return this.$store.state.sectorCounter || this.$store.state.defaultSectorCounter;
+    },
+    activeRegion(){
+      return this.$store.state.activeRegion;
     }
   },
 

@@ -5,8 +5,9 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        counter: 0,
-        activeSectorIndex:0,
+        defaultSectorCounter: 0,
+        sectorCounter: null,
+        activeRegion:null,
     }
 });
 

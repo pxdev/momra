@@ -11,7 +11,7 @@
       {
         "id": " 01-01",
         "label": "  عدد الأسر ",
-        "isActive": true
+        "isActive": false
       },
       {
         "id": "01-02",
@@ -32,7 +32,7 @@
       {
         "id": " 02-01 ",
         "label": "  تركيز ثاني أكسيد الكبريت  ",
-        "isActive": true
+        "isActive": false
       },
       {
         "id": " 02-02 ",

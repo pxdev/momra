@@ -3,13 +3,15 @@
   flex-shrink: 0;
   position: relative;
   z-index: 5;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   .scroll-area {
     position: relative;
 
     direction: ltr;
     .scroll-content{
+      scroll-behavior: smooth;
+      transition: 0.4s all ease-in-out;
 
       @include rtl(direction, rtl, ltr);
       @include rtl(direction, ltr, rtl);
