@@ -151,10 +151,11 @@
     justify-content: center;
     position: relative;
     display: flex;
-    padding: 20px 0;
+    padding: 20px 30px;
     text-align: center;
     flex-direction: column;
     margin: 25px 0;
+    white-space: nowrap;
 
     span {
       position: relative;

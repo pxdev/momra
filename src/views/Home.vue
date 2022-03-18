@@ -104,12 +104,14 @@ export default {
 
       Settings: {
         "dots": false,
-        "infinite": false,
-        "speed": 500,
+        "infinite": true,
+        "speed": 700,
         "slidesToShow": 7,
-        "slidesToScroll": 7,
-        "touchThreshold": 7,
-        "adaptiveHeight": true,
+        "slidesToScroll": 5,
+        "touchThreshold": 5,
+        "adaptiveHeight": false,
+        "variableWidth": true,
+
 
         "responsive": [
           {
