@@ -1,14 +1,16 @@
 <template>
   <section class="landing-page">
+
     <page-header></page-header>
     <main class="bg-primary">
       <video-bg class="home-video" :sources="['intro.mp4']"> </video-bg>
         <div class="landing-heading">
           <div class="container">
-            <h1 class="tx-34">المرصد الحضري الوطني</h1></div>
+            <h1 class="tx-34">المرصد الحضري الوطني</h1>
+          </div>
         </div>
         <!-- / landing-heading -->
-        <div class="container landing-data d-flex justify-content-between">
+        <div class="container landing-data d-flex justify-content-between align-items-center"  :style="`height:${homeHeight}px`">
           <div class="data-icons d-flex flex-wrap">
             <div class="data-icon-box d-flex align-items-start">
               <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
@@ -100,6 +102,7 @@ export default {
   data() {
     return {
       sectors: sectors,
+      homeHeight:null,
       Settings: {
         "dots": false,
         "infinite": false,
@@ -139,6 +142,22 @@ export default {
       this.$router.push("/explore");
     },
 
+    homeSize() {
+      this.homeHeight = window.innerHeight - 220;
+      console.log(this.homeHeight)
+
+    }
+  },
+
+  mounted() {
+    this.homeSize();
+  },
+
+  created() {
+    window.addEventListener('resize', this.homeSize);
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.homeSize);
   },
 
   computed:{

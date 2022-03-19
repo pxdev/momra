@@ -25,7 +25,9 @@
                 <span>{{sectors[sectorCounter].label || sectors[defaultSectorCounter].label }}</span>
                 <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
               </h1>
-              <p class="op-8">كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>
+              <p class="op-8">
+                {{ sectors[indicatorCounter[0]].children[indicatorCounter[1]].label }}
+               </p>
             </div>
           </div>
           <div class="heading-end pd-y-10">
@@ -210,7 +212,12 @@ export default {
     },
     activeRegion(){
       return this.$store.state.activeRegion;
+    },
+
+    indicatorCounter(){
+      return this.$store.state.indicatorCounter;
     }
+
   },
 
 

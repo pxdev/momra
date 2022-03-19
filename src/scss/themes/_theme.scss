@@ -116,6 +116,11 @@ body {
     right: auto;
     bottom: 0;
     z-index: 10;
+
+    @include for-size('small-devices'){
+      position: static;
+    }
+
     @include for-size('small-height') {
       top: 140px;
     }
@@ -125,6 +130,12 @@ body {
     .scroll-area {
       height: 100px;
       min-height: calc(100% - 120px);
+
+      @include for-size('small-devices'){
+        height: 400px;
+        min-height: 400px;
+      }
+
     }
 
   }
@@ -133,4 +144,7 @@ body {
 
 .pages-data {
   padding-right: 360px;
+  @include for-size('small-devices'){
+    padding: 0;
+  }
 }

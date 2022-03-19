@@ -11,17 +11,21 @@
       <VuePerfectScrollbar class="scroll-area">
         <div class="scroll-content pd-x-25">
           <ul>
-            <li :class="{'active' : sectorCounter == index || defaultSectorCounter == index }" v-for="(sector, index) in sectors"
-                :key="index + '_sector'">
-              <a href="#" class="side-nav-link" @click.prevent="setActiveSector(index)">
+            <li :class="{'active' : sectorCounter == sectorIndex || defaultSectorCounter == sectorIndex }"
+                v-for="(sector, sectorIndex) in sectors"
+                :key="sectorIndex + '_sector'">
+              <a href="#" class="side-nav-link" @click.prevent="setActiveSector(sectorIndex)">
                 <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight">
                   <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                 </svg>
                 <span class="pd-x-20">{{ sector.label }}</span></a>
-              <ul v-if="sector.children.length && sectorCounter == index || defaultSectorCounter == index  ">
-                <li :class="{'active' : indicator.isActive==true }" v-for="(indicator, index) in sector.children"
-                    :key="index + '_indicator'">
-                  <a href="#">{{ indicator.label }}</a>
+              <ul v-if="sector.children.length && sectorCounter == sectorIndex || defaultSectorCounter == sectorIndex ">
+                <li :class="{'active': indicatorCounter[0] == sectorIndex && indicatorCounter[1] == indicatorIndex }"
+                    v-for="(indicator, indicatorIndex) in sector.children"
+                    :key="indicatorIndex + '_indicator'">
+                  <a href="#" @click.prevent="setActiveIndicator(sectorIndex,indicatorIndex)">
+                    {{ indicator.label }}
+                  </a>
                 </li>
               </ul>
             </li>
@@ -54,26 +58,32 @@ export default {
   ,
   methods: {
 
-    // setActiveIndictor(indicatorIndex) {
-    //   this.$store.state.sectorCounter = index
-    // },
+    setActiveIndicator(sectorIndex, IndicatorIndex) {
+      this.$store.state.indicatorCounter = [sectorIndex, IndicatorIndex];
+    },
 
 
     setActiveSector(index) {
       this.$store.state.sectorCounter = index
       this.$store.state.defaultSectorCounter = index
+      this.$store.state.indicatorCounter = [index, 0];
     },
 
   },
 
   computed: {
-    defaultSectorCounter(){
+
+    defaultSectorCounter() {
       return this.$store.state.defaultSectorCounter;
     },
 
     sectorCounter() {
       return this.$store.state.sectorCounter;
-    }
+    },
+
+    indicatorCounter() {
+      return this.$store.state.indicatorCounter;
+    },
   },
 
 }

@@ -151,10 +151,6 @@
     content: "";
   }
 
-  @include for-size('small-devices') {
-    position: static;
-  }
-
 
   .home-nav-item {
     @extend %flex-area;

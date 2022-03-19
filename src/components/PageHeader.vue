@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed">
+  <header class="fixed" id="header">
 
     <div class="pre-header">
       <div class="container pd-y-5 d-flex justify-content-between align-items-center">
@@ -106,10 +106,6 @@ export default {
       this.mobileNav = !this.mobileNav
     },
 
-    toggleCart() {
-      this.showCart = !this.showCart
-      this.mobileNav = false
-    },
 
 
     handleResize() {
