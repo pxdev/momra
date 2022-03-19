@@ -132,8 +132,8 @@ body {
       min-height: calc(100% - 120px);
 
       @include for-size('small-devices'){
-        height: 400px;
-        min-height: 400px;
+        height: 200px;
+        min-height: 200px;
       }
 
     }

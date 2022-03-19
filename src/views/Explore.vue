@@ -96,7 +96,10 @@
                     class="ri-arrow-left-line tx-warning tx-42"></i></a>
               </div>
               <h1 class="tx-38"><span>{{ sectors[sectorCounter].label }}</span> على المستوى الوطنى</h1>
-              <p class="op-6">أهم المؤشرات</p>
+              <p class="op-6">
+                <span v-if="sectors[indicatorCounter[0]].children[indicatorCounter[1]]">{{sectors[indicatorCounter[0]].children[indicatorCounter[1]].label}}</span>
+                <span v-else>أهم المؤشرات</span>
+              </p>
             </div>
             <div class="data-icons d-flex flex-wrap pd-y-10">
               <div class="data-icon-box d-flex align-items-start">
@@ -215,12 +218,18 @@ export default {
     sectorCounter() {
       return this.$store.state.sectorCounter || this.$store.state.defaultSectorCounter ;
     },
+
     activeRegion() {
       return this.$store.state.activeRegion;
+    },
+
+    indicatorCounter(){
+      return this.$store.state.indicatorCounter;
+
     }
-  },
 
 
+}
 }
 </script>
 

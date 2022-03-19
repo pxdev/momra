@@ -141,6 +141,7 @@ export default {
       this.$store.state.sectorCounter = index;
       this.$store.state.defaultSectorCounter = index;
       this.$store.state.activeRegion = null;
+      this.$store.state.indicatorCounter = [index, 0];
       this.$router.push("/explore");
     },
 
