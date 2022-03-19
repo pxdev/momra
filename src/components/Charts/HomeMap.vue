@@ -123,13 +123,13 @@ export default {
 // Configure series tooltip
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = " منطقة {title}";
-    polygonTemplate.nonScalingStroke = true;
+    // polygonTemplate.nonScalingStroke = true;
     polygonTemplate.strokeWidth = 1;
     polygonTemplate.stroke = am4core.color("#fff")
     polygonTemplate.strokeDasharray = 5;
 
-    polygonTemplate.fill = am4core.color("#046F6C");
-    polygonTemplate.fillOpacity = 0;
+    polygonTemplate.fill = am4core.color("#fff");
+    polygonTemplate.fillOpacity = 0.05;
 
 
 // Create hover state and set alternative fill color

@@ -213,7 +213,7 @@ export default {
   computed: {
 
     sectorCounter() {
-      return this.$store.state.sectorCounter;
+      return this.$store.state.sectorCounter || this.$store.state.defaultSectorCounter ;
     },
     activeRegion() {
       return this.$store.state.activeRegion;
