@@ -60,6 +60,8 @@ export default {
 
     setActiveIndicator(sectorIndex, IndicatorIndex) {
       this.$store.state.indicatorCounter = [sectorIndex, IndicatorIndex];
+      this.$router.push("/analytics");
+
     },
 
 
