@@ -4,6 +4,12 @@
 .indicator-slider {
   height: 46px !important;
   border-radius: 6px !important;
+  margin: 0 50px;
+
+  @include for-size('small-devices') {
+    margin: 0 25px;
+  }
+
 
 
   /* component style */

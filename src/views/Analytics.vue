@@ -36,7 +36,7 @@
           </div>
         </div>
         <!-- / page heading -->
-        <div class="quick-stats mg-b-15 card shadow rounded justify-content-between flex-wrap d-flex pd-20">
+        <div class="quick-stats mg-b-15 card shadow rounded justify-content-between flex-wrap d-flex">
           <div class="number-stats pd-y-15  d-flex align-items-center">
             <div class="stats-box flex-fill">
               <h2 class="mg-b-10">5.68</h2>
@@ -67,7 +67,7 @@
         </div>
         <!-- / quick-stats -->
         <div class="state-widgets cols-2 d-flex align-items-stretch">
-          <div class="card mg-b-15 shadow rounded pd-25">
+          <div class="card mg-b-15 shadow rounded">
             <div class="d-flex justify-content-between flex-wrap align-items-center">
               <div class="widget-heading mg-b-15">
                 <h4 class="mg-b-5 d-flex align-items-center">متوسط حجم الأسرة<i
@@ -85,7 +85,7 @@
             <xy-chart class="xy-chart" chart-id="xyChart1"></xy-chart>
 
           </div>
-          <div class="card mg-b-15 shadow rounded pd-25">
+          <div class="card mg-b-15 shadow rounded">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 d-flex align-items-center">مقارنة مع الفهرس الدولي <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class="state-widgets cols-2 d-flex align-items-stretch">
-          <div class="card d-flex flex-column justify-content-between mg-b-15 shadow rounded pd-25">
+          <div class="card d-flex flex-column justify-content-between mg-b-15 shadow rounded">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 d-flex align-items-center">منهجية الحساب <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
@@ -132,7 +132,7 @@
             </div>
 
           </div>
-          <div class="card mg-b-15 shadow rounded pd-25">
+          <div class="card mg-b-15 shadow rounded">
             <div class="widget-heading">
               <h4 class="mg-b-5 d-flex align-items-center">المؤشر على مستوى المناطق <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
@@ -147,25 +147,24 @@
         </div>
         <div class="divider bd-b bd-2 mg-t-20 mg-b-30"></div>
         <div class="state-widgets cols-3 d-flex align-items-stretch">
-          <div class="card mg-b-15 shadow rounded pd-25">
+          <div class="card mg-b-15 shadow rounded">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة<i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i></h4>
             </div>
             <bar-chart class="related-indicator" chart-id="chart01"></bar-chart>
           </div>
-          <div class="card mg-b-15 shadow rounded pd-25">
+          <div class="card mg-b-15 shadow rounded">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة<i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i></h4>
             </div>
             <bar-chart class="related-indicator" chart-id="chart02"></bar-chart>
           </div>
-          <div class="card mg-b-15 shadow rounded pd-25">
+          <div class="card mg-b-15 shadow rounded">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 tx-16 d-flex align-items-center">المؤشرات ذات الصلة<i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i></h4>
             </div>
             <bar-chart class="related-indicator" chart-id="chart03"></bar-chart>
           </div>
-
         </div>
         </div>
       </div>

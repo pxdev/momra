@@ -30,9 +30,13 @@
     padding-right: 15px;
     margin-right:15px ;
     margin-left:15px ;
-    @include for-size('phone-only') {
-      border: 0;
+
+    @include for-size('small-devices') {
+      border: none;
+      padding: 0;
+      margin: 0;
     }
+
 
 
   }
@@ -55,6 +59,11 @@
   @include for-size('small-devices') {
     flex: 1 0 100%;
     max-width: 100%;
+  }
+
+  .indicator-container {
+    min-width: auto;
+    width: 100%;
   }
 
 
