@@ -22,11 +22,11 @@
             </div>
             <div class="pd-x-15">
               <h1 class="mg-b-10 d-flex align-items-center">
-                <span>{{sectors[sectorCounter].label || sectors[defaultSectorCounter].label }}</span>
+                <span>{{ sectors[indicatorCounter[0]].children[indicatorCounter[1]].label }}</span>
                 <i class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title" data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
               </h1>
               <p class="op-8">
-                {{ sectors[indicatorCounter[0]].children[indicatorCounter[1]].label }}
+                مثال نص عشوائى
                </p>
             </div>
           </div>

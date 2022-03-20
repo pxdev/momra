@@ -11,7 +11,7 @@
       <VuePerfectScrollbar class="scroll-area">
         <div class="scroll-content pd-x-25">
           <ul>
-            <li :class="{'active' : sectorCounter == sectorIndex || defaultSectorCounter == sectorIndex }"
+            <li :class="{'active' : sectorCounter == sectorIndex }"
                 v-for="(sector, sectorIndex) in sectors"
                 :key="sectorIndex + '_sector'">
               <a href="#" class="side-nav-link" @click.prevent="setActiveSector(sectorIndex)">
@@ -19,7 +19,7 @@
                   <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                 </svg>
                 <span class="pd-x-20">{{ sector.label }}</span></a>
-              <ul v-if="sector.children.length && sectorCounter == sectorIndex || defaultSectorCounter == sectorIndex ">
+              <ul v-if="sector.children.length && sectorCounter == sectorIndex ">
                 <li :class="{'active': indicatorCounter[0] == sectorIndex && indicatorCounter[1] == indicatorIndex }"
                     v-for="(indicator, indicatorIndex) in sector.children"
                     :key="indicatorIndex + '_indicator'">
@@ -68,7 +68,7 @@ export default {
     setActiveSector(index) {
       this.$store.state.sectorCounter = index
       this.$store.state.defaultSectorCounter = index
-      this.$store.state.indicatorCounter = [index, 0];
+      // this.$store.state.indicatorCounter = [index, 0];
     },
 
   },

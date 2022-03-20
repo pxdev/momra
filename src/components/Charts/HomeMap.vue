@@ -161,6 +161,7 @@ export default {
     },
     activeRegion(){
       return this.$store.state.activeRegion;
+
     }
   },
 

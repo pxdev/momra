@@ -13,9 +13,7 @@
             <div class="explore-heading">
               <h1 class="tx-38">منطقة <span>{{ activeRegion }}</span></h1>
               <span v-if="sectors[sectorCounter]">{{sectors[sectorCounter].label}}</span>
-
               <p class="op-6" v-else>أهم المؤشرات</p>
-
             </div>
             <div class="data-icons d-flex flex-wrap pd-y-10">
               <div class="data-icon-box d-flex align-items-start">
