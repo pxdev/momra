@@ -12,7 +12,10 @@
           <div v-if="activeRegion" class="explore-data">
             <div class="explore-heading">
               <h1 class="tx-38">منطقة <span>{{ activeRegion }}</span></h1>
-              <p class="op-6">أهم المؤشرات</p>
+              <span v-if="sectors[sectorCounter]">{{sectors[sectorCounter].label}}</span>
+
+              <p class="op-6" v-else>أهم المؤشرات</p>
+
             </div>
             <div class="data-icons d-flex flex-wrap pd-y-10">
               <div class="data-icon-box d-flex align-items-start">
@@ -82,7 +85,7 @@
             <a href="#" @click.prevent="exploreRegionStats(activeRegion)"
                class="btn btn-secondary lg pd-x-30">تفاصيل</a>
           </div>
-          <div v-else class="explore-data">
+          <div v-if="sectors[sectorCounter]" class="explore-data">
             <div class="explore-heading">
               <svg class="svg-ico" :width="sectors[sectorCounter].iconWidth"
                    :height="sectors[sectorCounter].iconHeight">
@@ -97,9 +100,11 @@
               </div>
               <h1 class="tx-38"><span>{{ sectors[sectorCounter].label }}</span> على المستوى الوطنى</h1>
               <p class="op-6">
-                <span v-if="sectors[indicatorCounter[0]].children[indicatorCounter[1]]">{{sectors[indicatorCounter[0]].children[indicatorCounter[1]].label}}</span>
-                <span v-else>أهم المؤشرات</span>
+<!--                <span v-if="sectors[indicatorCounter[0]].children[indicatorCounter[1]]">{{sectors[indicatorCounter[0]].children[indicatorCounter[1]].label}}</span>-->
+                <span>أهم المؤشرات</span>
               </p>
+
+
             </div>
             <div class="data-icons d-flex flex-wrap pd-y-10">
               <div class="data-icon-box d-flex align-items-start">
@@ -216,7 +221,7 @@ export default {
   computed: {
 
     sectorCounter() {
-      return this.$store.state.sectorCounter || this.$store.state.defaultSectorCounter ;
+      return this.$store.state.sectorCounter ;
     },
 
     activeRegion() {
