@@ -48,15 +48,18 @@
               </drop-down>
             </li>
             <li>
-              <drop-down class="parent-link" title="المؤشرات الحضرية" width="200" toggle-arrow="true">
+              <drop-down class="parent-link" title="المؤشرات الحضرية" width="250" toggle-arrow="true">
                 <a href="#" class="menu-item">أداء القطاعات الحضرية </a>
-                <a href="#" class="menu-item">أداء المناطق</a>
+                <a href="#" class="menu-item">أداء المناطق والمدن والمحافظات</a>
                 <a href="#" class="menu-item">الخارطة التفاعلية</a>
                 <a href="#" class="menu-item">حاسبة أهمية البيانات</a>
               </drop-down>
             </li>
             <li><a class="parent-link" href="#">دراسات حضرية </a></li>
             <li><a class="parent-link" href="#">الأخبار الحضرية </a></li>
+            <router-link class="parent-link" to="/contact">تواصل معنا</router-link>
+
+
           </ul>
         </nav>
         <div v-if="loggedIn" class="divider bd-l mg-x-10"></div>

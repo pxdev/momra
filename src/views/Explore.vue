@@ -83,7 +83,7 @@
             <a href="#" @click.prevent="exploreRegionStats(activeRegion)"
                class="btn btn-secondary lg pd-x-30">تفاصيل</a>
           </div>
-          <div v-if="sectors[sectorCounter]" class="explore-data">
+          <div v-if="sectors[sectorCounter] && !activeRegion" class="explore-data">
             <div class="explore-heading">
               <svg class="svg-ico" :width="sectors[sectorCounter].iconWidth"
                    :height="sectors[sectorCounter].iconHeight">

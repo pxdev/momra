@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Analytics from '../views/Analytics'
 import Explore from '../views/Explore'
+import Contact from '../views/Contact'
 
 
 Vue.use(VueRouter)
@@ -25,6 +26,11 @@ const routes = [
         component: Analytics
     },
 
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact
+    },
 
 
 
