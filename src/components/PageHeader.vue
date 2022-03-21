@@ -50,7 +50,7 @@
             <li>
               <drop-down class="parent-link" title="المؤشرات الحضرية" width="250" toggle-arrow="true">
                 <a href="#" class="menu-item">أداء القطاعات الحضرية </a>
-                <a href="#" class="menu-item">أداء المناطق والمدن والمحافظات</a>
+                <a href="#" class="menu-item" @click.prevent="exploreRegion('الرياض')" >أداء المناطق والمدن والمحافظات</a>
                 <a href="#" class="menu-item">الخارطة التفاعلية</a>
                 <a href="#" class="menu-item">حاسبة أهمية البيانات</a>
               </drop-down>
@@ -109,8 +109,6 @@ export default {
       this.mobileNav = !this.mobileNav
     },
 
-
-
     handleResize() {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth < 1023) {
@@ -121,9 +119,19 @@ export default {
         this.isMobile = false;
       }
 
+    },
+
+    exploreRegion(region) {
+      this.$store.state.activeRegion = region;
+      this.$router.push("/explore");
     }
 
+
   },
+  computed:{
+
+  },
+
   created() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
@@ -131,6 +139,7 @@ export default {
   destroyed() {
     window.removeEventListener('resize', this.handleResize);
   },
+
 
 
 }
