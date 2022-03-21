@@ -1,0 +1,16 @@
+ .contact {
+   .contact-widgets {
+      padding: 0 15px;
+   }
+   .numbers-box {
+     text-align: center;
+     flex: 1;
+     h5 {
+       margin-bottom: 0;
+     }
+     p{
+       color: darken($primary, 5);
+     }
+
+   }
+ }

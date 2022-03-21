@@ -15,11 +15,13 @@
 
 // components
 @import "components/header";
+@import "components/banners";
 
 // pages
 @import "pages/analytics";
 @import "pages/home";
 @import "pages/explore";
+@import "pages/contact";
 
 // plugins
 @import "plugins/select";

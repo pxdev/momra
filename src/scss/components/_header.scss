@@ -47,18 +47,7 @@ header {
       }
     }
 
-    .social {
-      a{
-        font-size: 18px;
-        color: #fff;
-        padding: 0 2px;
-        opacity: 0.6;
 
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
 
   }
 
@@ -155,7 +144,7 @@ header {
           }
 
 
-          &.router-link-active {
+          &.router-link-exact-active {
             &:after {
               width: 100%;
             }
@@ -286,3 +275,15 @@ header {
 
 
 
+.social {
+  a{
+    font-size: 18px;
+    color: #fff;
+    padding: 0 2px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

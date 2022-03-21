@@ -57,7 +57,7 @@
             </li>
             <li><a class="parent-link" href="#">دراسات حضرية </a></li>
             <li><a class="parent-link" href="#">الأخبار الحضرية </a></li>
-            <router-link class="parent-link" to="/contact">تواصل معنا</router-link>
+            <li><router-link class="parent-link" to="/contact">تواصل معنا</router-link></li>
 
 
           </ul>
