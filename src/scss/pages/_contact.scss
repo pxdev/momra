@@ -14,3 +14,18 @@
 
    }
  }
+
+ .contact-fields {
+   .form-group {
+     margin-bottom: 20px;
+   }
+   .col {
+     flex: 1 0 33.33%;
+     max-width: 33.33%;
+   }
+   .col-full {
+     flex: 1 0 100%;
+     max-width: 100%;
+
+   }
+ }

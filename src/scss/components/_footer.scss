@@ -1,0 +1,56 @@
+.footer {
+  color: #FFF;
+  background: $primary;
+  padding-top: 50px;
+
+  a {
+    color: #FFF;
+  }
+
+}
+
+.footer-links {
+  padding: 0 40px;
+  margin-bottom: 40px;
+
+  .footer-heading {
+    @extend %flex-area;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+
+    &:after {
+      content: "";
+      display: block;
+      background: $secondary;
+      height: 4px;
+      width: 40px;
+      margin: 10px;
+    }
+
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFF;
+    white-space: nowrap;
+  }
+
+  a {
+    display: block;
+    opacity: 0.6;
+    font-size: 14px;
+    padding: 6px 0;
+
+    &:hover {
+        opacity: 1;
+    }
+
+  }
+}
+
+.footer-bar {
+  border-top: 2px solid darken($primary, 5);
+   padding: 20px 0;
+}

@@ -31,9 +31,7 @@ header {
 
     .toll-free {
       color: #fff;
-      .phone-number {
-        direction: ltr;
-      }
+
       i{
         position: relative;
         font-size: 18px;
@@ -286,4 +284,9 @@ header {
       opacity: 1;
     }
   }
+}
+
+
+.phone-number {
+  direction: ltr;
 }

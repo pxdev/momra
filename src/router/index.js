@@ -5,6 +5,7 @@ import Home from '../views/Home'
 import Analytics from '../views/Analytics'
 import Explore from '../views/Explore'
 import Contact from '../views/Contact'
+import News from '../views/News'
 
 
 Vue.use(VueRouter)
@@ -32,6 +33,11 @@ const routes = [
         component: Contact
     },
 
+    {
+        path: '/news',
+        name: 'News',
+        component: News
+    },
 
 
 ]

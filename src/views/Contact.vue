@@ -49,10 +49,10 @@
 
     <main class="container pages pd-y-40 rounded">
 
-    <div class="card rounded bd shadow pd-20">
-      <h2>نموذج التواصل الالكتروني</h2>
+    <div class="card rounded bd shadow pd-30">
+      <h2 class="mg-b-20">نموذج التواصل الالكتروني</h2>
 
-      <div class="row">
+      <div class="row contact-fields">
         <div class="col">
           <div class="form-group">
             <label>الاسم<span class="star">*</span></label>
@@ -80,7 +80,12 @@
         <div class="col">
           <div class="form-group">
             <label>نوع المراسلة<span class="star">*</span></label>
-            <input type="text" class="form-control lg" placeholder="حدد نوع الرسالة">
+             <drop-down title="" class="form-dropdown lg" toggle-arrow="true">
+               <a href="#" class="menu-item">شكوى</a>
+               <a href="#" class="menu-item">شكوى</a>
+               <a href="#" class="menu-item">شكوى</a>
+               <a href="#" class="menu-item">شكوى</a>
+             </drop-down>
           </div>
         </div>
         <div class="col">
@@ -89,17 +94,37 @@
             <input type="text" class="form-control lg" placeholder="عنوان الرسالة">
           </div>
         </div>
-        <div class="col col-md-12 col-sm-12 col-xs-12">
+        <div class="col col-full ">
           <div class="form-group">
             <label>الرسالة<span class="star">*</span></label>
-            <textarea name="" class="form-textarea" placeholder="رسالتك…" id="" cols="30" rows="10"></textarea>
+            <textarea name="" class="form-textarea lg" placeholder="رسالتك…" id="" cols="30" rows="10"></textarea>
           </div>
         </div>
+        <div class="col col-full ">
+          <div class="d-flex align-items-center">
+              <div class="form-group">
+            <label>أدخل الرموز التي في الصورة<span class="star">*</span></label>
+            <input type="text" class="form-control lg" placeholder="">
+          </div>
+              <div class="form-group  captcha-img pd-x-30 pd-y-10">
+
+
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-secondary lg pd-x-60">إرسال</button>
       </div>
 
     </div>
 
     </main>
+
+    <page-footer></page-footer>
+
 
   </section>
 </template>
@@ -108,9 +133,11 @@
 import PageHeader from "@/components/PageHeader";
 import BannerHeading from "@/components/BannerHeading";
 import OverBar from "@/components/OverBar";
+import PageFooter from "@/components/PageFooter";
+import DropDown from "../components/DropDown";
 export default {
   name: "Contact",
-  components: {OverBar, BannerHeading, PageHeader}
+  components: {DropDown, OverBar, BannerHeading, PageHeader, PageFooter}
 }
 </script>
 

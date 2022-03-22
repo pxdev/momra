@@ -10,9 +10,10 @@
 
   label {
     font-size: 14px;
-    font-weight: 500;
-    padding: 6px 0;
+    font-weight: 700;
+    padding: 6px 15px;
     white-space: nowrap;
+    color: $primary;
   }
 
   &.floating-label {

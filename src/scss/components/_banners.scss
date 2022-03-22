@@ -23,6 +23,12 @@
     margin-bottom: 15px;
   }
 
+  h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
   &:after {
     @extend %heading-gradient;
     width: 100%;

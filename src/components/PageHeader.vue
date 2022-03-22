@@ -56,7 +56,7 @@
               </drop-down>
             </li>
             <li><a class="parent-link" href="#">دراسات حضرية </a></li>
-            <li><a class="parent-link" href="#">الأخبار الحضرية </a></li>
+            <li><router-link to="/news" class="parent-link">الأخبار الحضرية </router-link></li>
             <li><router-link class="parent-link" to="/contact">تواصل معنا</router-link></li>
 
 
