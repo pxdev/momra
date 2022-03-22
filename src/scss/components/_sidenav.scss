@@ -47,11 +47,11 @@
 
       &.active {
 
-        --blue-color: #9AC4C3;
+        --blue-color: rgba(255,255,255,0.6);
         --green-color: #FFF;
 
         a.side-nav-link {
-          background: $primary;
+          background: #73B160;
           color: #fff;
           font-weight: 700;
           border-radius: 8px;

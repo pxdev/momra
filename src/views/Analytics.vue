@@ -172,6 +172,8 @@
 
     </main>
 
+    <page-footer></page-footer>
+
 
   </section>
 </template>

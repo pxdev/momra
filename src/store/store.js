@@ -9,7 +9,7 @@ const store = new Vuex.Store({
         indicatorCounter: [0,0],
         sectorCounter: null,
         activeRegion:null,
-        activeRegionBg:""
+        activeRegionObj:null
     }
 });
 

@@ -50,7 +50,7 @@
   {
     "id": "2",
     "iconId": "crisis_management",
-    "bgImage": "environment.jpg",
+    "bgImage": "crisis.jpg",
     "iconWidth": 40.767,
     "iconHeight": 40.001,
     "isActive": false,
@@ -70,7 +70,7 @@
   {
     "id": "3",
     "iconId": "islamic_affairs_jajj_and_umrah",
-    "bgImage": "environment.jpg",
+    "bgImage": "islamandhajj.jpg",
     "iconWidth": 52,
     "iconHeight": 45.879,
     "isActive": false,
@@ -86,7 +86,7 @@
   {
     "id": "4",
     "iconId": "safety_and_security",
-    "bgImage": "environment.jpg",
+    "bgImage": "security.jpg",
     "iconWidth": 43.275,
     "iconHeight": 43.001,
     "isActive": false,
@@ -101,7 +101,7 @@
   {
     "id": "5",
     "iconId": "accommodation_and_housing",
-    "bgImage": "environment.jpg",
+    "bgImage": "housing01.jpg",
     "iconWidth": 46.04,
     "iconHeight": 44.8,
     "isActive": false,
@@ -117,7 +117,7 @@
   {
     "id": "6",
     "iconId": "infrastructure",
-    "bgImage": "environment.jpg",
+    "bgImage": "infrastructure.jpg",
     "iconWidth": 46,
     "iconHeight": 40,
     "isActive": false,
@@ -133,7 +133,7 @@
   {
     "id": "7",
     "iconId": "energy",
-    "bgImage": "environment.jpg",
+    "bgImage": "energy.jpg",
     "iconWidth": 39,
     "iconHeight": 44,
      "isActive": false,
@@ -149,7 +149,7 @@
   {
     "id": "8",
     "iconId": "governance_and_legislation",
-    "bgImage": "environment.jpg",
+    "bgImage": "governance.jpg",
     "iconWidth": 45.7,
     "iconHeight": 40.7,
     "isActive": false,
@@ -165,7 +165,7 @@
   {
     "id": "9",
     "iconId": "media_and_culture",
-    "bgImage": "environment.jpg",
+    "bgImage": "culturemedia.jpg",
     "iconWidth": 41,
     "iconHeight": 45,
     "isActive": false,
@@ -181,7 +181,7 @@
   {
     "id": "10",
     "iconId": "health",
-    "bgImage": "environment.jpg",
+    "bgImage": "health.jpg",
     "iconWidth": 49.16,
     "iconHeight": 46,
     "isActive": false,
@@ -197,7 +197,7 @@
   {
     "id": "11",
     "iconId": "economic_growth",
-    "bgImage": "environment.jpg",
+    "bgImage": "economy.jpg",
     "iconWidth": 54.001,
     "iconHeight": 45.22,
     "isActive": false,
@@ -213,7 +213,7 @@
   {
     "id": "12",
     "iconId": "education",
-    "bgImage": "environment.jpg",
+    "bgImage": "education.jpg",
     "iconWidth": 49.191,
     "iconHeight": 40.946,
     "isActive": false,
@@ -229,7 +229,7 @@
   {
     "id": "13",
     "iconId": "labor_and_social_security",
-    "bgImage": "environment.jpg",
+    "bgImage": "socialsecurity.jpg",
     "iconWidth": 43,
     "iconHeight": 44.001,
     "isActive": false,
@@ -245,7 +245,7 @@
   {
     "id": "14",
     "iconId": "urban_fabric",
-    "bgImage": "environment.jpg",
+    "bgImage": "urban.jpg",
     "iconWidth": 43.8,
     "iconHeight": 43.8,
     "isActive": false,
@@ -261,7 +261,7 @@
   {
     "id": "15",
     "iconId": "municipal_funding",
-    "bgImage": "environment.jpg",
+    "bgImage": "municipal.jpg",
     "iconWidth": 39,
     "iconHeight": 39.895,
     "isActive": false,
@@ -277,7 +277,7 @@
   {
     "id": "16",
     "iconId": "tourism_leisure_and_sports",
-    "bgImage": "environment.jpg",
+    "bgImage": "tourism.jpg",
     "iconWidth": 44.126,
     "iconHeight": 42.537,
     "isActive": false,

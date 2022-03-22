@@ -3,16 +3,13 @@
     <page-header></page-header>
     <main class="container pages pd-y-30 d-flex ">
 
+
       <div class="sector-bg" v-if="sectors[sectorCounter] && !activeRegion"
            :style="`background-image: url(/regions/sectors/${sectors[sectorCounter].bgImage})`"
       ></div>
 
-      <div class="sector-bg" v-if="activeRegion"
-           :style="`background-image: url(/regions/regions/${activeRegionBg})`"
-      ></div>
+      <div class="sector-bg" v-if="activeRegion" :style="`background-image: url(/regions/regions/${activeRegionObj.bgImage})`"></div>
 
-
-      {{activeRegionBg}}
 
       <side-navigation></side-navigation>
 
@@ -20,6 +17,8 @@
         <div class="pages-data">
           <div v-if="activeRegion" class="explore-data">
             <div class="explore-heading">
+              <div class="region-map-bg"><img :src="`/maps/${activeRegionObj.id}.png`" alt=""></div>
+
               <h1 class="tx-38">منطقة <span>{{ activeRegion }}</span></h1>
               <span v-if="sectors[sectorCounter]">{{sectors[sectorCounter].label}}</span>
               <p class="op-6" v-else>أهم المؤشرات</p>
@@ -191,12 +190,14 @@
 import PageHeader from "@/components/PageHeader";
 import SideNavigation from "@/components/SideNavigation";
 import sectors from "@/json/sectors.json";
+import regions from "@/json/regions.json";
 
 export default {
   components: {SideNavigation, PageHeader},
   data() {
     return {
       sectors: sectors,
+      regions : regions
     }
   },
 
@@ -233,8 +234,9 @@ export default {
     activeRegion() {
       return this.$store.state.activeRegion;
      },
-    activeRegionBg() {
-      return this.$store.state.activeRegionBg;
+
+    activeRegionObj() {
+      return this.$store.state.activeRegionObj;
     },
 
 

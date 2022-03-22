@@ -49,6 +49,8 @@
             </li>
             <li>
               <drop-down class="parent-link" title="المؤشرات الحضرية" width="250" toggle-arrow="true">
+
+                <a href="#" class="menu-item" @click.prevent="exploreSectorStats(0)">المنصة التحليلية </a>
                 <a href="#" class="menu-item" @click.prevent="exploreSector(0)">أداء القطاعات الحضرية </a>
                 <a href="#" class="menu-item" @click.prevent="exploreRegion('الرياض')" >أداء المناطق والمدن والمحافظات</a>
                 <a href="#" class="menu-item">الخارطة التفاعلية</a>
@@ -130,7 +132,15 @@ export default {
       this.$store.state.sectorCounter = sector;
       this.$store.state.activeRegion = null;
       this.$router.push("/explore");
-    }
+    },
+
+    exploreSectorStats(sector) {
+      this.$store.state.sectorCounter = sector;
+      this.$store.state.activeRegion = null;
+      this.$router.push("/analytics");
+    },
+
+
 
 
   },

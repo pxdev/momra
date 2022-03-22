@@ -2,6 +2,14 @@
   position: relative;
   height: 100%;
 
+
+  .region-map-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(30%, -20%);
+  }
+
   .side-nav {
     ul {
       li{
@@ -49,7 +57,7 @@
 
     margin: 50px 0;
 
-    --blue-color: #9AC4C3;
+    --blue-color: rgba(255,255,255,0.6);
     --green-color: #FFF;
 
     .svg-ico {
