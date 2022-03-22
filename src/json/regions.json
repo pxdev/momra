@@ -1,0 +1,293 @@
+[
+  {
+    "id": "0",
+    "iconId": "population_and_demographics",
+    "bgImage": "citizens.jpg",
+    "iconWidth": 42.053,
+    "iconHeight": 38.75,
+    "isActive": false,
+    "isOpened": false,
+    "label": " السكان والخصائص السكانية ",
+    "children": [
+      {
+        "id": "0-0",
+        "label": "  عدد الأسر "
+      },
+      {
+        "id": "0-1",
+        "label": " المعدل السنوي  الأسر الجديدة "
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "iconId": "water_and_the_environment",
+    "bgImage": "environment.jpg",
+    "iconWidth": 40.9,
+    "iconHeight": 40.932,
+    "isActive": true,
+    "isOpened": true,
+    "label": "المياه والبيئة",
+    "children": [
+      {
+        "id": "1-0 ",
+        "label": "  تركيز ثاني أكسيد الكبريت  "
+      },
+      {
+        "id": "1-1",
+        "label": "  عدد محطات الرصد والمراقبة  "
+      },
+      {
+        "id": "1-2",
+        "label": "  نسبة زمن الاستجابة  دقائق فأقل  "
+      },
+      {
+        "id": "1-3",
+        "label": "   زمن الاستجابة  دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "iconId": "crisis_management",
+    "bgImage": "environment.jpg",
+    "iconWidth": 40.767,
+    "iconHeight": 40.001,
+    "isActive": false,
+    "isOpened": false,
+    "label": "  إدارة الكوارث  ",
+    "children": [
+      {
+        "id": "2-1",
+        "label": "  نسبة زمن الاستجابة للحوادث خلال سبع دقائق فأقل  "
+      },
+      {
+        "id": "2-2",
+        "label": " المعدل السنوي الأسر الجديدة "
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "iconId": "islamic_affairs_jajj_and_umrah",
+    "bgImage": "environment.jpg",
+    "iconWidth": 52,
+    "iconHeight": 45.879,
+    "isActive": false,
+    "isOpened": false,
+    "label": "  الشؤون الإسلامية والحج والعمرة ",
+    "children": [
+      {
+        "id": "3-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "iconId": "safety_and_security",
+    "bgImage": "environment.jpg",
+    "iconWidth": 43.275,
+    "iconHeight": 43.001,
+    "isActive": false,
+    "isOpened": false,
+    "label": "الأمن والسلامة",
+    "children": [
+      {
+        "id": "4-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]  },
+  {
+    "id": "5",
+    "iconId": "accommodation_and_housing",
+    "bgImage": "environment.jpg",
+    "iconWidth": 46.04,
+    "iconHeight": 44.8,
+    "isActive": false,
+    "isOpened": false,
+    "label": "الايواء والمساكن",
+    "children": [
+      {
+        "id": "5-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "iconId": "infrastructure",
+    "bgImage": "environment.jpg",
+    "iconWidth": 46,
+    "iconHeight": 40,
+    "isActive": false,
+    "isOpened": false,
+    "label": "البنية التحتية",
+    "children": [
+      {
+        "id": "6-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "iconId": "energy",
+    "bgImage": "environment.jpg",
+    "iconWidth": 39,
+    "iconHeight": 44,
+     "isActive": false,
+    "isOpened": false,
+    "label": "الطاقة",
+    "children": [
+      {
+        "id": "7-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "iconId": "governance_and_legislation",
+    "bgImage": "environment.jpg",
+    "iconWidth": 45.7,
+    "iconHeight": 40.7,
+    "isActive": false,
+    "isOpened": false,
+    "label": "الحوكمة والتشريعات",
+    "children": [
+      {
+        "id": "8-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "iconId": "media_and_culture",
+    "bgImage": "environment.jpg",
+    "iconWidth": 41,
+    "iconHeight": 45,
+    "isActive": false,
+    "isOpened": false,
+    "label": "الثقافة والإعلام",
+    "children": [
+      {
+        "id": "9-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "iconId": "health",
+    "bgImage": "environment.jpg",
+    "iconWidth": 49.16,
+    "iconHeight": 46,
+    "isActive": false,
+    "isOpened": false,
+    "label": "الصحة",
+    "children": [
+      {
+        "id": "10-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "iconId": "economic_growth",
+    "bgImage": "environment.jpg",
+    "iconWidth": 54.001,
+    "iconHeight": 45.22,
+    "isActive": false,
+    "isOpened": false,
+    "label": "النمو الاقتصادي",
+    "children": [
+      {
+        "id": "11-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "iconId": "education",
+    "bgImage": "environment.jpg",
+    "iconWidth": 49.191,
+    "iconHeight": 40.946,
+    "isActive": false,
+    "isOpened": false,
+    "label": "التعليم",
+    "children": [
+      {
+        "id": "12-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "iconId": "labor_and_social_security",
+    "bgImage": "environment.jpg",
+    "iconWidth": 43,
+    "iconHeight": 44.001,
+    "isActive": false,
+    "isOpened": false,
+    "label": "العمل والحماية الاجتماعية",
+    "children": [
+      {
+        "id": "13-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "iconId": "urban_fabric",
+    "bgImage": "environment.jpg",
+    "iconWidth": 43.8,
+    "iconHeight": 43.8,
+    "isActive": false,
+    "isOpened": false,
+    "label": "النسيج العمراني",
+    "children": [
+      {
+        "id": "14-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "iconId": "municipal_funding",
+    "bgImage": "environment.jpg",
+    "iconWidth": 39,
+    "iconHeight": 39.895,
+    "isActive": false,
+    "isOpened": false,
+    "label": "تمويل البلديات",
+    "children": [
+      {
+        "id": "15-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "iconId": "tourism_leisure_and_sports",
+    "bgImage": "environment.jpg",
+    "iconWidth": 44.126,
+    "iconHeight": 42.537,
+    "isActive": false,
+    "isOpened": false,
+    "label": "السياحة والترفيه والرياضة",
+    "children": [
+      {
+        "id": "16-1",
+        "label": "   خلال سبع دقائق فأقل  "
+      }
+    ]
+  }
+]
