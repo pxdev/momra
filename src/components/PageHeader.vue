@@ -49,7 +49,7 @@
             </li>
             <li>
               <drop-down class="parent-link" title="المؤشرات الحضرية" width="250" toggle-arrow="true">
-                <a href="#" class="menu-item">أداء القطاعات الحضرية </a>
+                <a href="#" class="menu-item" @click.prevent="exploreSector(0)">أداء القطاعات الحضرية </a>
                 <a href="#" class="menu-item" @click.prevent="exploreRegion('الرياض')" >أداء المناطق والمدن والمحافظات</a>
                 <a href="#" class="menu-item">الخارطة التفاعلية</a>
                 <a href="#" class="menu-item">حاسبة أهمية البيانات</a>
@@ -123,6 +123,12 @@ export default {
 
     exploreRegion(region) {
       this.$store.state.activeRegion = region;
+      this.$router.push("/explore");
+    },
+
+    exploreSector(sector) {
+      this.$store.state.sectorCounter = sector;
+      this.$store.state.activeRegion = null;
       this.$router.push("/explore");
     }
 
