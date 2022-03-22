@@ -30,22 +30,6 @@
 
 
 
-  .moving-arrow {
-
-    &.next {
-      animation: arrowMovingRight 5s infinite ease-in-out;
-
-    }
-
-    &.prev {
-      animation: arrowMovingLeft 5s infinite ease-in-out;
-    }
-
-    &:hover {
-      animation: normal;
-    }
-
-  }
 
   .sector-bg {
     position: fixed;
@@ -132,3 +116,25 @@
 
 
 }
+
+
+.explore-nav{
+  .moving-arrow {
+
+    &.next {
+      animation: arrowMovingRight 5s infinite ease-in-out;
+
+    }
+
+    &.prev {
+      animation: arrowMovingLeft 5s infinite ease-in-out;
+    }
+
+    &:hover {
+      animation: normal;
+    }
+
+  }
+}
+
+

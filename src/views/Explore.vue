@@ -3,7 +3,16 @@
     <page-header></page-header>
     <main class="container pages pd-y-30 d-flex ">
 
-      <section class="sector-bg" style="background-image: url(https://placeimg.com/1000/920/tech)"></section>
+      <div class="sector-bg" v-if="sectors[sectorCounter] && !activeRegion"
+           :style="`background-image: url(/regions/sectors/${sectors[sectorCounter].bgImage})`"
+      ></div>
+
+      <div class="sector-bg" v-if="activeRegion"
+           :style="`background-image: url(/regions/regions/${activeRegionBg})`"
+      ></div>
+
+
+      {{activeRegionBg}}
 
       <side-navigation></side-navigation>
 
@@ -98,7 +107,6 @@
               </div>
               <h1 class="tx-38"><span>{{ sectors[sectorCounter].label }}</span> على المستوى الوطنى</h1>
               <p class="op-6">
-<!--                <span v-if="sectors[indicatorCounter[0]].children[indicatorCounter[1]]">{{sectors[indicatorCounter[0]].children[indicatorCounter[1]].label}}</span>-->
                 <span>أهم المؤشرات</span>
               </p>
 
@@ -224,7 +232,11 @@ export default {
 
     activeRegion() {
       return this.$store.state.activeRegion;
+     },
+    activeRegionBg() {
+      return this.$store.state.activeRegionBg;
     },
+
 
     indicatorCounter(){
       return this.$store.state.indicatorCounter;

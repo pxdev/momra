@@ -51,67 +51,80 @@ export default {
       {
         id: "SA-01",
         value: 4447100,
+        regionBg : "riyadh.jpg",
         title: "الرياض"
       },
       {
         id: "SA-02",
         value: 626932,
+        regionBg : "riyadh.jpg",
         title: "مكة المكرمة"
       },
       {
         id: "SA-03",
         value: 5130632,
+        regionBg : "riyadh.jpg",
         title: "المدينة المنورة"
       },
       {
         id: "SA-04",
         value: 2673400,
+        regionBg : "riyadh.jpg",
         title: "الشرقية"
       },
       {
         id: "SA-05",
         value: 5130632,
+        regionBg : "riyadh.jpg",
         title: "القصيم"
       },
       {
         id: "SA-06",
         value: 4301261,
+        regionBg : "riyadh.jpg",
         title: "حائل"
       },
       {
         id: "SA-07",
         value: 3405565,
+        regionBg : "riyadh.jpg",
         title: "تبوك"
       },
       {
         id: "SA-08",
         value: 783600,
+        regionBg : "riyadh.jpg",
         title: "الحدود الشمالية"
       },
       {
         id: "SA-09",
         value: 15982378,
+        regionBg : "riyadh.jpg",
         title: "جازان"
       },
       {
         id: "SA-10",
         value: 8186453,
+        regionBg : "riyadh.jpg",
         title: "نجران"
       },
       {
         id: "SA-11",
         value: 1211537,
+        regionBg : "riyadh.jpg",
         title: "الباحة"
       },
       {
         id: "SA-12",
         value: 1293953,
+        regionBg : "riyadh.jpg",
         title: "الجوف"
       },
 
       {
         id: "SA-14",
         value: 6080485,
+        regionBg : "riyadh.jpg",
         title: "عسير"
       }
     ];
@@ -142,15 +155,16 @@ export default {
     polygonTemplate.events.on("hit", (ev) => {
       var data = ev.target.dataItem.dataContext;
       console.log(data)
-      this.exploreRegion(data.title)
+      this.exploreRegion(data.title, data.regionBg)
     });
 
 
 
   },
   methods: {
-    exploreRegion(region) {
+    exploreRegion(region, regionBg) {
       this.$store.state.activeRegion = region;
+      this.$store.state.activeRegionBg = regionBg;
       this.$store.state.sectorCounter = null;
       this.$router.push("/explore");
     }
