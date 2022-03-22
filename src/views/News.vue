@@ -14,30 +14,15 @@
         <p class="tx-18">في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن  أكد معالي وزير الشؤون البلدية والقروية والإسكان الأستاذ… </p>
         <router-link to="/news-details" href="#"  class="btn mg-y-30 btn-secondary lg pd-x-60">المزيد</router-link>
       </div>
-
     </banner-heading>
 
     <over-bar>
       <div class="d-flex align-items-center flex-wrap">
 
-        <div class="featured-news">
-          <div class="featured-img rounded" :style="`background-image: url(https://placeimg.com/1000/920/tech);`"></div>
+        <div v-for="(newsFeatured, index) in newsPosts.slice(0,3)" :key="index+'_newsFeatured'" class="featured-news">
+          <a href="#" class="featured-img rounded" :style="`background-image: url(${newsFeatured.img});`"></a>
           <div class="featured-meta">
-            <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
-            <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
-          </div>
-        </div>
-        <div class="featured-news">
-          <div class="featured-img rounded" :style="`background-image: url(https://placeimg.com/1000/920/tech);`"></div>
-          <div class="featured-meta">
-            <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
-            <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
-          </div>
-        </div>
-        <div class="featured-news">
-          <div class="featured-img rounded" :style="`background-image: url(https://placeimg.com/1000/920/tech);`"></div>
-          <div class="featured-meta">
-            <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
+            <h3 class="tx-16">{{newsFeatured.title.substring(0,60)+"..." }}</h3>
             <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
           </div>
         </div>
@@ -73,14 +58,15 @@
 
       <div class="news-list flex-wrap d-flex">
 
-        <div v-for="n in 6" :key="n" class="news-box card rounded shadow pd-20">
+        <div v-for="(newsPost, index) in newsPosts" :key="index+'_news'" class="news-box card rounded shadow pd-20">
           <div class="news-box-data">
-            <div class="featured-img rounded" :style="`background-image: url(https://placeimg.com/1000/920/tech);`">
-              <span class="news-category bg-primary">المحلية</span>
-
+            <div class="featured-img rounded"
+                         :style="`background-image: url(${newsPost.img});`">
+              <span class="news-category bg-primary" v-if="newsPost.isLocale==true">المحلية</span>
+              <span class="news-category bg-info" v-else>الدولية</span>
             </div>
-            <h3 class="mg-b-10 tx-16">وافي “يرخص 500 وحدة سكنية صغيرة ومتوسطة …</h3>
-            <p class="tx-12 mg-b-15">وقّعت الشركة السعودية لإعادة التمويل العقاري (SRC) المملوكة بالكامل لصندوق الاستثمارات العامة - اتفاقية تعاون مشترك مع البنك الأهلي السعودي…</p>
+            <h3 class="mg-b-10 tx-16"><router-link class="tx-primary" to="/news-details">{{newsPost.title.substring(0,50)+"..." }}</router-link></h3>
+            <p class="tx-12 mg-b-15">{{ newsPost.description.substring(0,150)+"..." }}</p>
             <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
           </div>
         </div>
@@ -109,8 +95,59 @@ export default {
   data() {
     return {
       activeToggle: 1,
+      newsPosts: [
+        {
+          "img": "https://placeimg.com/640/480/nature",
+          "title" : "الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص",
+          "description" : "في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير الشؤون البلدية والقروية والإسكان",
+          "isLocale": true,
+          "isFeatured": true
+        },
+        {
+          "img": "https://placeimg.com/640/480/people",
+          "title" : "الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
+          "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
+          "isLocale": false,
+          "isFeatured": true
+        },
+        {
+          "img": "https://placeimg.com/640/480/animals",
+          "title" : " بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
+          "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي  سعياً لرفع مساهمة القطاع ",
+          "isLocale": true,
+          "isFeatured": true
+        },
+        {
+          "img": "https://placeimg.com/640/480/arch",
+          "title" : " بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
+          "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل  سعياً لرفع مساهمة القطاع ",
+          "isLocale": false,
+          "isFeatured": true
+        },
+        {
+          "img": "https://placeimg.com/640/480/nature",
+          "title" : " بن طلال يستقبل مدير المكتب  لبرنامج",
+          "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
+          "isLocale": false,
+          "isFeatured": true
+        },
+        {
+          "img": "https://placeimg.com/640/480/people",
+          "title" : " بن طلال يستقبل مدير  الإقليمي لبرنامج",
+          "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
+          "isLocale": false,
+          "isFeatured": true
+        },
+      ]
     }
   },
+
+  computed: {
+    // newsFeaturedList() {
+    //   return this.newsPosts;
+    // }
+  }
+
 }
 </script>
 
