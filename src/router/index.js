@@ -13,6 +13,9 @@ import OurVision from '../views/OurVision'
 import Regulation from '../views/Regulation'
 import InteractiveMap from '../views/InteractiveMap'
 import DataImportanceCalculator from '../views/DataImportanceCalculator'
+import UrbanSurveys from '../views/UrbanSurveys'
+import Experiences from '../views/Experiences'
+import Guidelines from '../views/Guidelines'
 
 Vue.use(VueRouter)
 
@@ -82,6 +85,27 @@ const routes = [
         name: 'DataImportanceCalculator',
         component: DataImportanceCalculator
     },
+
+    {
+        path: '/urban-surveys',
+        name: 'UrbanSurveys',
+        component: UrbanSurveys
+    },
+    {
+        path: '/experiences',
+        name: 'Experiences',
+        component: Experiences
+    },
+    {
+        path: '/guidelines',
+        name: 'Guidelines',
+        component: Guidelines
+    },
+
+
+
+
+
 
 
 ]

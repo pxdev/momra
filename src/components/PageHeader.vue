@@ -41,9 +41,9 @@
             </li>
             <li>
               <drop-down class="parent-link" title="اعمالنا الحضرية" width="250" toggle-arrow="true">
-                <router-link to="/"  class="menu-item">الأدلة الاسترشادية للمراصد المحلية </router-link>
-                <a href="#" class="menu-item">التجارب الدولية والمحلية</a>
-                <a href="#" class="menu-item">الاستطلاعات الحضرية</a>
+                <router-link to="/guidelines"  class="menu-item">الأدلة الاسترشادية للمراصد المحلية </router-link>
+                <router-link to="/experiences" class="menu-item">التجارب الدولية والمحلية</router-link>
+                <router-link to="/urban-surveys"  class="menu-item">الاستطلاعات الحضرية</router-link>
               </drop-down>
             </li>
             <li>
@@ -58,7 +58,7 @@
             </li>
             <li><router-link to="/urban-studies" class="parent-link">دراسات حضرية </router-link></li>
             <li><router-link to="/news" class="parent-link">الأخبار الحضرية </router-link></li>
-            <li><router-link class="parent-link" to="/contact">تواصل معنا</router-link></li>
+            <li><router-link to="/contact" class="parent-link" >تواصل معنا</router-link></li>
 
 
           </ul>
