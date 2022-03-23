@@ -2,25 +2,31 @@
   <section class="news">
     <page-header></page-header>
 
-    <banner-heading banner-height="525" image-url="https://placeimg.com/1000/920/tech">
+    <banner-heading banner-height="525" :image-url="newsFeaturedList[activeFeaturedNewsIndex].img">
       <div class="news-heading-content">
         <div class="explore-nav d-flex">
-          <a href="#" class="moving-arrow next" @click.prevent="increase" title="التالى"><i
+          <a href="#" class="moving-arrow next" @click.prevent="nextNews" title="التالى"><i
               class="ri-arrow-right-line tx-warning tx-42"></i></a>
-          <a href="#" class="moving-arrow prev" @click.prevent="decrease" title="السابق"><i
+          <a href="#" class="moving-arrow prev" @click.prevent="prevNews" title="السابق"><i
               class="ri-arrow-left-line tx-warning tx-42"></i></a>
         </div>
-        <h2 class="tx-40">الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص…</h2>
-        <p class="tx-18">في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن  أكد معالي وزير الشؤون البلدية والقروية والإسكان الأستاذ… </p>
+
+<!--        <p>Active Index{{activeFeaturedNewsIndex + 1}}</p>-->
+<!--        <p>Length{{newsFeaturedList.length}}</p>-->
+
+        <h2 class="tx-40">{{ newsFeaturedList[activeFeaturedNewsIndex].title }}</h2>
+        <p class="tx-18">{{ newsFeaturedList[activeFeaturedNewsIndex].description }}</p>
+
         <router-link to="/news-details" href="#"  class="btn mg-y-30 btn-secondary lg pd-x-60">المزيد</router-link>
+
       </div>
     </banner-heading>
 
     <over-bar>
       <div class="d-flex align-items-center flex-wrap">
 
-        <div v-for="(newsFeatured, index) in newsPosts.slice(0,3)" :key="index+'_newsFeatured'" class="featured-news">
-          <a href="#" class="featured-img rounded" :style="`background-image: url(${newsFeatured.img});`"></a>
+        <div v-for="(newsFeatured, index) in newsFeaturedList" :key="index+'_newsFeatured'" class="featured-news">
+          <a href="#" @click.prevent="showNewsFeatured(index, newsFeatured)" class="featured-img rounded" :style="`background-image: url(${newsFeatured.img});`"></a>
           <div class="featured-meta">
             <h3 class="tx-16">{{newsFeatured.title.substring(0,60)+"..." }}</h3>
             <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
@@ -73,6 +79,17 @@
 
       </div>
 
+      <div class="paging d-flex justify-content-between flex-wrap align-items-center pd-y-30">
+        <div class="data-pagination">
+          <ul class="pagination justify-content-center">
+            <li class="page-item pagination-page-nav active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+            <li class="page-item pagination-page-nav"><a href="#" class="page-link">2</a></li>
+            <li class="page-item pagination-page-nav"><a href="#" class="page-link">3</a></li>
+            <li class="page-item pagination-page-nav"><a href="#" class="page-link">4</a></li>
+            <li class="page-item pagination-next-nav"><a href="#" aria-label="Next" class="page-link"><span aria-hidden="true">»</span><span class="sr-only">التالى</span></a></li></ul>
+        </div>
+        <p class="tx-primary">إظهار 01-05 من 72 مقالات</p>
+      </div>
 
 
     </main>
@@ -89,32 +106,37 @@ import BannerHeading from "@/components/BannerHeading";
 import OverBar from "@/components/OverBar";
 import PageFooter from "@/components/PageFooter";
 import DropDown from "../components/DropDown";
+
 export default {
   name: "News",
   components: {DropDown, OverBar, BannerHeading, PageHeader, PageFooter},
   data() {
     return {
       activeToggle: 1,
+      activeFeaturedNewsIndex:0,
       newsPosts: [
         {
           "img": "https://placeimg.com/640/480/nature",
           "title" : "الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص",
           "description" : "في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير الشؤون البلدية والقروية والإسكان",
           "isLocale": true,
-          "isFeatured": true
+          "isFeaturedActive": false,
+          "isFeatured": false
         },
         {
           "img": "https://placeimg.com/640/480/people",
           "title" : "الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
           "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
+          "isFeaturedActive": false,
           "isFeatured": true
         },
         {
           "img": "https://placeimg.com/640/480/animals",
-          "title" : " بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
-          "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي  سعياً لرفع مساهمة القطاع ",
+          "title" : "  طلال يستقبل  المكتب الإقليمي لبرنامج",
+          "description" : " تنمية مساهمة القطاع الخاص في  المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي  سعياً لرفع مساهمة القطاع ",
           "isLocale": true,
+          "isFeaturedActive": false,
           "isFeatured": true
         },
         {
@@ -122,32 +144,65 @@ export default {
           "title" : " بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
           "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل  سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
-          "isFeatured": true
+          "isFeaturedActive": false,
+          "isFeatured": false
         },
         {
           "img": "https://placeimg.com/640/480/nature",
-          "title" : " بن طلال يستقبل مدير المكتب  لبرنامج",
-          "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
+          "title" : " فرص سعياً يستقبل مدير فرص سعياً  لبرنامج",
+          "description" : "  مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
+          "isFeaturedActive": false,
           "isFeatured": true
         },
         {
           "img": "https://placeimg.com/640/480/people",
-          "title" : " بن طلال يستقبل مدير  الإقليمي لبرنامج",
+          "title" : " الخاص في تنمية المدن أكد معالي وزير مدير  الإقليمي لبرنامج",
           "description" : " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
+          "isFeaturedActive": false,
           "isFeatured": true
         },
       ]
     }
   },
+  methods:{
+
+    nextNews(){
+
+      if (this.activeFeaturedNewsIndex + 1 < this.newsFeaturedList.length ){
+        this.activeFeaturedNewsIndex ++;
+      }else {
+        return false
+      }
+
+    },
+
+    prevNews(){
+      if (this.activeFeaturedNewsIndex + 1 >= 1 ){
+        this.activeFeaturedNewsIndex --;
+      }
+      else {
+        return false
+      }
+
+
+    },
+
+
+    showNewsFeatured(index, item){
+      this.activeFeaturedNewsIndex = index;
+      item.isFeaturedActive = true
+    }
+
+  },
 
   computed: {
-    // newsFeaturedList() {
-    //   return this.newsPosts;
-    // }
-  }
+    newsFeaturedList() {
+      return this.newsPosts.filter(item => item.isFeatured == true ).slice(0,3);
+    },
 
+  }
 }
 </script>
 

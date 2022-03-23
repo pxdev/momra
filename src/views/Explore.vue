@@ -4,22 +4,27 @@
     <main class="container pages pd-y-30 d-flex ">
 
 
-      <div class="sector-bg" v-if="sectors[sectorCounter] && !activeRegion"
-           :style="`background-image: url(/regions/sectors/${sectors[sectorCounter].bgImage})`"
+
+      <div class="sector-bg" v-if="sectors[sectorCounter] && !activeRegionID"
+           :style="`background-image: url(/regions/sectors/${sectors[sectorCounter].bgImage })`"
       ></div>
 
-      <div class="sector-bg" v-if="activeRegion" :style="`background-image: url(/regions/regions/${activeRegionObj.bgImage})`"></div>
 
+      <div class="sector-bg region" v-if="activeRegionId"
+           :style="`background-image: url(/regions/regions/${regions.find( item=>item.id == activeRegionId).bgImage })`"
+      ></div>
 
       <side-navigation></side-navigation>
 
       <div class="pages-content">
         <div class="pages-data">
-          <div v-if="activeRegion" class="explore-data">
-            <div class="explore-heading">
-              <div class="region-map-bg"><img :src="`/maps/${activeRegionObj.id}.png`" alt=""></div>
 
-              <h1 class="tx-38">منطقة <span>{{ activeRegion }}</span></h1>
+
+
+          <div v-if="activeRegionId" class="explore-data">
+            <div class="explore-heading">
+              <div class="region-map-bg"><img :src="`/maps/${regions.find( item=>item.id == activeRegionId).id}.png`" alt=""></div>
+              <h1 class="tx-38">منطقة <span>{{ regions.find( item=>item.id == activeRegionId).title }}</span></h1>
               <span v-if="sectors[sectorCounter]">{{sectors[sectorCounter].label}}</span>
               <p class="op-6" v-else>أهم المؤشرات</p>
             </div>
@@ -91,7 +96,12 @@
             <a href="#" @click.prevent="exploreRegionStats(activeRegion)"
                class="btn btn-secondary lg pd-x-30">تفاصيل</a>
           </div>
-          <div v-if="sectors[sectorCounter] && !activeRegion" class="explore-data">
+
+
+
+
+
+          <div v-if="sectors[sectorCounter] && !activeRegionId" class="explore-data">
             <div class="explore-heading">
               <svg class="svg-ico" :width="sectors[sectorCounter].iconWidth"
                    :height="sectors[sectorCounter].iconHeight">
@@ -227,6 +237,10 @@ export default {
 
   computed: {
 
+    activeRegionId() {
+      return this.$store.state.activeRegionId ;
+    },
+
     sectorCounter() {
       return this.$store.state.sectorCounter ;
     },
@@ -242,8 +256,7 @@ export default {
 
     indicatorCounter(){
       return this.$store.state.indicatorCounter;
-
-    }
+    },
 
 
 }

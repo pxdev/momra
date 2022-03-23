@@ -7,6 +7,12 @@ import Explore from '../views/Explore'
 import Contact from '../views/Contact'
 import News from '../views/News'
 import NewsDetails from '../views/NewsDetails'
+import UrbanStudies from '../views/UrbanStudies'
+import Brief from '../views/Brief'
+import OurVision from '../views/OurVision'
+import Regulation from '../views/Regulation'
+import InteractiveMap from '../views/InteractiveMap'
+import DataImportanceCalculator from '../views/DataImportanceCalculator'
 
 Vue.use(VueRouter)
 
@@ -44,6 +50,40 @@ const routes = [
         name: 'NewsDetails',
         component: NewsDetails
     },
+
+    {
+        path: '/urban-studies',
+        name: 'UrbanStudies',
+        component: UrbanStudies
+    },
+    {
+        path: '/brief',
+        name: 'Brief',
+        component: Brief
+    },
+    {
+        path: '/our-vision',
+        name: 'OurVision',
+        component: OurVision
+    },
+    {
+        path: '/regulation',
+        name: 'Regulation',
+        component: Regulation
+    },
+
+    {
+        path: '/interactive-map',
+        name: 'InteractiveMap',
+        component: InteractiveMap
+    },
+    {
+        path: '/data-importance-calculator',
+        name: 'DataImportanceCalculator',
+        component: DataImportanceCalculator
+    },
+
+
 ]
 
 const router = new VueRouter({

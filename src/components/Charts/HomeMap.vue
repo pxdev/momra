@@ -78,7 +78,8 @@ export default {
 
     polygonTemplate.events.on("hit", (ev) => {
       var data = ev.target.dataItem.dataContext;
-      this.exploreRegion(data);
+     // this.exploreRegion(data);
+      this.setActiveRegionID(data.id)
       console.log(data)
     });
 
@@ -86,6 +87,14 @@ export default {
 
   },
   methods: {
+
+    setActiveRegionID(data){
+      this.$store.state.activeRegionId = data;
+      this.$store.state.sectorCounter = null;
+      this.$router.push("/explore");
+      console.log(this.$store.state.activeRegionId)
+    },
+
     exploreRegion(data) {
       this.$store.state.activeRegion = data.title;
       this.$store.state.activeRegionObj = data;
@@ -104,7 +113,6 @@ export default {
     activeRegionIndex() {
       return this.$store.state.activeRegionIndex;
     },
-
 
   },
 

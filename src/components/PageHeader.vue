@@ -28,21 +28,20 @@
             <h5>القائمة الرئيسية</h5>
             <a href="#" @click.prevent="toggleMobileNav"><i class="ri-close-line tx-22"></i></a>
           </div>
-
           <ul>
             <li>
               <router-link class="parent-link" to="/">الرئيسية</router-link>
             </li>
             <li>
               <drop-down class="parent-link" title="عن المرصد" width="200" toggle-arrow="true">
-                <a href="#" class="menu-item">نبذة عن المرصد </a>
-                <a href="#" class="menu-item">الرؤية والرسالة </a>
-                <a href="#" class="menu-item">اللائحة التنظيمية</a>
+                <router-link to="/brief"  class="menu-item">نبذة عن المرصد </router-link>
+                <router-link to="/our-vision" class="menu-item">الرؤية والرسالة </router-link>
+                <router-link to="/regulation" class="menu-item">اللائحة التنظيمية</router-link>
               </drop-down>
             </li>
             <li>
               <drop-down class="parent-link" title="اعمالنا الحضرية" width="250" toggle-arrow="true">
-                <a href="#" class="menu-item">الأدلة الاسترشادية للمراصد المحلية </a>
+                <router-link to="/"  class="menu-item">الأدلة الاسترشادية للمراصد المحلية </router-link>
                 <a href="#" class="menu-item">التجارب الدولية والمحلية</a>
                 <a href="#" class="menu-item">الاستطلاعات الحضرية</a>
               </drop-down>
@@ -52,12 +51,12 @@
 
                 <a href="#" class="menu-item" @click.prevent="exploreSectorStats(0)">المنصة التحليلية </a>
                 <a href="#" class="menu-item" @click.prevent="exploreSector(0)">أداء القطاعات الحضرية </a>
-                <a href="#" class="menu-item" @click.prevent="exploreRegion('الرياض')" >أداء المناطق والمدن والمحافظات</a>
-                <a href="#" class="menu-item">الخارطة التفاعلية</a>
-                <a href="#" class="menu-item">حاسبة أهمية البيانات</a>
+                <a href="#" class="menu-item" @click.prevent="setActiveRegionID('SA-01')" >أداء المناطق والمدن والمحافظات</a>
+                <router-link to="/interactive-map" class="menu-item">الخارطة التفاعلية</router-link>
+                <router-link to="/data-importance-calculator"  class="menu-item">حاسبة أهمية البيانات</router-link>
               </drop-down>
             </li>
-            <li><a class="parent-link" href="#">دراسات حضرية </a></li>
+            <li><router-link to="/urban-studies" class="parent-link">دراسات حضرية </router-link></li>
             <li><router-link to="/news" class="parent-link">الأخبار الحضرية </router-link></li>
             <li><router-link class="parent-link" to="/contact">تواصل معنا</router-link></li>
 
@@ -123,10 +122,14 @@ export default {
 
     },
 
-    exploreRegion(region) {
-      this.$store.state.activeRegion = region;
+
+
+    setActiveRegionID(data){
+      this.$store.state.activeRegionId = data;
+      this.$store.state.sectorCounter = null;
       this.$router.push("/explore");
-    },
+     },
+
 
     exploreSector(sector) {
       this.$store.state.sectorCounter = sector;
