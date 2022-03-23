@@ -34,16 +34,16 @@
             </li>
             <li>
               <drop-down class="parent-link" title="عن المرصد" width="200" toggle-arrow="true">
-                <router-link to="/brief"  class="menu-item">نبذة عن المرصد </router-link>
-                <router-link to="/our-vision" class="menu-item">الرؤية والرسالة </router-link>
+                <router-link to="/brief" class="menu-item">نبذة عن المرصد</router-link>
+                <router-link to="/our-vision" class="menu-item">الرؤية والرسالة</router-link>
                 <router-link to="/regulation" class="menu-item">اللائحة التنظيمية</router-link>
               </drop-down>
             </li>
             <li>
               <drop-down class="parent-link" title="اعمالنا الحضرية" width="250" toggle-arrow="true">
-                <router-link to="/guidelines"  class="menu-item">الأدلة الاسترشادية للمراصد المحلية </router-link>
+                <router-link to="/guidelines" class="menu-item">الأدلة الاسترشادية للمراصد المحلية</router-link>
                 <router-link to="/experiences" class="menu-item">التجارب الدولية والمحلية</router-link>
-                <router-link to="/urban-surveys"  class="menu-item">الاستطلاعات الحضرية</router-link>
+                <router-link to="/urban-surveys" class="menu-item">الاستطلاعات الحضرية</router-link>
               </drop-down>
             </li>
             <li>
@@ -51,14 +51,21 @@
 
                 <a href="#" class="menu-item" @click.prevent="exploreSectorStats(0)">المنصة التحليلية </a>
                 <a href="#" class="menu-item" @click.prevent="exploreSector(0)">أداء القطاعات الحضرية </a>
-                <a href="#" class="menu-item" @click.prevent="setActiveRegionID('SA-01')" >أداء المناطق والمدن والمحافظات</a>
+                <a href="#" class="menu-item" @click.prevent="setActiveRegionID('SA-01')">أداء المناطق والمدن
+                  والمحافظات</a>
                 <router-link to="/interactive-map" class="menu-item">الخارطة التفاعلية</router-link>
-                <router-link to="/data-importance-calculator"  class="menu-item">حاسبة أهمية البيانات</router-link>
+                <router-link to="/data-importance-calculator" class="menu-item">حاسبة أهمية البيانات</router-link>
               </drop-down>
             </li>
-            <li><router-link to="/urban-studies" class="parent-link">دراسات حضرية </router-link></li>
-            <li><router-link to="/news" class="parent-link">الأخبار الحضرية </router-link></li>
-            <li><router-link to="/contact" class="parent-link" >تواصل معنا</router-link></li>
+            <li>
+              <router-link to="/urban-studies" class="parent-link">دراسات حضرية</router-link>
+            </li>
+            <li>
+              <router-link to="/news" class="parent-link">الأخبار الحضرية</router-link>
+            </li>
+            <li>
+              <router-link to="/contact" class="parent-link">تواصل معنا</router-link>
+            </li>
 
 
           </ul>
@@ -123,12 +130,17 @@ export default {
     },
 
 
+    setActiveRegionID(data) {
 
-    setActiveRegionID(data){
-      this.$store.state.activeRegionId = data;
-      this.$store.state.sectorCounter = null;
-      this.$router.push("/explore");
-     },
+      if (this.$route.name == 'Explore') {
+        return false
+      } else {
+        this.$store.state.activeRegionId = data;
+        this.$store.state.sectorCounter = null;
+        this.$router.push("/explore");
+      }
+
+    },
 
 
     exploreSector(sector) {
@@ -144,12 +156,8 @@ export default {
     },
 
 
-
-
   },
-  computed:{
-
-  },
+  computed: {},
 
   created() {
     window.addEventListener('resize', this.handleResize);
@@ -158,7 +166,6 @@ export default {
   destroyed() {
     window.removeEventListener('resize', this.handleResize);
   },
-
 
 
 }
