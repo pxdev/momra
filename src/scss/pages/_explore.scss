@@ -127,6 +127,8 @@
 
 
 .explore-nav{
+  position: relative;
+  z-index: 20;
   .moving-arrow {
 
     &.next {

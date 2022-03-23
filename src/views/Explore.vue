@@ -19,10 +19,11 @@
       <div class="pages-content">
         <div class="pages-data">
 
-
+<!--        {{regions.find( item=>item.id == activeRegionId).regIndex}}-->
 
           <div v-if="activeRegionId" class="explore-data">
             <div class="explore-heading">
+
               <div class="region-map-bg"><img :src="`/maps/${regions.find( item=>item.id == activeRegionId).id}.png`" alt=""></div>
               <h1 class="tx-38">منطقة <span>{{ regions.find( item=>item.id == activeRegionId).title }}</span></h1>
               <span v-if="sectors[sectorCounter]">{{sectors[sectorCounter].label}}</span>
@@ -212,6 +213,9 @@ export default {
   },
 
   methods: {
+
+    nextRegion(){
+    },
 
     exploreRegionStats(region) {
       this.$store.state.activeRegion = region;
