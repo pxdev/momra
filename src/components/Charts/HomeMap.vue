@@ -79,7 +79,7 @@ export default {
     polygonTemplate.events.on("hit", (ev) => {
       var data = ev.target.dataItem.dataContext;
      // this.exploreRegion(data);
-      this.setActiveRegionID(data.id)
+      this.setActiveRegionID(data.regIndex)
       console.log(data)
     });
 

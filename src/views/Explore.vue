@@ -3,15 +3,12 @@
     <page-header></page-header>
     <main class="container pages pd-y-30 d-flex ">
 
-
-
-      <div class="sector-bg" v-if="sectors[sectorCounter] && !activeRegionID"
+      <div class="sector-bg" v-if="sectors[sectorCounter] && !activeRegionId"
            :style="`background-image: url(/regions/sectors/${sectors[sectorCounter].bgImage })`"
       ></div>
 
-
       <div class="sector-bg region" v-if="activeRegionId"
-           :style="`background-image: url(/regions/regions/${regions.find( item=>item.id == activeRegionId).bgImage })`"
+           :style="`background-image: url(/regions/regions/${regions.find( item=>item.regIndex == activeRegionId).bgImage })`"
       ></div>
 
       <side-navigation></side-navigation>
@@ -19,15 +16,24 @@
       <div class="pages-content">
         <div class="pages-data">
 
-<!--        {{regions.find( item=>item.id == activeRegionId).regIndex}}-->
-
           <div v-if="activeRegionId" class="explore-data">
             <div class="explore-heading">
 
-              <div class="region-map-bg"><img :src="`/maps/${regions.find( item=>item.id == activeRegionId).id}.png`" alt=""></div>
-              <h1 class="tx-38">منطقة <span>{{ regions.find( item=>item.id == activeRegionId).title }}</span></h1>
+              <div class="explore-nav d-flex">
+                <a href="#" class="moving-arrow next" @click.prevent="nextRegion" title="التالى"><i
+                    class="ri-arrow-right-line tx-warning tx-42"></i></a>
+                <a href="#" class="moving-arrow prev" @click.prevent="prevRegion" title="السابق"><i
+                    class="ri-arrow-left-line tx-warning tx-42"></i></a>
+              </div>
+
+              <div class="region-map-bg">
+                <img :src="`/maps/${regions.find( item=>item.regIndex == activeRegionId).id}.png`" alt="">
+              </div>
+              <h1 class="tx-38">منطقة <span>{{ regions.find( item=>item.regIndex == activeRegionId).title }}</span></h1>
+
               <span v-if="sectors[sectorCounter]">{{sectors[sectorCounter].label}}</span>
               <p class="op-6" v-else>أهم المؤشرات</p>
+
             </div>
             <div class="data-icons d-flex flex-wrap pd-y-10">
               <div class="data-icon-box d-flex align-items-start">
@@ -97,8 +103,6 @@
             <a href="#" @click.prevent="exploreRegionStats(activeRegion)"
                class="btn btn-secondary lg pd-x-30">تفاصيل</a>
           </div>
-
-
 
 
 
@@ -214,8 +218,30 @@ export default {
 
   methods: {
 
-    nextRegion(){
+    nextRegion( ){
+      if(this.$store.state.activeRegionId < this.regions.length){
+        let currentIndex = regions.find( item=>item.regIndex == this.activeRegionId).regIndex;
+        let nextIndex = currentIndex + 1;
+        this.$store.state.activeRegionId = nextIndex;
+        console.log(this.regions.length)
+      }else {
+        return  false
+      }
     },
+
+    prevRegion(){
+
+      if(this.$store.state.activeRegionId > 1){
+        let currentIndex = regions.find( item=>item.regIndex == this.activeRegionId).regIndex;
+        let nextIndex = currentIndex - 1;
+        this.$store.state.activeRegionId = nextIndex;
+        console.log(this.regions.length)
+      }else {
+        return  false
+      }
+
+    },
+
 
     exploreRegionStats(region) {
       this.$store.state.activeRegion = region;
