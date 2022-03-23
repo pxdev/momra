@@ -35,7 +35,7 @@
               </div>
               <a href="#" class="menu-item" @click.prevent="exploreSectorStats(0)">المنصة التحليلية </a>
               <a href="#" class="menu-item" @click.prevent="exploreSector(0)">أداء القطاعات الحضرية </a>
-              <a href="#" class="menu-item" @click.prevent="setActiveRegionID('SA-01')">أداء المناطق والمدن والمحافظات</a>
+              <a href="#" class="menu-item" @click.prevent="setActiveRegionID(1)">أداء المناطق والمدن والمحافظات</a>
               <router-link to="/interactive-map" class="menu-item">الخارطة التفاعلية</router-link>
               <router-link to="/data-importance-calculator" class="menu-item">حاسبة أهمية البيانات</router-link>
             </div>
