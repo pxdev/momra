@@ -11,9 +11,6 @@
               class="ri-arrow-left-line tx-warning tx-42"></i></a>
         </div>
 
-<!--        <p>Active Index{{activeFeaturedNewsIndex + 1}}</p>-->
-<!--        <p>Length{{newsFeaturedList.length}}</p>-->
-
         <h2 class="tx-40">{{ newsFeaturedList[activeFeaturedNewsIndex].title }}</h2>
         <p class="tx-18">{{ newsFeaturedList[activeFeaturedNewsIndex].description }}</p>
 

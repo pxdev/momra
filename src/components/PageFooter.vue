@@ -64,9 +64,9 @@
 
 
           <div class="footer-bar-links tx-12 d-flex op-6">
-            <a href="#">سياسة الخصوصية</a>
+            <router-link to="/privacy">سياسة الخصوصية</router-link>
             <span class="divider bd-l mg-x-10"></span>
-            <a href="#">سياسة الاستخدام</a>
+            <router-link to="/terms">سياسة الاستخدام</router-link>
           </div>
 
         </div>

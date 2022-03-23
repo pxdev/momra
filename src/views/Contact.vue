@@ -106,9 +106,8 @@
             <label>أدخل الرموز التي في الصورة<span class="star">*</span></label>
             <input type="text" class="form-control lg" placeholder="">
           </div>
-              <div class="form-group  captcha-img pd-x-30 pd-y-10">
-
-
+              <div class="form-group  captcha-img pd-x-30 mg-t-20">
+                <img src="/cms/captcha.png" alt="">
               </div>
           </div>
         </div>

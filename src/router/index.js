@@ -16,6 +16,8 @@ import DataImportanceCalculator from '../views/DataImportanceCalculator'
 import UrbanSurveys from '../views/UrbanSurveys'
 import Experiences from '../views/Experiences'
 import Guidelines from '../views/Guidelines'
+import Privacy from '../views/Privacy'
+import Terms from '../views/Terms'
 
 Vue.use(VueRouter)
 
@@ -102,8 +104,17 @@ const routes = [
         component: Guidelines
     },
 
+    {
+        path: '/privacy',
+        name: 'Privacy',
+        component: Privacy
+    },
 
-
+    {
+        path: '/terms',
+        name: 'Terms',
+        component: Terms
+    },
 
 
 
@@ -111,6 +122,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+
     mode: 'history',
     base: process.env.BASE_URL,
     routes
