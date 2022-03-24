@@ -1,7 +1,6 @@
 <template>
   <div class="footer">
 
-
     <div class="container">
         <div class="d-flex flex-wrap justify-content-between">
           <div class="footer-start mg-b-30">
