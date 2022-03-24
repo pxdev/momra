@@ -1,0 +1,56 @@
+
+.widget-collapsible {
+  .widget-title {
+    font-size: 1.6rem;
+    a{
+      display: block;
+      position: relative;
+    }
+  }
+  .toggle-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 2px;
+    padding: 0;
+    width: 10px;
+    opacity: 1;
+    transform: translateY(-50%);
+
+    &:before{
+      content: '';
+      position: absolute;
+      border-top: 2px solid #666;
+      width: 10px;
+      transition: transform .3s;
+      transform: rotate(90deg);
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      border-top: 2px solid #666;
+      width: 10px;
+      transition: transform .3s;
+      transform: rotate(180deg);
+
+    }
+
+    &.opened {
+
+      &:before{
+        transform: rotate(0);
+
+      }
+      &:after{
+        transform: rotate(0);
+
+      }
+
+    }
+
+
+
+
+
+  }
+}

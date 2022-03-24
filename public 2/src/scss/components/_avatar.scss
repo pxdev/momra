@@ -1,0 +1,32 @@
+ .avatar {
+   position: relative;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: $primary;
+   flex-shrink: 0;
+
+   .avatar-text {
+     display: block;
+     color: #fff;
+     text-align: center;
+     font-size: 14px;
+     font-weight: bold;
+     text-transform: uppercase;
+   }
+
+ }
+
+ .rounded-circle {
+    border-radius: 50%;
+ }
+
+ .heading-icon {
+   @extend %flex-area;
+   height: 68px;
+   width: 68px;
+   flex-shrink: 0;
+   justify-content: center;
+   border-radius: 16px;
+   background: rgba($primary, 0.05);
+ }

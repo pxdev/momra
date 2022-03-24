@@ -1,0 +1,93 @@
+[
+  {
+    "regIndex": 1,
+    "id": "SA-01",
+    "value": 4447100,
+    "bgImage": "riyadh.jpg",
+    "title": "الرياض"
+  },
+  {
+    "regIndex": 2,
+    "id": "SA-02",
+    "value": 626932,
+    "bgImage": "makkah.jpg",
+    "title": "مكة المكرمة"
+  },
+  {
+    "regIndex": 3,
+    "id": "SA-03",
+    "value": 5130632,
+    "bgImage": "madinahmonawwarah.jpg",
+    "title": "المدينة المنورة"
+  },
+  {
+    "regIndex": 4,
+    "id": "SA-04",
+    "value": 2673400,
+    "bgImage": "easternregion.jpg",
+    "title": "الشرقية"
+  },
+  {
+    "regIndex": 5,
+    "id": "SA-05",
+    "value": 5130632,
+    "bgImage": "qassim.jpg",
+    "title": "القصيم"
+  },
+  {
+    "regIndex": 6,
+    "id": "SA-06",
+    "value": 4301261,
+    "bgImage": "hail.jpg",
+    "title": "حائل"
+  },
+  {
+    "regIndex": 7,
+    "id": "SA-07",
+    "value": 3405565,
+    "bgImage": "tabouk.jpg",
+    "title": "تبوك"
+  },
+  {
+    "regIndex": 8,
+    "id": "SA-08",
+    "value": 783600,
+    "bgImage": "easternregion.jpg",
+    "title": "الحدود الشمالية"
+  },
+  {
+    "regIndex": 9,
+    "id": "SA-09",
+    "value": 15982378,
+    "bgImage": "jazan.jpg",
+    "title": "جازان"
+  },
+  {
+    "regIndex": 10,
+    "id": "SA-10",
+    "value": 8186453,
+    "bgImage": "najran.jpg",
+    "title": "نجران"
+  },
+  {
+    "regIndex": 11,
+    "id": "SA-11",
+    "value": 1211537,
+    "bgImage": "albaha.jpg",
+    "title": "الباحة"
+  },
+  {
+    "regIndex": 12,
+    "id": "SA-12",
+    "value": 1293953,
+    "bgImage": "aljouf.jpg",
+    "title": "الجوف"
+  },
+  {
+    "regIndex": 13,
+    "id": "SA-14",
+    "value": 6080485,
+    "bgImage": "aseer.jpg",
+    "title": "عسير"
+  }
+]

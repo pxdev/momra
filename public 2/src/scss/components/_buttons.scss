@@ -1,0 +1,292 @@
+@mixin button-bg($bg) {
+  background: $bg;
+  border-color: $bg;
+  &:hover {
+    background: darken($bg, 10%);
+    border-color: darken($bg, 10%);
+  }
+  &:active {
+    border-color: darken($bg, 25%);
+    background: darken($bg, 25%);
+  }
+}
+
+@mixin button-border($border) {
+  color: $border;
+  border-color: $border;
+  &:hover {
+    background: darken($border, 1%);
+    border-color: lighten($border, 5%);
+    color: white;
+  }
+  &:active {
+    border-color: darken($border, 25%);
+    background: darken($border, 25%);
+  }
+}
+
+// buttons
+.btn {
+  display: inline-block;
+  line-height: 1.8;
+  color: currentColor;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  padding: 5px 15px;
+  white-space: nowrap;
+  height: $normal-form-size;
+  max-width: 680px;
+
+  &.sm {
+    line-height: 1.5;
+    font-size: 12px;
+    height: $small-form-size;
+  }
+
+  &.lg {
+    line-height: 2.6;
+    font-size: 14px;
+    height: $large-form-size;
+  }
+
+
+  &:disabled {
+    @extend %disabled;
+
+    &:hover {
+      @extend %disabled;
+    }
+
+  }
+
+  &.disabled {
+    @extend %disabled;
+
+    &:hover {
+      @extend %disabled;
+    }
+
+  }
+
+
+}
+
+.not-allowed {
+  cursor: none;
+  pointer-events: none;
+}
+
+// colors
+
+
+.btn-primary {
+  @include button-bg($primary);
+  color: #fff;
+}
+
+.btn-primary-outline {
+  @include button-border($primary);
+}
+
+.btn-secondary {
+  @include button-bg($secondary);
+  color: #fff;
+}
+
+.btn-secondary-outline {
+  @include button-border($secondary);
+}
+
+.btn-warning {
+  @include button-bg($warning);
+  color: #fff;
+}
+
+.btn-warning-outline {
+  @include button-border($warning);
+}
+
+.btn-success {
+  @include button-bg($success);
+  color: #fff;
+}
+
+.btn-success-outline {
+  @include button-border($success);
+}
+
+.btn-info {
+  @include button-bg($info);
+  color: #fff;
+}
+
+.btn-info-outline {
+  @include button-border($info);
+}
+
+.btn-danger {
+  @include button-bg($danger);
+  color: #fff;
+}
+
+.btn-danger-outline {
+  @include button-border($danger);
+}
+
+.btn-teal {
+  @include button-bg($teal);
+  color: #fff;
+}
+
+.btn-teal-outline {
+  @include button-border($teal);
+}
+
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+.btn-rounded {
+  border-radius: 50px;
+}
+
+
+input + .btn {
+  @include rtl(margin-left, 15px, 0);
+  @include rtl(margin-right, 0, 15px);
+
+}
+
+
+.btn-circle {
+  @extend %flex-area;
+  justify-content: center;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  i {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background: $info;
+    color: #fff;
+  }
+
+}
+
+
+.play-btn {
+  i {
+    font-size: 20px;
+  }
+}
+
+.pause-btn {
+  i {
+    font-size: 14px;
+  }
+
+}
+
+
+.toggle-btn {
+  width: 30px;
+  height: 20px;
+  background: $dark-gray;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid lighten($info, 0.2);
+  cursor: pointer;
+  display: flex;
+
+  span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: block;
+    background: $info;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    transition: 0.2s all ease-in-out;
+  }
+
+  &.active {
+    background: $info;
+
+    span {
+      background: #FFF;
+      right: 3px;
+      left: auto;
+    }
+
+  }
+
+
+}
+
+
+.toggle-switch {
+  height: 45px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid $border-color;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s all ease-in-out;
+    height: 45px;
+    color: $primary;
+    padding: 0 15px;
+    &.active {
+      background: $primary;
+      color: #fff;
+    }
+  }
+
+
+
+
+}
+
+.btn-pre {
+  position: relative;
+  padding-right: 60px;
+  .btn-ico {
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+}
+
