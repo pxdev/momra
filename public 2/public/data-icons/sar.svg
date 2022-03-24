@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49">
-  <g id="Group_2609" data-name="Group 2609" transform="translate(-1313.867 -355.947)">
-    <g id="base" transform="translate(1313.867 355.947)" fill="none" stroke="#b3f4fc" stroke-width="3.5">
-      <rect width="49" height="49" rx="24.5" stroke="none"/>
-      <rect x="1.75" y="1.75" width="45.5" height="45.5" rx="22.75" fill="none"/>
-    </g>
-    <text id="SR" transform="translate(1350.867 385.947)" fill="#b3f4fc" font-size="21" font-family="SegoeUI, Segoe UI"><tspan x="-23.717" y="0">SR</tspan></text>
-  </g>
-</svg>
