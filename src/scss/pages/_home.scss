@@ -149,10 +149,6 @@
   z-index: 15;
   height: 180px;
 
-  @include for-size('small-devices') {
-   }
-
-
   &:after {
     height: 120px;
     background: $primary;
