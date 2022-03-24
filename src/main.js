@@ -6,6 +6,7 @@ import store from "./store/store"
 import './scss/main.scss'
 import 'remixicon/fonts/remixicon.css'
 
+
 Vue.config.productionTip = false
 
 new Vue({
