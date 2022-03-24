@@ -1,29 +1,33 @@
-// main configuration
-@import "config/variables";
+body{
+  background: #F00;
+}
 
-// utilities
-@import "utilities/utilites" ;
-
-// theme
-@import "themes/theme" ;
-
-// fonts
-@import "fonts/thesansarab/stylesheet.css" ;
-
-// general components
-@import "components/components" ;
-
-// components
-@import "components/header";
-@import "components/footer";
-@import "components/banners";
-
-// pages
-@import "pages/analytics";
-@import "pages/home";
-@import "pages/explore";
-@import "pages/contact";
-@import "pages/news";
-
-// plugins
-@import "plugins/select";
+//// main configuration
+//@import "config/variables";
+//
+//// utilities
+//@import "utilities/utilites" ;
+//
+//// theme
+//@import "themes/theme" ;
+//
+//// fonts
+//@import "fonts/thesansarab/stylesheet.css" ;
+//
+//// general components
+//@import "components/components" ;
+//
+//// components
+//@import "components/header";
+//@import "components/footer";
+//@import "components/banners";
+//
+//// pages
+//@import "pages/analytics";
+//@import "pages/home";
+//@import "pages/explore";
+//@import "pages/contact";
+//@import "pages/news";
+//
+//// plugins
+//@import "plugins/select";
