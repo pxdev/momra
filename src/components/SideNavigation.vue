@@ -13,11 +13,12 @@
             <li :class="{'active' : sectorCounter == sectorIndex }"
                 v-for="(sector, sectorIndex) in sectors"
                 :key="sectorIndex + '_sector'">
-              <a href="#" class="side-nav-link" @click.prevent="setActiveSector(sectorIndex)">
+              <a href="#" class="side-nav-link" @click.prevent="setActiveSector(sectorIndex, $event)">
                 <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight">
                   <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
                 </svg>
-                <span class="pd-x-20">{{ sector.label }}</span></a>
+                <span class="pd-x-20">{{ sector.label }}</span>
+              </a>
               <ul v-if="sector.children.length && sectorCounter == sectorIndex ">
                 <li :class="{'active': indicatorCounter[0] == sectorIndex && indicatorCounter[1] == indicatorIndex }"
                     v-for="(indicator, indicatorIndex) in sector.children"
@@ -65,14 +66,14 @@ export default {
     },
 
 
-    setActiveSector(index) {
+    setActiveSector(index, e) {
       this.$store.state.sectorCounter = index
       this.$store.state.defaultSectorCounter = index;
-
-      // this.sectors[index].isOpened = !this.sectors[index].isOpened
-
-      // this.$store.state.indicatorCounter = [index, 0];
+      let nextNavList = e.target.parentElement.parentElement;
+      nextNavList.classList.toggle('active')
     },
+
+
 
     sideNavSize() {
       this.sideNavHeight = window.innerHeight - 200;

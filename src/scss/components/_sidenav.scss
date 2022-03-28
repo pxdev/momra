@@ -11,8 +11,9 @@
 
   .scroll-area {
     position: relative;
-
     direction: ltr;
+
+
     .scroll-content{
       scroll-behavior: smooth;
       transition: 0.4s all ease-in-out;
@@ -30,12 +31,26 @@
     padding: 0;
 
     li {
+      position: relative;
+
       a.side-nav-link {
         @extend %flex-area;
         font-size: 14px;
         color: $primary;
-        padding: 15px 10px;
+        padding: 0 10px;
         border-bottom: 1px solid $border-color;
+
+
+
+        span {
+          flex: 1;
+          padding: 20px;
+
+          @include for-size('small-height') {
+            padding: 15px;
+          }
+
+        }
 
         &:hover {
           color: $secondary;
@@ -66,6 +81,7 @@
           color: #fff;
           font-weight: 700;
           border-radius: 8px;
+
         }
 
         svg {
@@ -74,10 +90,16 @@
             stroke: #fff;
           }
         }
+
+        ul {
+          display: block;
+        }
+
       }
 
       ul {
         padding: 10px 15px;
+        display: none;
 
         li {
           border-bottom: 1px solid $border-color;
@@ -92,6 +114,11 @@
              position: relative;
             min-height: 30px;
 
+            @include for-size('small-height') {
+              font-size: 12px;
+
+            }
+            
             &:hover {
               opacity: 1;
             }
