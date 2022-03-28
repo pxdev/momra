@@ -54,13 +54,7 @@ export default {
     polygonSeries.useGeodata = true;
 
 
-
-    // Set heatmap values for each state
     polygonSeries.data = this.regions
-
-
-
-
 
 
 
@@ -72,8 +66,11 @@ export default {
     polygonTemplate.stroke = am4core.color("#fff")
     polygonTemplate.strokeDasharray = 5;
 
-    polygonTemplate.fill = am4core.color("#fff");
-    polygonTemplate.fillOpacity = 0.05;
+    // polygonTemplate.fill = am4core.color("#fff");
+
+
+    // polygonTemplate.fillOpacity = 0.05;
+    // polygonTemplate.fillOpacity = 0.6;
 
 // Create hover state and set alternative fill color
     var hs = polygonTemplate.states.create("hover");
@@ -81,7 +78,6 @@ export default {
     hs.properties.fillOpacity = 0.6;
 
 // Create Click state
-
     polygonTemplate.events.on("hit", (ev) => {
       var data = ev.target.dataItem.dataContext;
      // this.exploreRegion(data);
@@ -89,11 +85,14 @@ export default {
       console.log(data)
     });
 
-    //
-    // var riyadhPolygonTemplate = am4geodata_region_saudiArabia_onLow.features[1];
-    // riyadhPolygonTemplate.fill = am4core.color("#E94F37");
-    // riyadhPolygonTemplate.properties.fill = am4core.color("#E94F37");
-    // console.log(riyadhPolygonTemplate.id)
+
+    var riyadhPolygonTemplate = polygonSeries.mapPolygons.template;
+    riyadhPolygonTemplate.propertyFields.fill = "activeColor"
+    riyadhPolygonTemplate.propertyFields.fillOpacity = "fillOpacity"
+    console.log(riyadhPolygonTemplate)
+
+    // polygonTemplate.propertyFields.fill = "color";
+
 
 
   },
