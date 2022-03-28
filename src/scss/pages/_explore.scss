@@ -129,7 +129,26 @@
 .explore-nav{
   position: relative;
   z-index: 20;
+
   .moving-arrow {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    background: #FDDE8C;
+    flex-shrink: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #436667;
+
+    &:nth-child(2){
+      margin-right: 15px;
+    }
+
+    i{
+
+    }
 
     &.next {
       animation: arrowMovingRight 5s infinite ease-in-out;

@@ -21,9 +21,9 @@
 
               <div class="explore-nav d-flex">
                 <a href="#" class="moving-arrow next" @click.prevent="nextRegion" title="التالى"><i
-                    class="ri-arrow-right-line tx-warning tx-42"></i></a>
+                    class="ri-arrow-right-s-line"></i></a>
                 <a href="#" class="moving-arrow prev" @click.prevent="prevRegion" title="السابق"><i
-                    class="ri-arrow-left-line tx-warning tx-42"></i></a>
+                    class="ri-arrow-left-s-line"></i></a>
               </div>
 
               <div class="region-map-bg">
@@ -115,9 +115,9 @@
               </svg>
               <div class="explore-nav d-flex">
                 <a href="#" class="moving-arrow next" @click.prevent="increase" title="التالى"><i
-                    class="ri-arrow-right-line tx-warning tx-42"></i></a>
+                    class="ri-arrow-right-s-line"></i></a>
                 <a href="#" class="moving-arrow prev" @click.prevent="decrease" title="السابق"><i
-                    class="ri-arrow-left-line tx-warning tx-42"></i></a>
+                    class="ri-arrow-left-s-line"></i></a>
               </div>
               <h1 class="tx-38"><span>{{ sectors[sectorCounter].label }}</span> على المستوى الوطنى</h1>
               <p class="op-6">

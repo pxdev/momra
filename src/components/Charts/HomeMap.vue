@@ -40,6 +40,7 @@ export default {
 // Set projection
     chart.projection = new am4maps.projections.Miller();
 
+
 // Create map polygon series
     var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
@@ -53,8 +54,14 @@ export default {
     polygonSeries.useGeodata = true;
 
 
+
     // Set heatmap values for each state
     polygonSeries.data = this.regions
+
+
+
+
+
 
 
 // Configure series tooltip
@@ -67,7 +74,6 @@ export default {
 
     polygonTemplate.fill = am4core.color("#fff");
     polygonTemplate.fillOpacity = 0.05;
-
 
 // Create hover state and set alternative fill color
     var hs = polygonTemplate.states.create("hover");
@@ -83,6 +89,11 @@ export default {
       console.log(data)
     });
 
+    //
+    // var riyadhPolygonTemplate = am4geodata_region_saudiArabia_onLow.features[1];
+    // riyadhPolygonTemplate.fill = am4core.color("#E94F37");
+    // riyadhPolygonTemplate.properties.fill = am4core.color("#E94F37");
+    // console.log(riyadhPolygonTemplate.id)
 
 
   },

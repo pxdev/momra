@@ -4,7 +4,8 @@
     "id": "SA-01",
     "value": 4447100,
     "bgImage": "riyadh.jpg",
-    "title": "الرياض"
+    "title": "الرياض",
+    "isActive": true
   },
   {
     "regIndex": 2,

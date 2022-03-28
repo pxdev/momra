@@ -7,9 +7,9 @@
 
         <div class="explore-nav d-flex">
           <a href="#" class="moving-arrow next" @click.prevent="nextNews" title="التالى"><i
-              class="ri-arrow-right-line tx-warning tx-42"></i></a>
+              class="ri-arrow-right-s-line"></i></a>
           <a href="#" class="moving-arrow prev" @click.prevent="prevNews" title="السابق"><i
-              class="ri-arrow-left-line tx-warning tx-42"></i></a>
+              class="ri-arrow-left-s-line"></i></a>
         </div>
 
         <h2 class="tx-40">{{ newsFeaturedList[activeFeaturedNewsIndex].title }}</h2>

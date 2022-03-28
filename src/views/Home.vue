@@ -147,8 +147,7 @@ export default {
 
     homeSize() {
       this.homeHeight = window.innerHeight - 220;
-      console.log(this.homeHeight)
-    }
+     }
   },
 
   mounted() {
