@@ -76,32 +76,32 @@ export default {
       activeFeaturedNewsIndex:0,
       newsPosts: [
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/green-riyadh-2019-riyadh-green-7.jpg",
           "title" : "إرشادات للمراصد المحلية 1",
           "link" : "https://www.orimi.com/pdf-test.pdf",
          },
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/saudi-arabia-for-first-time-marks-its-founding-downplaying-conservative-roots.webp",
           "title" : "إرشادات للمراصد المحلية 2",
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },
         {
-          "img": "https://placeimg.com/640/480/animals",
+          "img": "news/landmark-tower-Markaz-al-Mamlakah-Saudi-Arabia-Riyadh.webp",
           "title" : "إرشادات للمراصد المحلية 3",
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },
         {
-          "img": "https://placeimg.com/640/480/arch",
+          "img": "news/King-Salman-Park_2.webp",
           "title" : "إرشادات للمراصد المحلية 4",
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/506543e3-6e94-40ab-9d43-40c8d486cf71.webp",
           "title" : "إرشادات للمراصد المحلية 5",
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/506543e3-6e94-40ab-9d43-40c8d486cf71.webp",
           "title" : "إرشادات للمراصد المحلية 6",
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },

@@ -21,23 +21,25 @@
             </div>
           </div>
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-2.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-6.svg" alt="">
             <div class="pd-x-15">
-              <p>نسبة إجمالي عدد السُكان النشطين اقتصاديا</p>
-              <p class="tx-bold">0.23</p>
-            </div>
-          </div>
-          <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-3.svg" alt="">
-            <div class="pd-x-15">
-              <p> عدد المتطوعين لكل 100،000 نسمة من السكان</p>
+              <p>إمكانية الوصول إلى المناطق العامة المفتوحة</p>
               <p class="tx-bold">3,681,927</p>
             </div>
           </div>
+
           <div class="data-icon-box d-flex align-items-start">
             <img class="mg-t-5" src="data-icons/d-4.svg" alt="">
             <div class="pd-x-15">
               <p>نسبة خدمات الإنترنت الثابت عالي السرعة</p>
+              <p class="tx-bold">3,681,927</p>
+            </div>
+          </div>
+
+          <div class="data-icon-box d-flex align-items-start">
+            <img class="mg-t-5" src="data-icons/d-3.svg" alt="">
+            <div class="pd-x-15">
+              <p> عدد المتطوعين لكل 100،000 نسمة من السكان</p>
               <p class="tx-bold">3,681,927</p>
             </div>
           </div>
@@ -49,10 +51,10 @@
             </div>
           </div>
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-6.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-2.svg" alt="">
             <div class="pd-x-15">
-              <p>إمكانية الوصول إلى المناطق العامة المفتوحة</p>
-              <p class="tx-bold">3,681,927</p>
+              <p>نسبة إجمالي عدد السُكان النشطين اقتصاديا</p>
+              <p class="tx-bold">0.23</p>
             </div>
           </div>
 

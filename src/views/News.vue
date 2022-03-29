@@ -125,7 +125,7 @@ export default {
       activeFeaturedNewsIndex: 0,
       newsPosts: [
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/506543e3-6e94-40ab-9d43-40c8d486cf71.webp",
           "title": "الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص",
           "description": "في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير الشؤون البلدية والقروية والإسكان",
           "isLocale": true,
@@ -133,7 +133,7 @@ export default {
           "isFeatured": false
         },
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/green-riyadh-2019-riyadh-green-7.jpg",
           "title": "الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
           "description": " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
@@ -141,7 +141,7 @@ export default {
           "isFeatured": true
         },
         {
-          "img": "https://placeimg.com/640/480/animals",
+          "img": "news/King-Salman-Park_2.webp",
           "title": "  طلال يستقبل  المكتب الإقليمي لبرنامج",
           "description": " تنمية مساهمة القطاع الخاص في  المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي  سعياً لرفع مساهمة القطاع ",
           "isLocale": true,
@@ -149,7 +149,7 @@ export default {
           "isFeatured": true
         },
         {
-          "img": "https://placeimg.com/640/480/arch",
+          "img": "news/landmark-tower-Markaz-al-Mamlakah-Saudi-Arabia-Riyadh.webp",
           "title": " بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
           "description": " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل  سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
@@ -157,7 +157,7 @@ export default {
           "isFeatured": false
         },
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/saudi-arabia-for-first-time-marks-its-founding-downplaying-conservative-roots.webp",
           "title": " فرص سعياً يستقبل مدير فرص سعياً  لبرنامج",
           "description": "  مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
@@ -165,7 +165,7 @@ export default {
           "isFeatured": true
         },
         {
-          "img": "https://placeimg.com/640/480/nature",
+          "img": "news/green-riyadh-2019-riyadh-green-7.jpg",
           "title": " الخاص في تنمية المدن أكد معالي وزير مدير  الإقليمي لبرنامج",
           "description": " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
