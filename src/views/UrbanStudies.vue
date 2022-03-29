@@ -81,7 +81,7 @@ export default {
           "link" : "https://www.orimi.com/pdf-test.pdf",
          },
         {
-          "img": "https://placeimg.com/640/480/people",
+          "img": "https://placeimg.com/640/480/nature",
           "title" : "إرشادات للمراصد المحلية 2",
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },
@@ -101,7 +101,7 @@ export default {
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },
         {
-          "img": "https://placeimg.com/640/480/people",
+          "img": "https://placeimg.com/640/480/nature",
           "title" : "إرشادات للمراصد المحلية 6",
           "link" : "https://www.orimi.com/pdf-test.pdf",
         },

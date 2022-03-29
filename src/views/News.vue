@@ -133,7 +133,7 @@ export default {
           "isFeatured": false
         },
         {
-          "img": "https://placeimg.com/640/480/people",
+          "img": "https://placeimg.com/640/480/nature",
           "title": "الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج",
           "description": " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
@@ -165,7 +165,7 @@ export default {
           "isFeatured": true
         },
         {
-          "img": "https://placeimg.com/640/480/people",
+          "img": "https://placeimg.com/640/480/nature",
           "title": " الخاص في تنمية المدن أكد معالي وزير مدير  الإقليمي لبرنامج",
           "description": " لرفع مساهمة القطاع الخاص في تنمية المدن أكد معالي وزير وأتمتة كامل رحلةالبلدي فرص سعياً لرفع مساهمة القطاع ",
           "isLocale": false,
