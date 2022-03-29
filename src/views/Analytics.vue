@@ -87,7 +87,7 @@
           </div>
           <div class="card mg-b-15 shadow rounded">
             <div class="widget-heading mg-b-15">
-              <h4 class="mg-b-5 d-flex align-items-center">مقارنة مع الفهرس الدولي <i
+              <h4 class="mg-b-5 d-flex align-items-center">المقارنات الدولية <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
                   data-title="كما تصميمات الطباعة أو الرسوم أو الويب"></i>
               </h4>

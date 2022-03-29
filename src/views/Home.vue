@@ -14,44 +14,44 @@
            :style="`height:${homeHeight}px`">
         <div class="data-icons d-flex flex-wrap">
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-1.svg" alt="">
             <div class="pd-x-15">
-              <p>إجمالي عدد الأسر</p>
+              <p>طول الطرق الحضرية المعبدة (المسفلتة) لكل 1000 نسمة من السكان</p>
               <p class="tx-bold">3,681,927</p>
             </div>
           </div>
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/briefcase.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-2.svg" alt="">
             <div class="pd-x-15">
-              <p>معدل بطالة الشباب</p>
+              <p>نسبة إجمالي عدد السُكان النشطين اقتصاديا</p>
               <p class="tx-bold">0.23</p>
             </div>
           </div>
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-3.svg" alt="">
             <div class="pd-x-15">
-              <p>إجمالي عدد الأسر</p>
+              <p> عدد المتطوعين لكل 100،000 نسمة من السكان</p>
               <p class="tx-bold">3,681,927</p>
             </div>
           </div>
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/chart.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-4.svg" alt="">
             <div class="pd-x-15">
-              <p>متوسط حجم الأسرة</p>
+              <p>نسبة خدمات الإنترنت الثابت عالي السرعة</p>
               <p class="tx-bold">3,681,927</p>
             </div>
           </div>
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/chart.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-5.svg" alt="">
             <div class="pd-x-15">
-              <p>متوسط حجم الأسرة</p>
+              <p>النسبة المئوية  لعدد المساكن التي تستخدم الطاقة الشمسية</p>
               <p class="tx-bold">3,681,927</p>
             </div>
           </div>
           <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/chart.svg" alt="">
+            <img class="mg-t-5" src="data-icons/d-6.svg" alt="">
             <div class="pd-x-15">
-              <p>متوسط حجم الأسرة</p>
+              <p>إمكانية الوصول إلى المناطق العامة المفتوحة</p>
               <p class="tx-bold">3,681,927</p>
             </div>
           </div>

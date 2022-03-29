@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46.902" height="47" viewBox="0 0 46.902 47">
+  <g id="Icon" transform="translate(1.002 1.5)">
+    <ellipse id="Ellipse_21" data-name="Ellipse 21" cx="21.951" cy="22" rx="21.951" ry="22" transform="translate(0.498 0)" fill="none" stroke="#b3f4fc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <ellipse id="Ellipse_1186" data-name="Ellipse 1186" cx="10.973" cy="10.918" rx="10.973" ry="10.918" transform="translate(11.476 11.082)" fill="none" stroke="#b3f4fc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_34271" data-name="Path 34271" d="M0,0V9.518" transform="translate(36.365 5.569) rotate(40)" fill="none" stroke="#b3f4fc" stroke-linecap="round" stroke-width="3"/>
+    <path id="Path_34280" data-name="Path 34280" d="M0,0V10.419" transform="translate(11.131 22.293) rotate(90)" fill="none" stroke="#b3f4fc" stroke-linecap="round" stroke-width="3"/>
+    <path id="Path_34272" data-name="Path 34272" d="M10.386,0,0,.117" transform="translate(30.198 30.189) rotate(45)" fill="none" stroke="#b3f4fc" stroke-linecap="round" stroke-width="3"/>
+    <path id="Path_34274" data-name="Path 34274" d="M3.292,33.258l11.555,9.734,9.375.66,8.617-2.432,4.976-3.8-8.09-7.266-5.139,2.033-7.6-.826-5.28-9.108H.4Z" transform="translate(0 0.163)" fill="#b3f4fc" opacity="0.4"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43.957" height="44" viewBox="0 0 43.957 44">
+  <g id="d-3" transform="translate(-1109 -718)">
+    <g id="arrow_provit" data-name="arrow provit" transform="translate(1109 718)">
+      <g id="bar-chart" transform="translate(1.829 8.435)">
+        <path id="Rectangle_1806" data-name="Rectangle 1806" d="M2,0H6.584a2,2,0,0,1,2,2V25.2a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2A2,2,0,0,1,2,0Z" transform="translate(25.203 7.584) rotate(90)" fill="none" stroke="#b3f4fc" stroke-width="2.8"/>
+        <path id="Rectangle_1807" data-name="Rectangle 1807" d="M2,0H6.584a2,2,0,0,1,2,2V37.192a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2A2,2,0,0,1,2,0Z" transform="translate(37.192 16.167) rotate(90)" fill="none" stroke="#b3f4fc" stroke-width="2.8"/>
+        <path id="Rectangle_1808" data-name="Rectangle 1808" d="M2,0H6.584a2,2,0,0,1,2,2V14.1a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2A2,2,0,0,1,2,0Z" transform="translate(14.102 -1) rotate(90)" fill="none" stroke="#b3f4fc" stroke-width="2.8"/>
+      </g>
+    </g>
+    <path id="Path_5" data-name="Path 5" d="M4.632,25.709V2.818A1.816,1.816,0,1,0,1,2.818V43.182A1.817,1.817,0,0,0,2.816,45H43.141a1.818,1.818,0,0,0,0-3.636H4.632V25.709Z" transform="translate(1108 717)" fill="#b3f4fc"/>
+  </g>
+</svg>
