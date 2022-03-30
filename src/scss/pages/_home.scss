@@ -38,11 +38,11 @@
 
     .data-icons {
       min-width: 60%;
-      padding-top: 30px;
+      padding-top: 20px;
       padding-right: 20px;
       padding-left: 20px;
       @include for-size('small-height') {
-        padding-top: 15px;
+        padding-top: 5px;
       }
 
       .data-icon-box {
@@ -104,9 +104,9 @@
 
   h1 {
     line-height: normal;
-    padding: 20px 0;
+    padding: 10px 0;
     color: $light-bg;
-    font-size: 240%;
+    font-size: 200%;
     @include for-size('small-height') {
       padding: 10px 0;
 
@@ -136,6 +136,25 @@
   }
 }
 
+.landing-primary-slick {
+  overflow: hidden;
+
+  h3 {
+    color: #FFF;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    @include for-size('small-height') {
+      font-size: 14px;
+    }
+
+  }
+
+  .landing-primary-sectors{
+    direction: rtl;
+  }
+}
+
 .home-video{
   position: fixed;
   left: 0;
@@ -162,7 +181,6 @@
     right: 0;
     content: "";
   }
-
 
   .home-nav-item {
     @extend %flex-area;
@@ -239,6 +257,33 @@
     }
 
 
+
+
+  }
+
+
+  .slick-current {
+    .home-nav-item {
+    --blue-color: rgba(255,255,255,0.6);
+    --green-color: #FFF;
+
+
+    span {
+      color: #fff;
+
+    }
+
+
+    &:after {
+      transform: scaleY(1.15);
+      opacity: 1;
+    }
+
+    .explore-btn {
+      opacity: 1;
+      transform: scale(1);
+    }
+    }
   }
 
 }

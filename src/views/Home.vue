@@ -13,54 +13,58 @@
       <div class="container landing-data d-flex justify-content-between align-items-center"
            :style="`height:${homeHeight}px`">
 
-        <div class="data-icons d-flex flex-wrap">
-          <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-1.svg" alt="">
-            <div class="pd-x-15">
-              <p>طول الطرق الحضرية المعبدة (المسفلتة) لكل 1000 نسمة من السكان</p>
-              <p class="tx-bold">3,681,927</p>
-            </div>
-          </div>
-          <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-6.svg" alt="">
-            <div class="pd-x-15">
-              <p>إمكانية الوصول إلى المناطق العامة المفتوحة</p>
-              <p class="tx-bold">3,681,927</p>
+        <VueSlickCarousel class="slick-carousel landing-primary-slick" ref="c1" :asNavFor="$refs.c2" :focusOnSelect="true" v-bind="primarySettings">
+          <div v-for="(sectorName, index) in sectors" :key="index + '_sectorName'" class="landing-primary-sectors pd-x-10">
+            <h3>{{ sectorName.label }}</h3>
+            <div class="data-icons d-flex flex-wrap">
+              <div class="data-icon-box d-flex align-items-start">
+                <img class="mg-t-5" src="data-icons/d-1.svg" alt="">
+                <div class="pd-x-15">
+                  <p>طول الطرق الحضرية المعبدة (المسفلتة) لكل 1000 نسمة من السكان</p>
+                  <p class="tx-bold">3,681,927</p>
+                </div>
+              </div>
+              <div class="data-icon-box d-flex align-items-start">
+                <img class="mg-t-5" src="data-icons/d-6.svg" alt="">
+                <div class="pd-x-15">
+                  <p>إمكانية الوصول إلى المناطق العامة المفتوحة</p>
+                  <p class="tx-bold">3,681,927</p>
+                </div>
+              </div>
+
+              <div class="data-icon-box d-flex align-items-start">
+                <img class="mg-t-5" src="data-icons/d-4.svg" alt="">
+                <div class="pd-x-15">
+                  <p>نسبة خدمات الإنترنت الثابت عالي السرعة</p>
+                  <p class="tx-bold">3,681,927</p>
+                </div>
+              </div>
+
+              <div class="data-icon-box d-flex align-items-start">
+                <img class="mg-t-5" src="data-icons/d-3.svg" alt="">
+                <div class="pd-x-15">
+                  <p> عدد المتطوعين لكل 100،000 نسمة من السكان</p>
+                  <p class="tx-bold">3,681,927</p>
+                </div>
+              </div>
+              <div class="data-icon-box d-flex align-items-start">
+                <img class="mg-t-5" src="data-icons/d-5.svg" alt="">
+                <div class="pd-x-15">
+                  <p>النسبة المئوية  لعدد المساكن التي تستخدم الطاقة الشمسية</p>
+                  <p class="tx-bold">3,681,927</p>
+                </div>
+              </div>
+              <div class="data-icon-box d-flex align-items-start">
+                <img class="mg-t-5" src="data-icons/d-2.svg" alt="">
+                <div class="pd-x-15">
+                  <p>نسبة إجمالي عدد السُكان النشطين اقتصاديا</p>
+                  <p class="tx-bold">0.23</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-4.svg" alt="">
-            <div class="pd-x-15">
-              <p>نسبة خدمات الإنترنت الثابت عالي السرعة</p>
-              <p class="tx-bold">3,681,927</p>
-            </div>
-          </div>
-
-          <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-3.svg" alt="">
-            <div class="pd-x-15">
-              <p> عدد المتطوعين لكل 100،000 نسمة من السكان</p>
-              <p class="tx-bold">3,681,927</p>
-            </div>
-          </div>
-          <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-5.svg" alt="">
-            <div class="pd-x-15">
-              <p>النسبة المئوية  لعدد المساكن التي تستخدم الطاقة الشمسية</p>
-              <p class="tx-bold">3,681,927</p>
-            </div>
-          </div>
-          <div class="data-icon-box d-flex align-items-start">
-            <img class="mg-t-5" src="data-icons/d-2.svg" alt="">
-            <div class="pd-x-15">
-              <p>نسبة إجمالي عدد السُكان النشطين اقتصاديا</p>
-              <p class="tx-bold">0.23</p>
-            </div>
-          </div>
-
-
-        </div>
+        </VueSlickCarousel>
 
 
         <div class="ksa-map">
@@ -72,7 +76,7 @@
       <div class="landing-navigation ">
         <div class="container">
 
-          <VueSlickCarousel class="slick-carousel landing-slick" v-bind="Settings">
+          <VueSlickCarousel class="slick-carousel landing-slick" v-bind="secondarySettings" :focusOnSelect="true" :asNavFor="$refs.c1" ref="c2">
             <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
               <a href="#" @click.prevent="setActiveSector(index)" class="home-nav-item">
                 <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight">
@@ -112,15 +116,31 @@ export default {
     return {
       sectors: sectors,
       homeHeight: null,
-      Settings: {
+
+      primarySettings: {
         "dots": false,
-        "infinite": false,
+        "arrows": false,
+        "infinite": true,
+        "speed": 300,
+        "slidesToShow": 1,
+        "adaptiveHeight": false,
+        // "fade": true,
+        "pauseOnHover": true,
+        "swipeToSlide": true,
+
+
+      },
+      secondarySettings: {
+        "dots": false,
+        "infinite": true,
         "speed": 300,
         "slidesToShow": 7,
-        "slidesToScroll": 1,
-        "touchThreshold": 1,
         "adaptiveHeight": false,
-
+        "autoplay": true,
+        "autoplaySpeed": 4000,
+        "swipeToSlide": true,
+        "centerMode": true,
+        "centerPadding": "20px",
 
         "responsive": [
           {
