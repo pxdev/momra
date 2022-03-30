@@ -108,28 +108,31 @@
               <p class="op-8 tx-12">المعلومات تعرض حسب توفر البيانات</p>
             </div>
 
-            <p>يتم حساب هذا المؤشر ، X ، على أنه تلخيص بسيط للمؤشرات ذات الصلة (حالات الوفاة ، والمفقودين ، والمتضررين)
-              من قواعد البيانات الوطنية المتعلقة بالخسائر الناجمة عن الكوارث مقسومة على إجمالي بيانات السكان (من
-              التعدادات الوطنية للهيئة العامة للإحصاء ، أو معلومات البنك الدولي أو اللجنة الإحصائية للأمم المتحدة).X =
-              ((A_2+A_3+B_1)) مقسومة على عدد السكان) ويضرب الحاصل في 100,000حيث:X: عدد الوفيات والأشخاص المفقودين
-              والأشخاص المتضررين مباشرة بسبب الكوارث لكل 100,000 نسمة:A2 عدد الوفيات بسبب الكوارث:A3 عدد المفقودين بسبب
-              الكوارث:B1 عدد الأشخاص المتأثرين بشكل مباشر بسبب الكوارث</p>
-
-            <div
-                class="bg-gray calc-legend shadow bd rounded mg-t-15 pd-15 d-flex align-items-center justify-content-between">
-              <div class="meta-data pd-x-20 flex-fill">
-                <p class="tx-12">وحدة القياس</p>
-                <p class="tx-20 tx-bold tx-primary">عدد</p>
-              </div>
-              <div class="meta-data pd-x-20 bd-l bd-r flex-fill">
-                <p class="tx-12">الدورية</p>
-                <p class="tx-20 tx-bold tx-primary">سنوي</p>
-              </div>
-              <div class="meta-data pd-x-20 flex-fill">
-                <p class="tx-12">آخر تحديث</p>
-                <p class="tx-20 tx-bold tx-primary">12 فبراير 2022</p>
+<!--           <no-data></no-data>-->
+            <div>
+              <p>يتم حساب هذا المؤشر ، X ، على أنه تلخيص بسيط للمؤشرات ذات الصلة (حالات الوفاة ، والمفقودين ، والمتضررين)
+                من قواعد البيانات الوطنية المتعلقة بالخسائر الناجمة عن الكوارث مقسومة على إجمالي بيانات السكان (من
+                التعدادات الوطنية للهيئة العامة للإحصاء ، أو معلومات البنك الدولي أو اللجنة الإحصائية للأمم المتحدة).X =
+                ((A_2+A_3+B_1)) مقسومة على عدد السكان) ويضرب الحاصل في 100,000حيث:X: عدد الوفيات والأشخاص المفقودين
+                والأشخاص المتضررين مباشرة بسبب الكوارث لكل 100,000 نسمة:A2 عدد الوفيات بسبب الكوارث:A3 عدد المفقودين بسبب
+                الكوارث:B1 عدد الأشخاص المتأثرين بشكل مباشر بسبب الكوارث</p>
+              <div
+                  class="bg-gray calc-legend shadow bd rounded mg-t-15 pd-15 d-flex align-items-center justify-content-between">
+                <div class="meta-data pd-x-20 flex-fill">
+                  <p class="tx-12">وحدة القياس</p>
+                  <p class="tx-20 tx-bold tx-primary">عدد</p>
+                </div>
+                <div class="meta-data pd-x-20 bd-l bd-r flex-fill">
+                  <p class="tx-12">الدورية</p>
+                  <p class="tx-20 tx-bold tx-primary">سنوي</p>
+                </div>
+                <div class="meta-data pd-x-20 flex-fill">
+                  <p class="tx-12">آخر تحديث</p>
+                  <p class="tx-20 tx-bold tx-primary">12 فبراير 2022</p>
+                </div>
               </div>
             </div>
+
 
           </div>
           <div class="card mg-b-15 shadow rounded">
