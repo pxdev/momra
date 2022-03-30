@@ -48,7 +48,7 @@
             </li>
             <li>
               <drop-down class="parent-link" title="المؤشرات الحضرية" width="250" toggle-arrow="true">
-                <a href="#" class="menu-item" @click.prevent="exploreSectorStats(0)">المنصة التحليلية </a>
+<!--                <a href="#" class="menu-item" @click.prevent="exploreSectorStats(0)">المنصة التحليلية </a>-->
                 <a href="#" class="menu-item" @click.prevent="exploreSector(0)">أداء القطاعات الحضرية </a>
                 <a href="#" class="menu-item" @click.prevent="setActiveRegionID(1)">أداء المناطق والمدن والمحافظات</a>
                 <router-link to="/interactive-map" class="menu-item">الخارطة التفاعلية</router-link>

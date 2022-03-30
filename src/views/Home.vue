@@ -12,6 +12,7 @@
       <!-- / landing-heading -->
       <div class="container landing-data d-flex justify-content-between align-items-center"
            :style="`height:${homeHeight}px`">
+
         <div class="data-icons d-flex flex-wrap">
           <div class="data-icon-box d-flex align-items-start">
             <img class="mg-t-5" src="data-icons/d-1.svg" alt="">
@@ -60,6 +61,8 @@
 
 
         </div>
+
+
         <div class="ksa-map">
           <home-map chart-id="homeMap"></home-map>
         </div>
@@ -68,6 +71,7 @@
       <!-- / landing-data -->
       <div class="landing-navigation ">
         <div class="container">
+
           <VueSlickCarousel class="slick-carousel landing-slick" v-bind="Settings">
             <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
               <a href="#" @click.prevent="setActiveSector(index)" class="home-nav-item">
@@ -86,6 +90,7 @@
               <div class="ri-arrow-right-line"></div>
             </template>
           </VueSlickCarousel>
+
         </div>
       </div>
       <!-- / landing-navigation -->
