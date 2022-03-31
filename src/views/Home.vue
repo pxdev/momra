@@ -88,10 +88,12 @@
               </a>
             </div>
             <template #prevArrow>
-              <div class="ri-arrow-left-line"></div>
+              <div><img src="/left_arrow.svg" alt=""></div>
             </template>
             <template #nextArrow>
-              <div class="ri-arrow-right-line"></div>
+              <div>
+                <img src="/right_arrow.svg" alt="">
+              </div>
             </template>
           </VueSlickCarousel>
 
@@ -168,6 +170,7 @@ export default {
       this.$store.state.sectorCounter = index;
       this.$store.state.defaultSectorCounter = index;
       this.$store.state.activeRegion = null;
+      this.$store.state.activeRegionId = null;
       this.$store.state.indicatorCounter = [index, 0];
       this.$router.push("/explore");
     },

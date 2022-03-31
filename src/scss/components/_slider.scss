@@ -96,7 +96,7 @@
   .slick-prev {
     left: 0;
 
-    &:before {
+    img {
       animation: arrowMovingLeft 5s infinite ease-in-out;
     }
 
@@ -110,7 +110,7 @@
   .slick-next {
     right: 0;
 
-    &:before {
+   img {
       animation: arrowMovingRight 5s infinite ease-in-out;
     }
 
