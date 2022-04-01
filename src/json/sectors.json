@@ -1,5 +1,30 @@
 [
   {
+    "id": "17",
+    "iconId": "urban_strategy",
+    "bgImage": "tourism.jpg",
+    "iconWidth": 44.126,
+    "iconHeight": 42.537,
+    "isActive": false,
+    "isOpened": false,
+    "label": "استراتيجية التحول الحضري",
+    "children": [
+
+    ]
+  },
+  {
+    "id": "18",
+    "iconId": "urban_enhancement",
+    "bgImage": "tourism.jpg",
+    "iconWidth": 44.126,
+    "iconHeight": 42.537,
+    "isActive": false,
+    "isOpened": false,
+    "label": "تحسين المشهد الحضري",
+    "children": [
+    ]
+  },
+  {
     "id": "0",
     "iconId": "population_and_demographics",
     "bgImage": "citizens.jpg",
@@ -290,4 +315,5 @@
       }
     ]
   }
+
 ]

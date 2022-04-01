@@ -16,6 +16,7 @@
         <VueSlickCarousel class="slick-carousel landing-primary-slick" ref="c1" :asNavFor="$refs.c2" :focusOnSelect="true" v-bind="primarySettings">
           <div v-for="(sectorName, index) in sectors" :key="index + '_sectorName'" class="landing-primary-sectors pd-x-10">
             <h3>{{ sectorName.label }}</h3>
+
             <div class="data-icons d-flex flex-wrap">
               <div class="data-icon-box d-flex align-items-start">
                 <img class="mg-t-5" src="data-icons/d-1.svg" alt="">
@@ -31,7 +32,6 @@
                   <p class="tx-bold">3,681,927</p>
                 </div>
               </div>
-
               <div class="data-icon-box d-flex align-items-start">
                 <img class="mg-t-5" src="data-icons/d-4.svg" alt="">
                 <div class="pd-x-15">
@@ -39,7 +39,6 @@
                   <p class="tx-bold">3,681,927</p>
                 </div>
               </div>
-
               <div class="data-icon-box d-flex align-items-start">
                 <img class="mg-t-5" src="data-icons/d-3.svg" alt="">
                 <div class="pd-x-15">
@@ -62,6 +61,8 @@
                 </div>
               </div>
             </div>
+
+
           </div>
 
         </VueSlickCarousel>
@@ -88,11 +89,17 @@
               </a>
             </div>
             <template #prevArrow>
-              <div><img src="/left_arrow.svg" alt=""></div>
+              <div>
+                <div class="home-slider-arrow">
+              <i class="ri-arrow-left-s-line"></i>
+                </div>
+              </div>
             </template>
             <template #nextArrow>
               <div>
-                <img src="/right_arrow.svg" alt="">
+                <div class="home-slider-arrow">
+                <i class="ri-arrow-right-s-line"></i>
+                </div>
               </div>
             </template>
           </VueSlickCarousel>
