@@ -57,12 +57,10 @@
           <p class="op-7 tx-12">جميع الحقوق محفوظة – المرصد الحضري الوطني - وزارة الشؤون البلدية والقروية والإسكان © 2022</p>
 
           <div class="social d-flex align-items-center">
-            <router-link to="/" class="pd-x-5"> <i class="ri-twitter-line"></i> </router-link>
-            <router-link to="/" class="pd-x-5"> <i class="ri-facebook-fill"></i> </router-link>
-            <router-link to="/" class="pd-x-5"><i class="ri-instagram-line"></i></router-link>
-            <router-link to="/" class="pd-x-5"><i class="ri-youtube-line"></i></router-link>
-            <router-link to="/" class="pd-x-5"> <i class="ri-snapchat-line"></i> </router-link>
-          </div>
+            <a href="#" class="pd-x-5"> <i class="ri-linkedin-box-fill"></i> </a>
+            <a href="#" class="pd-x-5"> <i class="ri-youtube-line"></i> </a>
+            <a href="#" class="pd-x-5"> <i class="ri-twitter-fill"></i> </a>
+           </div>
 
 
           <div class="footer-bar-links tx-12 d-flex op-6">

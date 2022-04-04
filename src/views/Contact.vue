@@ -2,16 +2,25 @@
   <section class="contact">
     <page-header></page-header>
 
-    <banner-heading banner-height="385" image-url="https://placeimg.com/1000/920/tech">
+
+    <banner-heading banner-height="385" image-url="regions/regions/tabouk.jpg">
       <h1 class="tx-40">اتصل بنا</h1>
       <p class="tx-18">نحن نرحب دائماً بتعاونك معنا ومشاركتنا كل مقترحاتك.</p>
+
+      <div class="social d-flex align-items-center">
+        <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
+        <a href="#"> <i class="ri-youtube-line"></i> </a>
+        <a href="#"> <i class="ri-twitter-fill"></i> </a>
+       </div>
+
 
     </banner-heading>
 
     <over-bar>
 
     </over-bar>
-     <!-- over bar -->
+    <!-- over bar -->
+
 
     <main class="container pages pd-y-40 rounded">
 
