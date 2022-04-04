@@ -2,7 +2,7 @@
   <section class="news">
     <page-header></page-header>
 
-    <banner-heading banner-height="525" :image-url="newsFeaturedList[activeFeaturedNewsIndex].img">
+    <banner-heading banner-height="350" :image-url="newsFeaturedList[activeFeaturedNewsIndex].img">
       <div class="news-heading-content">
 
         <div class="explore-nav d-flex">

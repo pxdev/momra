@@ -3,7 +3,7 @@
     <page-header></page-header>
 
 
-    <banner-heading banner-height="385" image-url="regions/regions/tabouk.jpg">
+    <banner-heading banner-height="385" image-url="cms/contact.jpg">
       <h1 class="tx-40">اتصل بنا</h1>
       <p class="tx-18">نحن نرحب دائماً بتعاونك معنا ومشاركتنا كل مقترحاتك.</p>
 
