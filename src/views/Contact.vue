@@ -4,52 +4,18 @@
 
     <banner-heading banner-height="385" image-url="https://placeimg.com/1000/920/tech">
       <h1 class="tx-40">اتصل بنا</h1>
-      <p class="tx-18">نحن نرحب دائماً بتعاونك معنا ومشاركتنا كل مقترحاتك. يمكنك الاتصال على أي من <br>الأرقام المذكورة أدناه وستسعدنا خدمتك:</p>
-      <div class="social d-flex align-items-center">
-        <a href="#"> <i class="ri-twitter-line"></i> </a>
-        <a href="#"> <i class="ri-facebook-fill"></i> </a>
-        <a href="#"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-youtube-line"></i></a>
-        <a href="#"> <i class="ri-snapchat-line"></i> </a>
-      </div>
+      <p class="tx-18">نحن نرحب دائماً بتعاونك معنا ومشاركتنا كل مقترحاتك.</p>
+
     </banner-heading>
 
     <over-bar>
-      <div class="d-flex align-items-center flex-wrap">
-        <h3 class="pd-15 tx-24">أرقام تهمك</h3>
-        <div class="d-flex pd-y-10 justify-content-between flex-grow-1 contact-widgets">
-          <div class="numbers-box">
-            <h5 class="tx-30 tx-primary">199090</h5>
-            <p class="tx-14">سكني</p>
-          </div>
-          <div class="divider flex-grow-0 op-5 bd-l bd-2"></div>
-          <div class="numbers-box">
-            <h5 class="tx-30 tx-primary">940</h5>
-            <p class="tx-14">بلاغات البلدية</p>
-          </div>
-          <div class="divider flex-grow-0 op-5 bd-l bd-2"></div>
-          <div class="numbers-box">
-            <h5 class="tx-30 tx-primary">500103</h5>
-            <p class="tx-14">رسائل نصية</p>
-          </div>
-          <div class="divider flex-grow-0 op-5 bd-l bd-2"></div>
-          <div class="numbers-box">
-            <h5 class="tx-30 tx-primary">955</h5>
-            <p class="tx-14">صندوق البريد</p>
-          </div>
-          <div class="divider flex-grow-0 op-5 bd-l bd-2"></div>
-          <div class="numbers-box">
-            <h5 class="tx-30 tx-primary">11136</h5>
-            <p class="tx-14">الرمز البريدي</p>
-          </div>
-        </div>
-      </div>
+
     </over-bar>
      <!-- over bar -->
 
     <main class="container pages pd-y-40 rounded">
 
-    <div class="card rounded bd shadow pd-30">
+    <div class="card rounded contact-card bd shadow pd-30">
       <h2 class="mg-b-20">نموذج التواصل الالكتروني</h2>
 
       <div class="row contact-fields">

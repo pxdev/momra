@@ -1,7 +1,7 @@
 <template>
   <header class="fixed" id="header">
 
-    <div class="pre-header">
+    <div class="d-none pre-header">
       <div class="container pd-y-5 d-flex justify-content-between align-items-center">
         <div class="toll-free">
           <p class="d-flex align-items-center">

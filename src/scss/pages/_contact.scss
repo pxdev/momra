@@ -1,4 +1,11 @@
  .contact {
+
+   .contact-card {
+     margin-top: -140px;
+     position: relative;
+     z-index: 20;
+   }
+
    .contact-widgets {
     padding: 0 15px;
      @include for-size('small-devices') {

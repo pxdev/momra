@@ -76,7 +76,7 @@ export default {
 
 
     sideNavSize() {
-      this.sideNavHeight = window.innerHeight - 200;
+      this.sideNavHeight = window.innerHeight - 155;
       console.log(this.sideNavHeight)
     }
 
