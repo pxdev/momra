@@ -117,10 +117,10 @@ body {
     right: auto;
     bottom: 0;
     z-index: 10;
-    top: 170px;
+    top: 130px;
 
      @include for-size('small-height'){
-       top: 140px;
+       top: 110px;
      }
 
     @include for-size('small-devices'){

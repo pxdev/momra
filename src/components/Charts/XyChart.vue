@@ -71,7 +71,7 @@ export default {
     dateAxis.renderer.minGridDistance = 30;
 
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-    console.log(valueAxis)
+     console.log(valueAxis)
 // Create series
     function createSeries(field, name, zindex) {
       var series = chart.series.push(new am4charts.LineSeries());
