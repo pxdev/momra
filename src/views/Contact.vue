@@ -3,9 +3,9 @@
     <page-header></page-header>
 
 
-    <banner-heading banner-height="385" image-url="cms/contact.jpg">
+    <banner-heading banner-height="250" image-url="cms/contact.jpg">
       <h1 class="tx-40">اتصل بنا</h1>
-      <p class="tx-18">نحن نرحب دائماً بتعاونك معنا ومشاركتنا كل مقترحاتك.</p>
+<!--      <p class="tx-18">نحن نرحب دائماً بتعاونك معنا ومشاركتنا كل مقترحاتك.</p>-->
 
       <div class="social d-flex align-items-center">
         <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
