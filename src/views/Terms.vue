@@ -2,10 +2,10 @@
   <section class="urban-studies">
     <page-header></page-header>
 
-    <banner-heading banner-height="325" image-url="/regions/regions/madinahmonawwarah.jpg">
+    <banner-heading banner-height="250" image-url="/regions/regions/madinahmonawwarah.jpg">
       <div class="news-heading-content">
          <h2 class="tx-40">سياسة الاستخدام</h2>
-        <p>بيان خاص بالأمن والخصوصية يفصح عن النهج الذي تتبعه المنصة الوطنية الموحدة GOV.SA في جمع المعلومات ونشرها على موق الإلكتروني.</p>
+<!--        <p>بيان خاص بالأمن والخصوصية يفصح عن النهج الذي تتبعه المنصة الوطنية الموحدة GOV.SA في جمع المعلومات ونشرها على موق الإلكتروني.</p>-->
 
       </div>
     </banner-heading>

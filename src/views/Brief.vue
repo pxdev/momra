@@ -2,11 +2,11 @@
   <section class="brief">
     <page-header></page-header>
 
-    <banner-heading banner-height="325" image-url="/regions/regions/tabouk.jpg">
+    <banner-heading banner-height="250" image-url="/regions/regions/tabouk.jpg">
       <div class="news-heading-content">
-        <p>عن المرصد</p>
+<!--        <p>عن المرصد</p>-->
         <h2 class="tx-40">نبذة عن المرصد</h2>
-        <p>كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>
+<!--        <p>كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>-->
 
       </div>
     </banner-heading>

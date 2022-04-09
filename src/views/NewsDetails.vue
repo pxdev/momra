@@ -2,7 +2,7 @@
   <section class="news-details">
     <page-header></page-header>
 
-    <banner-heading banner-height="325" image-url="regions/regions/tabouk.jpg">
+    <banner-heading banner-height="250" image-url="regions/regions/tabouk.jpg">
       <div class="news-heading-content">
         <h2 class="tx-40">وزير “البلدية والإسكان” يلتقي وزيرة المدن والتخطيط بجمهورية جيبوتي لبحث فرص التعاون بين
           البلدين</h2>

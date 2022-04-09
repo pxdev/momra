@@ -2,10 +2,10 @@
   <section class="urban-studies">
     <page-header></page-header>
 
-    <banner-heading banner-height="325" image-url="/regions/regions/madinahmonawwarah.jpg">
+    <banner-heading banner-height="250" image-url="/regions/regions/madinahmonawwarah.jpg">
       <div class="news-heading-content">
         <h2 class="tx-40">دراسات حضرية</h2>
-        <p>كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>
+<!--        <p>كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>-->
 
       </div>
     </banner-heading>
