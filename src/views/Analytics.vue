@@ -100,6 +100,8 @@
         </div>
         <div class="state-widgets cols-2 d-flex align-items-stretch">
           <div class="card d-flex flex-column justify-content-between mg-b-15 shadow rounded">
+
+            <div class="d-flex justify-content-between flex-wrap align-items-center">
             <div class="widget-heading mg-b-15">
               <h4 class="mg-b-5 d-flex align-items-center">منهجية الحساب <i
                   class="ri-question-line tx-18 tx-default tx-normal mg-x-5 hint data-title"
@@ -107,10 +109,13 @@
               </h4>
               <p class="op-8 tx-12">المعلومات تعرض حسب توفر البيانات</p>
             </div>
+              <a href="files/desc_data.pdf" target="_blank" class="desc-data"><span class="pd-x-10">البيانات الوصفية</span><i class="ri-download-2-line"></i></a>
+            </div>
+
 
 <!--           <no-data></no-data>-->
             <div>
-              <p>يتم حساب هذا المؤشر ، X ، على أنه تلخيص بسيط للمؤشرات ذات الصلة (حالات الوفاة ، والمفقودين ، والمتضررين)
+              <p class="mg-b-40">يتم حساب هذا المؤشر ، X ، على أنه تلخيص بسيط للمؤشرات ذات الصلة (حالات الوفاة ، والمفقودين ، والمتضررين)
                 من قواعد البيانات الوطنية المتعلقة بالخسائر الناجمة عن الكوارث مقسومة على إجمالي بيانات السكان (من
                 التعدادات الوطنية للهيئة العامة للإحصاء ، أو معلومات البنك الدولي أو اللجنة الإحصائية للأمم المتحدة).X =
                 ((A_2+A_3+B_1)) مقسومة على عدد السكان) ويضرب الحاصل في 100,000حيث:X: عدد الوفيات والأشخاص المفقودين

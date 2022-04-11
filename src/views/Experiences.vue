@@ -16,7 +16,7 @@
       <div class="list-heading mg-b-40 d-flex align-items-center justify-content-between">
         <div class="mg-b-15">
         <h1 class="tx-primary tx-22 tx-bold">التجارب الدولية والمحلية</h1>
-        <p>في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن  أكد معالي وزير الشؤون البلدية والقروية والإسكان الأستاذ… في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن  أكد معالي وزير الشؤون البلدية والقروية والإسكان الأستاذ… </p>
+<!--        <p>في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن  أكد معالي وزير الشؤون البلدية والقروية والإسكان الأستاذ… في حفل إطلاق ملتقى استثمر بالجوف الحقيل يؤكد على تيسير وأتمتة كامل رحلة المستثمر عبر بوابة الاستثمار البلدي فرص سعياً لرفع مساهمة القطاع الخاص في تنمية المدن  أكد معالي وزير الشؤون البلدية والقروية والإسكان الأستاذ… </p>-->
         </div>
 
 
@@ -35,7 +35,7 @@
               </a>
               </div>
              </div>
-            <h3 class="mg-b-10 tx-16"><router-link class="tx-primary" to="/news-details">{{newsPost.title.substring(0,80) }}</router-link></h3>
+            <h3 class="mg-b-10 tx-16 tx-primary">{{newsPost.title.substring(0,80) }}</h3>
              <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
           </div>
         </div>
@@ -78,33 +78,33 @@ export default {
       newsPosts: [
         {
           "img": "news/green-riyadh-2019-riyadh-green-7.jpg",
-          "title" : "إرشادات للمراصد المحلية 1",
-          "link" : "https://www.orimi.com/pdf-test.pdf",
+          "title" : "الشبكة الاسترالية للبنية التحتية-إستراليا",
+          "link" : "files/experiences/الشبكة الاسترالية للبنية التحتية-إستراليا.pdf",
         },
         {
-          "img": "news/saudi-arabia-for-first-time-marks-its-founding-downplaying-conservative-roots.webp",
-          "title" : "إرشادات للمراصد المحلية 2",
-          "link" : "https://www.orimi.com/pdf-test.pdf",
+          "img": "news/green-riyadh-2019-riyadh-green-7.jpg",
+          "title" : "المراكز الحضرية التابعة لهيئة الاحضاء الهولندية-هولندا",
+          "link" : "files/experiences/المراكز الحضرية التابعة لهيئة الاحضاء الهولندية-هولندا.pdf",
         },
         {
-          "img": "news/landmark-tower-Markaz-al-Mamlakah-Saudi-Arabia-Riyadh.webp",
-          "title" : "إرشادات للمراصد المحلية 3",
-          "link" : "https://www.orimi.com/pdf-test.pdf",
+          "img": "news/green-riyadh-2019-riyadh-green-7.jpg",
+          "title" : "المرصد الحضري الاسترالي-استراليا",
+          "link" : "files/experiences/المرصد الحضري الاسترالي-استراليا.pdf",
         },
         {
-          "img": "news/King-Salman-Park_2.webp",
-          "title" : "إرشادات للمراصد المحلية 4",
-          "link" : "https://www.orimi.com/pdf-test.pdf",
-        },
-        {
-          "img": "news/506543e3-6e94-40ab-9d43-40c8d486cf71.webp",
-          "title" : "إرشادات للمراصد المحلية 5",
-          "link" : "https://www.orimi.com/pdf-test.pdf",
+          "img": "news/green-riyadh-2019-riyadh-green-7.jpg",
+          "title" : "المرصد الحضري لدولة الهند-الهند.",
+          "link" : "files/experiences/المرصد الحضري لدولة الهند-الهند.pdf",
         },
         {
           "img": "news/506543e3-6e94-40ab-9d43-40c8d486cf71.webp",
-          "title" : "إرشادات للمراصد المحلية 6",
-          "link" : "https://www.orimi.com/pdf-test.pdf",
+          "title" : "المرصد الحضري لمدينة نيوكاسل- الولايات المتحدة",
+          "link" : "files/experiences/المرصد الحضري لمدينة نيوكاسل- الولايات المتحدة .pdf",
+        },
+        {
+          "img": "news/506543e3-6e94-40ab-9d43-40c8d486cf71.webp",
+          "title" : "المركز الحضري للحوسبة و البيانات- الولايات المتحدة الامريكية",
+          "link" : "files/experiences/المركز الحضري للحوسبة و البيانات- الولايات المتحدة الامريكية .pdf",
         },
       ]
     }

@@ -34,12 +34,12 @@
             <input type="text" class="form-control lg" placeholder="اسمك الكامل">
           </div>
         </div>
-        <div class="col">
-          <div class="form-group">
-            <label>رقم الهوية/الإقامة/خليجي<span class="star">*</span></label>
-            <input type="text" class="form-control lg" placeholder="هويتك / إقامتك / رقم خليجي">
-          </div>
-        </div>
+<!--        <div class="col">-->
+<!--          <div class="form-group">-->
+<!--            <label>رقم الهوية/الإقامة/خليجي<span class="star">*</span></label>-->
+<!--            <input type="text" class="form-control lg" placeholder="هويتك / إقامتك / رقم خليجي">-->
+<!--          </div>-->
+<!--        </div>-->
         <div class="col">
           <div class="form-group">
             <label>البريد الإلكتروني<span class="star">*</span></label>
@@ -52,17 +52,17 @@
             <input type="text" class="form-control lg" placeholder="رقم هاتفك">
           </div>
         </div>
-        <div class="col">
-          <div class="form-group">
-            <label>نوع المراسلة<span class="star">*</span></label>
-             <drop-down title="" class="form-dropdown lg" toggle-arrow="true">
-               <a href="#" class="menu-item">شكوى</a>
-               <a href="#" class="menu-item">شكوى</a>
-               <a href="#" class="menu-item">شكوى</a>
-               <a href="#" class="menu-item">شكوى</a>
-             </drop-down>
-          </div>
-        </div>
+<!--        <div class="col">-->
+<!--          <div class="form-group">-->
+<!--            <label>نوع المراسلة<span class="star">*</span></label>-->
+<!--             <drop-down title="" class="form-dropdown lg" toggle-arrow="true">-->
+<!--               <a href="#" class="menu-item">شكوى</a>-->
+<!--               <a href="#" class="menu-item">شكوى</a>-->
+<!--               <a href="#" class="menu-item">شكوى</a>-->
+<!--               <a href="#" class="menu-item">شكوى</a>-->
+<!--             </drop-down>-->
+<!--          </div>-->
+<!--        </div>-->
         <div class="col">
           <div class="form-group">
             <label>عنوان الرسالة<span class="star">*</span></label>
@@ -108,10 +108,9 @@ import PageHeader from "@/components/PageHeader";
 import BannerHeading from "@/components/BannerHeading";
 import OverBar from "@/components/OverBar";
 import PageFooter from "@/components/PageFooter";
-import DropDown from "../components/DropDown";
 export default {
   name: "Contact",
-  components: {DropDown, OverBar, BannerHeading, PageHeader, PageFooter}
+  components: { OverBar, BannerHeading, PageHeader, PageFooter}
 }
 </script>
 

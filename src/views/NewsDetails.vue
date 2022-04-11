@@ -24,41 +24,20 @@
         <div class="cms-sidebar">
           <div class="cms-sidebar-content">
           <h2 class="mg-b-20">محتوى ذو صلة</h2>
-          <div class="featured-news">
-            <div class="featured-img rounded" :style="`background-image: url(/news/green-riyadh-2019-riyadh-green-7.jpg);`"></div>
+
+          <div  v-for="(newsPost, index) in newsPosts.slice(0, 5)" :key="index+'_newspost'" class="featured-news">
+            <div class="featured-img rounded" :style="`background-image: url(${newsPost.img});`"></div>
             <div class="featured-meta">
-              <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
+              <h3 class="tx-16">
+                <router-link class="tx-primary" :to="'/news-details/' + newsPost.id ">{{
+                    newsPost.title.substring(0, 50) + "..."
+                  }}
+                </router-link>
+                </h3>
               <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
             </div>
           </div>
-          <div class="featured-news">
-            <div class="featured-img rounded" :style="`background-image: url(/news/landmark-tower-Markaz-al-Mamlakah-Saudi-Arabia-Riyadh.webp);`"></div>
-            <div class="featured-meta">
-              <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
-              <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
-            </div>
-          </div>
-          <div class="featured-news">
-            <div class="featured-img rounded" :style="`background-image: url(/news/saudi-arabia-for-first-time-marks-its-founding-downplaying-conservative-roots.webp);`"></div>
-            <div class="featured-meta">
-              <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
-              <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
-            </div>
-          </div>
-          <div class="featured-news">
-            <div class="featured-img rounded" :style="`background-image: url(/news/green-riyadh-2019-riyadh-green-7.jpg);`"></div>
-            <div class="featured-meta">
-              <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
-              <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
-            </div>
-          </div>
-          <div class="featured-news">
-            <div class="featured-img rounded" :style="`background-image: url(/news/green-riyadh-2019-riyadh-green-7.jpg);`"></div>
-            <div class="featured-meta">
-              <h3 class="tx-16">الأمير سعود بن طلال يستقبل مدير المكتب الإقليمي لبرنامج…</h3>
-              <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
-            </div>
-          </div>
+
           </div>
 
 
@@ -89,7 +68,6 @@ export default {
     return {
       activeToggle: 1,
       newsPosts: newsPosts
-
     }
   },
 }
