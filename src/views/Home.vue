@@ -7,7 +7,6 @@
       <div class="landing-heading">
         <div class="container">
           <h1 class="tx-34">المرصد الحضري الوطني </h1>
-
         </div>
       </div>
       <!-- / landing-heading -->
@@ -184,7 +183,7 @@ export default {
     },
 
     homeSize() {
-      this.homeHeight = window.innerHeight - 220;
+      this.homeHeight = window.innerHeight - 277;
      }
   },
 

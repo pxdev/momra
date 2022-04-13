@@ -1,9 +1,7 @@
 .landing-page {
   position: relative;
 
-  @include for-size('small-height') {
-    font-size: 80%;
-   }
+
 
   &:after {
     @extend %vertical-gradient;
@@ -26,8 +24,7 @@
     align-items: center;
 
     @include for-size('small-height') {
-      align-items: start;
-
+      align-items: center;
     }
 
     @include for-size('small-devices') {
@@ -71,8 +68,7 @@
 
         @include for-size('small-height') {
           max-height: 300px;
-          transform: translateY(-45px);
-        }
+         }
 
       }
 
@@ -107,9 +103,9 @@
     padding: 10px 0;
     color: $light-bg;
     font-size: 200%;
+
     @include for-size('small-height') {
       padding: 10px 0;
-
       font-size: 160%;
     }
     span{

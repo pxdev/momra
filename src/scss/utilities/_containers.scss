@@ -12,9 +12,7 @@
     padding-right: 5px;
   }
 
-  @include for-size('big-desktop-up') {
-    max-width: none;
-  }
+
 
 
   .fluid {

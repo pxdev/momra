@@ -20,6 +20,7 @@ header {
     transform-origin: 50%;
     transform: rotate(-45deg);
     top: 15px;
+    z-index: 30;
 
   }
 
@@ -27,10 +28,7 @@ header {
     padding-bottom: 20px;
     padding-top: 20px;
 
-    @include for-size('small-height') {
-      padding-bottom: 10px;
-      padding-top: 10px;
-    }
+
     }
 
   &.fixed {
@@ -133,6 +131,9 @@ header {
           @include for-size('small-height') {
             font-size: 14px;
           }
+          @include for-size('small-devices') {
+            font-size: 14px;
+          }
 
         }
 
@@ -145,6 +146,9 @@ header {
           color: $primary;
 
           @include for-size('small-height') {
+            font-size: 14px;
+          }
+          @include for-size('small-devices') {
             font-size: 14px;
           }
 

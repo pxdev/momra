@@ -39,7 +39,7 @@
         </p>
 
         <div class="pd-t-60">
-          <p class="mg-b-15">عرض اللائحة التنفيذية </p>
+          <p class="mg-b-15">عرض اللائحة التنظيمية </p>
           <a href="#" class="btn lg btn-secondary btn-pre">
             <span class=" btn-ico"><i class="ri-download-2-line"></i></span>
             <span>تحميل</span>
