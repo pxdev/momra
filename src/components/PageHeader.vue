@@ -1,6 +1,8 @@
 <template>
   <header class="fixed" id="header">
 
+    <div class="trial">نسخة تجريبية</div>
+
     <div class="d-none pre-header">
       <div class="container pd-y-5 d-flex justify-content-between align-items-center">
         <div class="toll-free">
@@ -51,7 +53,7 @@
 <!--                <a href="#" class="menu-item" @click.prevent="exploreSectorStats(0)">المنصة التحليلية </a>-->
                 <a href="#" class="menu-item" @click.prevent="exploreSector(0)">أداء القطاعات الحضرية </a>
                 <a href="#" class="menu-item" @click.prevent="setActiveRegionID(1)">أداء المناطق والمدن والمحافظات</a>
-                <router-link to="/interactive-map" class="menu-item">الخارطة التفاعلية</router-link>
+                <router-link to="/interactive-map" class="menu-item">المستكشف الجغرافي</router-link>
                 <router-link to="/data-importance-calculator" class="menu-item">حاسبة أهمية البيانات</router-link>
               </drop-down>
             </li>

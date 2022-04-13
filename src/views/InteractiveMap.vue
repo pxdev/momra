@@ -5,7 +5,7 @@
     <banner-heading banner-height="250" image-url="/regions/regions/najran.jpg">
       <div class="news-heading-content">
 <!--        <p>المنصة التحليلية</p>-->
-        <h2 class="tx-40">الخريطة التفاعلية</h2>
+        <h2 class="tx-40">المستكشف الجغرافي</h2>
 <!--        <p>كما يُعرف أحيانًا ، هو نص وهمي يستخدم في تصميمات الطباعة أو الرسوم أو الويب</p>-->
 
       </div>

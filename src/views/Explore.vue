@@ -101,7 +101,7 @@
               </div>
             </div>
             <a href="#" @click.prevent="exploreRegionStats(activeRegion)"
-               class="btn btn-secondary lg pd-x-30">قراءة المؤشرات</a>
+               class="btn btn-success lg pd-x-30">قراءة المؤشرات</a>
           </div>
 
 
@@ -191,7 +191,7 @@
                 </div>
               </div>
             </div>
-            <router-link to="/analytics" href="#" class="btn btn-secondary lg pd-x-30">قراءة المؤشرات</router-link>
+            <router-link to="/analytics" href="#" class="btn btn-success lg pd-x-30">قراءة المؤشرات</router-link>
           </div>
         </div>
       </div>

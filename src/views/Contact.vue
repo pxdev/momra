@@ -4,7 +4,7 @@
 
 
     <banner-heading banner-height="250" image-url="cms/contact.jpg">
-      <h1 class="tx-40">اتصل بنا</h1>
+      <h1 class="tx-40">تواصل معنا</h1>
 <!--      <p class="tx-18">نحن نرحب دائماً بتعاونك معنا ومشاركتنا كل مقترحاتك.</p>-->
 
       <div class="social d-flex align-items-center">

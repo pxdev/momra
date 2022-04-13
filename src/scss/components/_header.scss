@@ -5,6 +5,24 @@ header {
   z-index: 20;
 
 
+  .trial {
+    background: $danger;
+    color: #FFF;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+    left: -60px;
+    width: 190px;
+    transform-origin: 50%;
+    transform: rotate(-45deg);
+    top: 15px;
+
+  }
+
   .page-header {
     padding-bottom: 20px;
     padding-top: 20px;
@@ -132,7 +150,7 @@ header {
 
             &:after {
             height: 5px;
-            background: $secondary;
+            background: $success;
             width: 0;
             content: "";
             display: block;

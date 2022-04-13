@@ -6,7 +6,7 @@
       <video-bg class="home-video" :sources="['intro.mp4']"></video-bg>
       <div class="landing-heading">
         <div class="container">
-          <h1 class="tx-34">المرصد الحضري الوطني  <span>نسخة تجريبية</span></h1>
+          <h1 class="tx-34">المرصد الحضري الوطني </h1>
 
         </div>
       </div>
@@ -147,7 +147,7 @@ export default {
         "slidesToShow": 7,
         "adaptiveHeight": false,
         "autoplay": true,
-        "autoplaySpeed": 4000,
+        "autoplaySpeed": 7000,
         "swipeToSlide": true,
         "centerMode": true,
         "centerPadding": "20px",
