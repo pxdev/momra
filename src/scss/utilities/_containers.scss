@@ -5,7 +5,7 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1570px;
+  max-width: 90vw;
 
   @include for-size('small-devices') {
     padding-left: 5px;
@@ -24,7 +24,7 @@
 .card {
   background: white;
   border: 1px solid $border-color;
-  padding: 20px;
+  padding: 1vw;
 
   @include for-size('small-devices') {
     padding: 5px;

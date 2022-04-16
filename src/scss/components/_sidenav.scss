@@ -1,8 +1,19 @@
 .side-bar {
-  width: 380px;
+  width: 25vw;
   flex-shrink: 0;
   position: relative;
   z-index: 5;
+
+  .nav-search {
+    padding: 1.5vw;
+  }
+
+
+  .scroll-content {
+    padding-left: 1.5vw !important;
+    padding-right: 1.5vw !important;
+  }
+
   @include for-size('small-devices') {
     width: 100%;
     margin-bottom: 20px;
@@ -35,20 +46,16 @@
 
       a.side-nav-link {
         @extend %flex-area;
-        font-size: 15px;
+        font-size: 1vw;
         color: $primary;
-        padding: 0 10px;
+        padding: 0 1vw;
         border-bottom: 1px solid $border-color;
 
 
 
         span {
           flex: 1;
-          padding: 20px;
-
-          @include for-size('small-height') {
-            padding: 15px;
-          }
+          padding: 1.4vw;
 
         }
 
@@ -64,10 +71,6 @@
         transform: scale(0.85);
         margin: 0 -5px;
 
-        @include for-size('small-height') {
-          transform: scale(0.7);
-          margin: 0 -10px;
-        }
 
       }
 
@@ -98,34 +101,33 @@
       }
 
       ul {
-        padding: 10px 20px;
+        padding: 1vw 2vw;
         display: none;
 
         li {
           border-bottom: 1px solid $border-color;
 
           a {
-            font-size: 14px;
+            font-size: 0.85vw;
             color: $primary;
-            padding: 12px 20px 12px 30px;
+            padding: 0.9vw 1.5vw 0.9vw 2.5vw;
+            //padding: 12px 20px 12px 30px;
             opacity: 0.5;
             @extend %flex-area;
             justify-content: space-between;
             position: relative;
-            min-height: 30px;
+            min-height: 3vw;
 
-            @include for-size('small-height') {
-              font-size: 12px;
 
-            }
 
 
             &:before {
               content:"\EB7C";
               font-family: remixicon !important;
               position: absolute;
-              font-size: 6px;
+              font-size: 0.40vw;
               right: 0;
+              top: 1.3vw;
             }
 
             

@@ -1,7 +1,7 @@
 <template>
   <section class="explore-page">
     <page-header></page-header>
-    <main class="container pages pd-y-30 d-flex ">
+    <main class="container pages d-flex ">
 
       <div class="sector-bg" v-if="sectors[sectorCounter] && !activeRegionId"
            :style="`background-image: url(/regions/sectors/${sectors[sectorCounter].bgImage })`"
@@ -35,7 +35,7 @@
               <p class="op-6" v-else>أهم المؤشرات</p>
 
             </div>
-            <div class="data-icons d-flex flex-wrap pd-y-10">
+            <div class="data-icons d-flex flex-wrap">
               <div class="data-icon-box d-flex align-items-start">
                 <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
                 <div class="pd-x-15">
@@ -126,7 +126,7 @@
 
 
             </div>
-            <div class="data-icons d-flex flex-wrap pd-y-10">
+            <div class="data-icons d-flex flex-wrap">
               <div class="data-icon-box d-flex align-items-start">
                 <img class="mg-t-5" src="data-icons/data_icon_01.svg" alt="">
                 <div class="pd-x-15">

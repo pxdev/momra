@@ -1,25 +1,25 @@
 h1 {
-  font-size: 24px;
+  font-size: 1.6vw;;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 1.6vw;;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.4vw;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1.2vw;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 1vw;;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 0.85vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -174,15 +174,6 @@ h1, h2, h3, h4, h5, h6 {
   color: darken($gray, 20);
 }
 
-@mixin make-opacity($num) {
-  .tx-#{$num} {
-    font-size: #{$num}px;
-  }
-
-}
-
-$num: 10;
-@while $num <= 80 {
-  @include make-opacity($num);
-  $num: $num + 2;
+.tx-40 {
+  font-size: 3vw;
 }

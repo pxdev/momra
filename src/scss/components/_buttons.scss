@@ -28,7 +28,7 @@
 // buttons
 .btn {
   display: inline-block;
-  line-height: 1.8;
+  line-height: 1.8vw;
   color: currentColor;
   text-align: center;
   text-decoration: none;
@@ -37,10 +37,10 @@
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  font-size: 14px;
+  font-size: 0.65vw;
   border-radius: 6px;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  padding: 5px 15px;
+  padding: .25vw .85vw;
   white-space: nowrap;
   height: $normal-form-size;
   max-width: 680px;
@@ -245,7 +245,7 @@ input + .btn {
 
 
 .toggle-switch {
-  height: 45px;
+  height: 3vw;
   border-radius: 10px;
   position: relative;
   border: 1px solid $border-color;
@@ -258,9 +258,10 @@ input + .btn {
     align-items: center;
     justify-content: center;
     transition: 0.2s all ease-in-out;
-    height: 45px;
+    height: 3vw;
     color: $primary;
-    padding: 0 15px;
+    padding: 0 1.5vw;
+    font-size: 0.85vw;
     &.active {
       background: $primary;
       color: #fff;

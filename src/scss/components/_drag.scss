@@ -2,9 +2,9 @@
   min-width: 500px;
 }
 .indicator-slider {
-  height: 46px !important;
+  height: 3.2vw !important;
   border-radius: 6px !important;
-  margin: 0 50px;
+  margin: 0 3vw;
 
   @include for-size('small-devices') {
     margin: 0 25px;
@@ -27,7 +27,7 @@
   /* process style */
   .vue-slider-process {
     background-color: #68BFCA;
-    height: 46px !important;
+    height: 3.2vw !important;
     top: 0!important;
   }
 
@@ -50,10 +50,10 @@
   }
 
   .vue-slider-mark-label {
-    font-size: 20px;
+    font-size: 1.1vw;
     font-weight: 700;
     color: $primary;
-    margin-top: -38px !important;
+    margin-top: -2.4vw !important;
     padding: 0 0;
     cursor: pointer;
 
@@ -70,17 +70,17 @@
   }
 
   .vue-slider-dot {
-    height: 46px !important;
-    width: 46px !important;
+    height: 3.2vw !important;
+    width: 2.6vw !important;
     cursor: pointer;
     border-radius: 10px 0 0 10px;
     background-color: #68BFCA;
-    transform: translate(-46px, -50%) !important;
+    transform: translate(-2.6vw, -50%) !important;
 
     .custom-dot {
       position: absolute;
       left: 0;
-      width: 20px;
+      width: 1.6vw;
       height: 100%;
       display: block;
       box-sizing: border-box;

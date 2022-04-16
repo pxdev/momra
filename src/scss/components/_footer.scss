@@ -33,13 +33,13 @@
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 1vw;
     font-weight: 700;
     color: #FFF;
     white-space: nowrap;
 
     a{
-      font-size: 18px;
+      font-size: 1vw;
       font-weight: 700;
       color: #FFF;
       opacity: 1;
@@ -49,7 +49,7 @@
   a {
     display: block;
     opacity: 0.6;
-    font-size: 14px;
+    font-size: 0.85vw;
     padding: 6px 0;
 
     &:hover {
@@ -62,4 +62,17 @@
 .footer-bar {
   border-top: 2px solid darken($primary, 5);
    padding: 20px 0;
+}
+
+
+.footer-start {
+  width: 20%;
+
+  img {
+    width: 14vw;
+  }
+}
+
+.footer-end {
+  width: 80%;
 }

@@ -20,7 +20,7 @@ body {
   font-size: $font-size-base;
   background: $body-bg;
   color: $font-color-base;
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
   font-family: $font-family-base;
   overflow-x: hidden;
 
@@ -50,8 +50,8 @@ body {
   flex-grow: 1;
   position: relative;
   z-index: 5;
-  @include rtl(padding-left, 25px, 0);
-  @include rtl(padding-right, 0, 25px);
+  @include rtl(padding-left, 1.5vw, 0);
+  @include rtl(padding-right, 0, 1.5vw);
 
   @include for-size('small-devices') {
     @include rtl(padding-left, 0, 0);
@@ -63,39 +63,23 @@ body {
 
 .data-icons {
 
-  @include for-size('small-height') {
-    padding-top: 15px;
-  }
-
   .data-icon-box {
-    padding: 20px 10px;
+    padding: 0 1vh 5vh;
 
-    @include for-size('small-height') {
-      padding: 10px;
-    }
 
     p:nth-child(1) {
-      font-size: 14px;
-
-      @include for-size('small-height') {
-        font-size: 12px;
-      }
+      font-size: 1.45vh;
 
     }
 
     p:nth-child(2) {
-      font-size: 30px;
-      @include for-size('small-height') {
-        font-size: 20px;
-      }
-
+      font-size: 3.45vh;
     }
 
     img {
-      max-width: 40px;
-      @include for-size('small-height') {
-        max-width: 30px;
-      }
+      max-width: 4.4vh;
+      min-width: 4.4vh;
+      margin: 0.4vh;
     }
 
     @include for-size('small-devices') {
@@ -113,31 +97,31 @@ body {
 
 .side-bar {
   overflow: hidden;
-   &.fixed-sidebar {
+
+  &.fixed-sidebar {
     position: sticky;
     right: auto;
     bottom: 0;
     z-index: 10;
-    top: 130px;
+    top: 11vh;
+    height: 82vh;
 
-     @include for-size('small-height'){
-       top: 110px;
-     }
 
-    @include for-size('small-devices'){
+    @include for-size('small-devices') {
       position: static;
-      height: auto!important;
+      height: auto !important;
     }
 
 
     .side-nav {
       height: 100%;
     }
+
     .scroll-area {
       height: 100px;
       min-height: calc(100% - 120px);
 
-      @include for-size('small-devices'){
+      @include for-size('small-devices') {
         height: 200px;
         min-height: 200px;
       }

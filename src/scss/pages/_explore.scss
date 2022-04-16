@@ -2,6 +2,10 @@
   position: relative;
   height: 100%;
 
+  .pages {
+    padding: 2vw 0;
+  }
+
 
   .region-map-bg {
     position: absolute;
@@ -15,8 +19,6 @@
     ul {
       li{
         li {
-
-
         a{
           &:after {
             display: none;
@@ -55,11 +57,14 @@
 
   .explore-heading {
     position: relative;
-
-    margin: 50px 0;
+    margin: 3vh 0;
 
     --blue-color: rgba(255,255,255,0.6);
     --green-color: #FFF;
+
+    p{
+      font-size: 1.65vh;
+    }
 
     .svg-ico {
       opacity: 0.25;
@@ -75,6 +80,7 @@
   h1 {
     color: #fff;
     animation-name: fadeIn;
+    font-size: 3.65vh;
   }
 
   &:after {
@@ -89,7 +95,7 @@
   }
 
   .explore-data {
-    padding: 20px 100px 0 0;
+    padding: 1vw 6vw 0 0;
     color: #fff;
 
     @include for-size('small-devices') {
@@ -103,7 +109,7 @@
   .data-icons {
 
     .data-icon-box {
-      padding: 20px 0;
+      padding: 2vh 0;
       max-width: 33.33%;
       flex: 1 0 33.33%;
 
@@ -132,15 +138,15 @@
   margin-bottom: 15px;
 
   .moving-arrow {
-    height: 35px;
-    width: 35px;
+    height: 2.2vw;
+    width: 2.2vw;
     display: flex;
     background: #FDDE8C;
     flex-shrink: 0;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 2vw;
     color: #436667;
 
     &:nth-child(2){

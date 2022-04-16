@@ -1,5 +1,5 @@
 <template>
-  <div class="banner-heading" :style="`background-image: url(${ImageUrl}); min-height: ${BannerHeight}px `">
+  <div class="banner-heading" :style="`background-image: url(${ImageUrl}); min-height: ${BannerHeight/100}vh `">
     <div class="container banner-content">
       <slot></slot>
     </div>

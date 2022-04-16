@@ -86,10 +86,10 @@
 
     a.menu-item {
       display: block;
-      padding: 10px 15px;
+      padding: 0.6vw 0.85vw;
       border-bottom: 1px solid lighten($border-color, 5);
       transition: 0.4s all ease-in-out;
-      font-size: 14px;
+      font-size: 0.75vw;
       color: $primary;
 
       &:hover {

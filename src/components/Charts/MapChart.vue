@@ -142,8 +142,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.charts {
-  height: 300px;
-}
-</style>
+

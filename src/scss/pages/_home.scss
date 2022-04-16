@@ -1,5 +1,12 @@
 .landing-page {
   position: relative;
+  position: relative;
+  height: 100vh;
+  min-height: 40vw;
+
+  main {
+    height: 70vh;
+  }
 
 
 
@@ -19,8 +26,8 @@
     position: relative;
     z-index: 10;
     color: #fff;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 2vw;
+    padding-top: 5vw;
     align-items: center;
 
     @include for-size('small-height') {
@@ -52,7 +59,7 @@
         }
 
         p {
-          max-width: 230px;
+          max-width: 15vw;
         }
 
 
@@ -63,14 +70,6 @@
     .ksa-map {
       min-width: 40%;
 
-
-      #homeMap{
-
-        @include for-size('small-height') {
-          max-height: 300px;
-         }
-
-      }
 
 
       @include for-size('small-devices') {
@@ -100,14 +99,12 @@
 
   h1 {
     line-height: normal;
-    padding: 10px 0;
+    padding: 0.65vw 0;
     color: $light-bg;
-    font-size: 200%;
+    font-size: 1.3vw;
 
-    @include for-size('small-height') {
-      padding: 10px 0;
-      font-size: 160%;
-    }
+
+
     span{
       display: block;
       font-size: 12px;
@@ -124,11 +121,11 @@
     width: 100%;
     background: #fff;
     position: absolute;
-    border-radius: 10px;
-    margin: 24px 0;
+    border-radius: 1.6vmin;
+    margin: 25px 0;
     top: 0;
     bottom: 0;
-    height: 140px;
+    height: 16vmin;
     z-index: 5;
   }
 
@@ -142,12 +139,10 @@
 
   h3 {
     color: #FFF;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1vw;
+    margin-bottom: 1vw;
 
-    @include for-size('small-height') {
-      font-size: 14px;
-    }
+
 
   }
 
@@ -171,10 +166,10 @@
   left: 0;
   right: 0;
   z-index: 15;
-  height: 180px;
+  height: 20vh;
 
   &:after {
-    height: 120px;
+    height: 12vh;
     background: $primary;
     position: absolute;
     bottom: 0;
@@ -188,35 +183,34 @@
     justify-content: center;
     position: relative;
     display: flex;
-    padding: 20px 10px;
+    padding: 0 10px;
     text-align: center;
     flex-direction: column;
     margin: 25px 0;
-    font-size: 13px;
+    font-size: 0.80vw;
+    height: 17vh;
 
-    @include for-size('small-height') {
-      font-size: 12px;
-    }
-    @include for-size('small-devices') {
-      font-size: 12px;
-    }
+
 
     span {
       position: relative;
       z-index: 10;
-    }
+      margin-bottom: 0.3vw;
+     }
 
     svg {
       display: block;
-      margin: 10px auto 10px;
+      margin: 0.3vw auto 0.3vw;
       position: relative;
       z-index: 10;
+      min-height: 3vmax;
     }
 
     .explore-btn {
       opacity: 0;
       transform: scale(0);
       transition: 0.2s all ease-in-out;
+      font-size: 0.65vw;
     }
 
 
@@ -230,7 +224,7 @@
       right: 0;
       top: 0;
       bottom: 0;
-      border-radius: 6px;
+      border-radius: 0.45vw;
       opacity: 0;
       transition: 0.2s all ease-in-out;
     }

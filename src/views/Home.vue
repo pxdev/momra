@@ -10,8 +10,7 @@
         </div>
       </div>
       <!-- / landing-heading -->
-      <div class="container landing-data d-flex justify-content-between align-items-center"
-           :style="`height:${homeHeight}px`">
+      <div class="container landing-data d-flex justify-content-between align-items-center">
 
         <VueSlickCarousel class="slick-carousel landing-primary-slick" ref="c1" :asNavFor="$refs.c2" :focusOnSelect="true" v-bind="primarySettings">
           <div v-for="(sectorName, index) in sectors" :key="index + '_sectorName'" class="landing-primary-sectors pd-x-10">
@@ -74,40 +73,41 @@
 
       </div>
       <!-- / landing-data -->
-      <div class="landing-navigation ">
-        <div class="container">
-
-          <VueSlickCarousel class="slick-carousel landing-slick" v-bind="secondarySettings" :focusOnSelect="true" :asNavFor="$refs.c1" ref="c2">
-            <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
-              <a href="#" @click.prevent="setActiveSector(index)" class="home-nav-item">
-                <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight">
-                  <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
-                </svg>
-                <span>{{ sector.label }}</span>
-                <span class="explore-btn tx-12 d-flex align-items-center"><i class="ri-arrow-left-line"></i><span
-                    class="pd-x-5">استكشف</span></span>
-              </a>
-            </div>
-            <template #prevArrow>
-              <div>
-                <div class="home-slider-arrow">
-              <i class="ri-arrow-left-s-line"></i>
-                </div>
-              </div>
-            </template>
-            <template #nextArrow>
-              <div>
-                <div class="home-slider-arrow">
-                <i class="ri-arrow-right-s-line"></i>
-                </div>
-              </div>
-            </template>
-          </VueSlickCarousel>
-
-        </div>
-      </div>
-      <!-- / landing-navigation -->
     </main>
+    <div class="landing-navigation ">
+      <div class="container">
+
+        <VueSlickCarousel class="slick-carousel landing-slick" v-bind="secondarySettings" :focusOnSelect="true" :asNavFor="$refs.c1" ref="c2">
+          <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
+            <a href="#" @click.prevent="setActiveSector(index)" class="home-nav-item">
+              <svg class="svg-ico"  :width="sector.iconWidth" :height="sector.iconHeight">
+                <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
+              </svg>
+              <span>{{ sector.label }}</span>
+              <span class="explore-btn tx-12 d-flex align-items-center"><i class="ri-arrow-left-line"></i><span
+                  class="pd-x-5">استكشف</span></span>
+            </a>
+          </div>
+          <template #prevArrow>
+            <div>
+              <div class="home-slider-arrow">
+                <i class="ri-arrow-left-s-line"></i>
+              </div>
+            </div>
+          </template>
+          <template #nextArrow>
+            <div>
+              <div class="home-slider-arrow">
+                <i class="ri-arrow-right-s-line"></i>
+              </div>
+            </div>
+          </template>
+        </VueSlickCarousel>
+
+      </div>
+    </div>
+    <!-- / landing-navigation -->
+
   </section>
 </template>
 
@@ -133,23 +133,20 @@ export default {
         "speed": 300,
         "slidesToShow": 1,
         "adaptiveHeight": false,
-        // "fade": true,
         "pauseOnHover": true,
         "swipeToSlide": true,
-
-
       },
       secondarySettings: {
         "dots": false,
         "infinite": true,
         "speed": 300,
-        "slidesToShow": 7,
+        "slidesToShow": 6,
         "adaptiveHeight": false,
         "autoplay": true,
         "autoplaySpeed": 7000,
         "swipeToSlide": true,
         "centerMode": true,
-        "centerPadding": "20px",
+        "centerPadding": "1vw",
 
         "responsive": [
           {

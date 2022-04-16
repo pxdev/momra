@@ -4,10 +4,10 @@
 
   .search-ico{
     position: absolute;
-    left: 6px;
-    top: 5px;
+    left: 0.5vw;
+    top: 0.5vw;
     z-index: 10;
-    font-size: 24px;
+    font-size: 1.4vw;
   }
 
 }
@@ -15,12 +15,19 @@
 .vue-treeselect__control-arrow-container{
   opacity: 0;
 }
+.vue-treeselect__input{
+  font-size: 0.85vw;
+}
 
+
+.vue-treeselect__placeholder {
+  font-size: 0.85vw;
+}
 .vue-treeselect__control {
-  height: 45px;
+  height: 3vw;
   background: $gray;
   border-color: $gray;
 }
 .vue-treeselect__placeholder, .vue-treeselect__single-value {
-  line-height: 45px;
+  line-height: 3vw;
 }

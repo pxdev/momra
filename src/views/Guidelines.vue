@@ -35,7 +35,9 @@
               </a>
               </div>
              </div>
-            <h3 class="mg-b-10 tx-16"><router-link class="tx-primary" to="/news-details">{{newsPost.title.substring(0,80) }}</router-link></h3>
+            <h3 class="mg-b-10 tx-16 tx-primary">
+              {{newsPost.title.substring(0,80) }}
+            </h3>
              <p class="d-flex align-items-center"><i class="ri-calendar-line tx-16"></i><span class="pd-x-5 tx-12">1443/08/05 الموافق 2022/03/08</span></p>
           </div>
         </div>
