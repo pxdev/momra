@@ -46,14 +46,14 @@
 
       a.side-nav-link {
         @extend %flex-area;
-        font-size: 1vw;
+        font-size: 1.4vh;
         color: $primary;
         padding: 0 1vw;
         border-bottom: 1px solid $border-color;
 
 
 
-        span {
+        .text {
           flex: 1;
           padding: 1.4vw;
 
@@ -63,6 +63,15 @@
           color: $secondary;
         }
 
+      }
+
+      .ico {
+        font-size: 3.2vmin;
+        height: 3.2vmin;
+        width: 3.2vmin;
+        margin-top: 1vmin;
+        margin-bottom: 0.6vmin;
+        word-break: normal;
       }
 
       svg {
@@ -108,11 +117,10 @@
           border-bottom: 1px solid $border-color;
 
           a {
-            font-size: 0.85vw;
+            font-size: 1.2vh;
             color: $primary;
             padding: 0.9vw 1.5vw 0.9vw 2.5vw;
-            //padding: 12px 20px 12px 30px;
-            opacity: 0.5;
+             opacity: 0.5;
             @extend %flex-area;
             justify-content: space-between;
             position: relative;
@@ -125,12 +133,12 @@
               content:"\EB7C";
               font-family: remixicon !important;
               position: absolute;
-              font-size: 0.40vw;
+              font-size: 0.6vh;
               right: 0;
               top: 1.3vw;
             }
 
-            
+
             &:hover {
               opacity: 1;
             }

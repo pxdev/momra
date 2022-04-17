@@ -28,8 +28,8 @@
 // buttons
 .btn {
   display: inline-block;
-  line-height: 1.8vw;
-  color: currentColor;
+  line-height: $normal-form-size;
+   color: currentColor;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -38,9 +38,9 @@
   background-color: transparent;
   border: 1px solid transparent;
   font-size: 0.65vw;
-  border-radius: 6px;
+  border-radius: 0.6vmin;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  padding: .25vw .85vw;
+  padding: 0.2vmin 0.6vmin;
   white-space: nowrap;
   height: $normal-form-size;
   max-width: 680px;
@@ -52,9 +52,9 @@
   }
 
   &.lg {
-    line-height: 2.6;
-    font-size: 14px;
+   font-size: 1.3vh;
     height: $large-form-size;
+    line-height: $large-form-size;
   }
 
 

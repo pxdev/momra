@@ -14,10 +14,8 @@
                 v-for="(sector, sectorIndex) in sectors"
                 :key="sectorIndex + '_sector'">
               <a href="#" class="side-nav-link" @click.prevent="setActiveSector(sectorIndex, $event)">
-                <svg class="svg-ico" :width="sector.iconWidth" :height="sector.iconHeight">
-                  <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
-                </svg>
-                <span class="pd-x-20">{{ sector.label }}</span>
+                <i class="ico" :class="'icon-'+ sector.iconId"><span class="path1"></span><span class="path2"></span></i>
+                <span class="text">{{ sector.label }}</span>
               </a>
               <ul v-if="sector.children.length && sectorCounter == sectorIndex ">
                 <li :class="{'active': indicatorCounter[0] == sectorIndex && indicatorCounter[1] == indicatorIndex }"

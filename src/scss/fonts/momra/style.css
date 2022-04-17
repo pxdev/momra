@@ -25,156 +25,172 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Accommodation-and-housing .path1:before {
+.icon-accommodation_and_housing .path1:before {
   content: "\e900";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Accommodation-and-housing .path2:before {
+.icon-accommodation_and_housing .path2:before {
   content: "\e901";
   margin-left: -1.02734375em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Crisis-Management .path1:before {
+
+.icon-crisis_management .path1:before {
   content: "\e902";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Crisis-Management .path2:before {
+.icon-crisis_management .path2:before {
   content: "\e903";
   margin-left: -0.994140625em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Economic-growth .path1:before {
+
+.icon-economic_growth .path1:before {
   content: "\e904";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Economic-growth .path2:before {
+.icon-economic_growth .path2:before {
   content: "\e905";
   margin-left: -1.1943359375em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Education .path1:before {
+
+.icon-education .path1:before {
   content: "\e906";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Education .path2:before {
+.icon-education .path2:before {
   content: "\e907";
   margin-left: -1.201171875em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Energy .path1:before {
+
+.icon-energy .path1:before {
   content: "\e908";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Energy .path2:before {
+.icon-energy .path2:before {
   content: "\e909";
   margin-left: -0.88671875em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Governance-and-Legislation .path1:before {
+
+.icon-governance_and_legislation .path1:before {
   content: "\e90a";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Governance-and-Legislation .path2:before {
+.icon-governance_and_legislation .path2:before {
   content: "\e90b";
   margin-left: -1.123046875em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Health .path1:before {
+
+.icon-health .path1:before {
   content: "\e90c";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Health .path2:before {
+.icon-health .path2:before {
   content: "\e90d";
   margin-left: -1.068359375em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Infrastructure .path1:before {
+
+.icon-infrastructure .path1:before {
   content: "\e90e";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Infrastructure .path2:before {
+.icon-infrastructure .path2:before {
   content: "\e90f";
   margin-left: -1.150390625em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Islamic-Affairs .path1:before {
+
+.icon-islamic_affairs_jajj_and_umrah .path1:before {
   content: "\e910";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Islamic-Affairs .path2:before {
+.icon-islamic_affairs_jajj_and_umrah .path2:before {
   content: "\e911";
   margin-left: -1.1337890625em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Labor-and-social-Security .path1:before {
+
+.icon-labor_and_social_security .path1:before {
   content: "\e912";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Labor-and-social-Security .path2:before {
+.icon-labor_and_social_security .path2:before {
   content: "\e913";
   margin-left: -0.9775390625em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Media-and-Culture .path1:before {
+
+.icon-media_and_culture .path1:before {
   content: "\e914";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Media-and-Culture .path2:before {
+.icon-media_and_culture .path2:before {
   content: "\e915";
   margin-left: -0.9111328125em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Municipal-Funding .path1:before {
+
+.icon-municipal_funding .path1:before {
   content: "\e916";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Municipal-Funding .path2:before {
+.icon-municipal_funding .path2:before {
   content: "\e917";
   margin-left: -0.9775390625em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Population-and-demographics .path1:before {
+
+.icon-population_and_demographics .path1:before {
   content: "\e918";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Population-and-demographics .path2:before {
+.icon-population_and_demographics .path2:before {
   content: "\e919";
   margin-left: -1.0849609375em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Safety-and-Security .path1:before {
+
+.icon-safety_and_security .path1:before {
   content: "\e91a";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Safety-and-Security .path2:before {
+.icon-safety_and_security .path2:before {
   content: "\e91b";
   margin-left: -1.08203125em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Tourism .path1:before {
+
+.icon-tourism_leisure_and_sports .path1:before {
   content: "\e91c";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Tourism .path2:before {
+.icon-tourism_leisure_and_sports .path2:before {
   content: "\e91d";
   margin-left: -1.037109375em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Urban-fabric .path1:before {
+
+.icon-urban_fabric .path1:before {
   content: "\e91e";
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }
-.icon-Urban-fabric .path2:before {
+.icon-urban_fabric .path2:before {
   content: "\e91f";
   margin-left: -0.935546875em;
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Water-and-the-environment .path1:before {
+
+.icon-water_and_the_environment .path1:before {
   content: "\e920";
-  color: rgb(96, 203, 95);
+  color: var(--green-color);
 }
-.icon-Water-and-the-environment .path2:before {
+.icon-water_and_the_environment .path2:before {
   content: "\e921";
   margin-left: -0.9990234375em;
-  color: rgb(104, 191, 202);
+  color: var(--blue-color);
 }

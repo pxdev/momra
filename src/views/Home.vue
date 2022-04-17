@@ -80,9 +80,8 @@
         <VueSlickCarousel class="slick-carousel landing-slick" v-bind="secondarySettings" :focusOnSelect="true" :asNavFor="$refs.c1" ref="c2">
           <div v-for="(sector, index) in sectors" :key="index + '_group'" class="pd-x-10">
             <a href="#" @click.prevent="setActiveSector(index)" class="home-nav-item">
-              <svg class="svg-ico"  :width="sector.iconWidth" :height="sector.iconHeight">
-                <use class="svg-ico-use" :xlink:href="`icons/icon.symbol.svg#${sector.iconId}`"></use>
-              </svg>
+              <i class="ico" :class="'icon-'+ sector.iconId"><span class="path1"></span><span class="path2"></span></i>
+
               <span>{{ sector.label }}</span>
               <span class="explore-btn tx-12 d-flex align-items-center"><i class="ri-arrow-left-line"></i><span
                   class="pd-x-5">استكشف</span></span>
